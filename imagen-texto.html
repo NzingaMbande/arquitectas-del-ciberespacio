@@ -12,11 +12,13 @@
             border: 1px solid red;
         }
 
-        section.card {
+        .card {
             width: 100%;
+            position: relative;
+            transition: transform 1s linear;
         }
 
-        section.card>img {
+        .card>img {
             margin: 0 auto;
             display: block;
             width: 80%;
@@ -25,12 +27,23 @@
 
         .reverso {
             display: none;
-            background-color: rgba(30, 30, 30, .9);
-            color: whitesmoke
+            /* background-color: rgba(30, 30, 30, .9); */
+            /* color: whitesmoke; */
         }
 
         .card.flip {
-            transform: rotateY(180deg);
+            transform: rotateY(360deg);
+        }
+
+        .voltear {
+            position: absolute;
+            bottom: 10px;
+            right: calc(50%);
+            border: none;
+            background-color: rgba(230, 230, 230, .75);
+            padding: .5rem;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -57,15 +70,24 @@
                     magni sed unde aperiam aliquid fuga esse eligendi et animi maiores voluptatibus consequuntur
                     doloribus! Odio, ullam ipsum.</p>
             </article>
+            <button class="voltear">Leer mas...</button>
         </div>
     </section>
     <script>
-        const anverso = document.querySelector(".anverso");
-        anverso.addEventListener("click", () => {
+        const voltear = document.querySelector(".voltear");
+        voltear.addEventListener("click", () => {
             const tarjeta = document.querySelector(".card");
+            const anverso = document.querySelector(".anverso");
+            const reverso = document.querySelector(".reverso");
             tarjeta.classList.toggle('flip');
             if (tarjeta.classList.contains("flip")) {
-                // anverso.display
+                anverso.style.display = "none";
+                reverso.style.display = "block";
+                voltear.textContent = "Ver imágen...";
+            } else {
+                anverso.style.display = "block";
+                reverso.style.display = "none";
+                voltear.textContent = "Leer más...";
             }
         })
     </script>
