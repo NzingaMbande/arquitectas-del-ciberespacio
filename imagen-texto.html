@@ -7,38 +7,41 @@
     <title>Imagen transformado a un texto</title>
     <style>
         section {
-            width: 30%;
+            width: 100%;
             margin: 0 auto;
             border: 1px solid red;
         }
 
         .card {
-            width: 100%;
+            width: 30%;
+            margin: 0 auto;
+            padding: 1rem;
+            border: 1px solid blue;
             position: relative;
-            transition: transform 1s linear;
+            transition: transform .6s linear;
         }
 
-        .card>img {
+        .anverso>img {
+            width: 80%;
             margin: 0 auto;
             display: block;
-            width: 80%;
             object-fit: cover;
         }
 
         .reverso {
             display: none;
-            /* background-color: rgba(30, 30, 30, .9); */
-            /* color: whitesmoke; */
+            transform: rotateY(180deg);
         }
 
         .card.flip {
-            transform: rotateY(360deg);
+            transform: rotateY(180deg);
         }
 
         .voltear {
             position: absolute;
-            bottom: 10px;
-            right: calc(50%);
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
             border: none;
             background-color: rgba(230, 230, 230, .75);
             padding: .5rem;
@@ -52,7 +55,10 @@
 
     <section>
         <div class="card">
-            <img class="anverso" src="Adriana-planas.jpg" alt="Imagen 1">
+            <div class="anverso">
+                <img src="Adriana-planas.jpg" alt="Imagen 1">
+                <button class="voltear">Leer mas...</button>
+            </div>
             <article class="reverso">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quas at quisquam. Repellendus
                     quas cumque quae maxime totam molestiae vitae laborum ducimus in eaque odio, et nobis assumenda,
@@ -69,27 +75,29 @@
                 <p>Nam minima architecto dolorum deleniti rem in aspernatur ratione est cupiditate porro tempora,
                     magni sed unde aperiam aliquid fuga esse eligendi et animi maiores voluptatibus consequuntur
                     doloribus! Odio, ullam ipsum.</p>
+                <button class="voltear">Ver imágen...</button>
             </article>
-            <button class="voltear">Leer mas...</button>
         </div>
     </section>
     <script>
-        const voltear = document.querySelector(".voltear");
-        voltear.addEventListener("click", () => {
-            const tarjeta = document.querySelector(".card");
-            const anverso = document.querySelector(".anverso");
-            const reverso = document.querySelector(".reverso");
-            tarjeta.classList.toggle('flip');
-            if (tarjeta.classList.contains("flip")) {
-                anverso.style.display = "none";
-                reverso.style.display = "block";
-                voltear.textContent = "Ver imágen...";
-            } else {
-                anverso.style.display = "block";
-                reverso.style.display = "none";
-                voltear.textContent = "Leer más...";
-            }
-        })
+        const botones = document.querySelectorAll(".voltear");
+        botones.forEach(boton => {
+            boton.addEventListener("click", () => {
+                const tarjeta = document.querySelector(".card");
+                const anverso = document.querySelector(".anverso");
+                const reverso = document.querySelector(".reverso");
+
+                tarjeta.classList.toggle("flip");
+
+                if (tarjeta.classList.contains("flip")) {
+                    anverso.style.display = "none";
+                    reverso.style.display = "block";
+                } else {
+                    anverso.style.display = "block";
+                    reverso.style.display = "none";
+                }
+            });
+        });
     </script>
 </body>
 
