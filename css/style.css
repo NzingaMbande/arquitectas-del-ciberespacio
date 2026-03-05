@@ -96,3 +96,8 @@ footer{
     grid-template-columns: 100%;
     width: 100%;
 }
+
+header{
+    color: var(--bg-color2);
+}
+
