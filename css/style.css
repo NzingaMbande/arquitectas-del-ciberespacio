@@ -55,7 +55,7 @@ body{
     background-color:var(--bg-color);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5vh 65vh 1fr auto;
+    grid-template-rows: 5vh 20vh 1fr auto;
     grid-template-areas:
         "navegador"
         "header"
@@ -87,12 +87,23 @@ ul li{
     padding-left: 2rem;
 }
 
+header{
+    grid-area: header;
+    background-color: var(--bg-color2);
+}
+
+main{
+
+    grid-area: main;
+}
+
+
 /* NAV DEL FOOTER */
 footer{
-    text-transform: uppercase;
     background-color: var(--bg-color2);
     grid-area: footer;
     display: grid;
     grid-template-columns: 100%;
     width: 100%;
 }
+
