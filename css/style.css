@@ -103,6 +103,48 @@ main{
 
 }
 
+/* Imagenes */
+figure img{
+    max-width: 95% ;
+    max-height: 95%;
+}
+
+/* MAIN PAGE */
+.index section h2{
+    display: block;
+}
+
+/* SLIDER */
+.slider{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+/* Firefox scrollbar */
+.slider{
+    scrollbar-width: thin;
+    scrollbar-color: var(--font-color) var(--bg-color);
+}
+
+/* Chrome, Safari, Edge */
+.slider::-webkit-scrollbar{
+    height: 8px;
+}
+
+.slider::-webkit-scrollbar-thumb{
+    background: var(--font-color);
+    border-radius: 4px;
+}
+
+.slider img{
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    scroll-snap-align: start;
+}
 
 /* PÁGINA DE ARTICULOS */
 #articulos{
