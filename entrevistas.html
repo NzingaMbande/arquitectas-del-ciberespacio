@@ -9,18 +9,22 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Menú de navegación -->
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
+            <li><a href="#" aria-current="page">Entrevistas</a></li>
             <li><a href="mujeres.html">Mujeres</a></li>
             <li><a href="articulos.html">Articulos</a></li>
-            <li><a href="#">Entrevistas</a></li>
         </ul>
     </nav>
-    <header>
+    <!-- Cabecera -->
+    <!-- No enseñar en Mobile -->
+    <header class="cabecera entrevista">
         <h1>Arquitectas del Ciberespacio</h1>
     </header>
-    <main>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="entrevistas">
         <section>
             <audio src="#" controls></audio>
         </section>
@@ -56,6 +60,7 @@
         </section>
     </main>
 
+    <!-- PIE DE PÁGINA -->
     <!-- LAS CLASES SON PARA PLANTILLAS, EN PRODUCCIÓN SE LIMPIA EL CODIGO -->
     <footer>
         <div class="footer__top">
@@ -63,15 +68,17 @@
                 <h2 class="footer__logo">Arquitectas del Ciberespacio</h2>
                 <p class="footer__des">Por un futuro más igualitario</p>
             </div>
+
             <nav class="footer__links">
                 <h3 class="footer__title">Enlaces</h3>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#" aria-current="page">Entrevistas</a></li>
                     <li><a href="mujeres.html">Mujeres</a></li>
                     <li><a href="articulos.html">Articulos</a></li>
-                    <li><a href="#">Entrevistas</a></li>
                 </ul>
             </nav>
+            
             <div class="footer__contact">
                 <h3 class="footer__title">Contacto</h3>
                 <p>Email: <a href="mailto:info@info.com">info@info.com</a></p>
