@@ -55,7 +55,7 @@ body{
     background-color:var(--bg-color);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5vh 20vh 1fr auto;
+    grid-template-rows: 2vh 100vh 1fr auto;
     grid-template-areas:
         "navegador"
         "header"
@@ -110,7 +110,7 @@ figure img{
 }
 
 /* MAIN PAGE */
-.index section h2{
+#index section h2{
     display: block;
 }
 
