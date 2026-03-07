@@ -115,20 +115,20 @@ figure img{
 }
 
 /* SLIDER */
-.slider{
+/* .slider{
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
+    scroll-snap-type: x mandatory; 
+} Lo comento porque dentro esta h2 que no quiere estar en flex y scroll*/  
 
 /* Firefox scrollbar */
-.slider{
+/* .slider{
     scrollbar-width: thin;
     scrollbar-color: var(--font-color) var(--bg-color);
-}
+} */
 
 /* Chrome, Safari, Edge */
-.slider::-webkit-scrollbar{
+/* .slider::-webkit-scrollbar{
     height: 8px;
 }
 
@@ -144,7 +144,9 @@ figure img{
     object-fit: cover;
     object-position: center bottom;
     scroll-snap-align: start;
-}
+} */
+/*  */
+
 
 /* PÁGINA DE ARTICULOS */
 #articulos{
@@ -250,5 +252,77 @@ footer h3{
     /* border: 1px solid crimson; */
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+/* Firefox scrollbar */
+.cards{
+    scrollbar-width: thin;
+    scrollbar-color: var(--font-color) var(--bg-color);
+}
+
+/* Chrome, Safari, Edge */
+.cards::-webkit-scrollbar{
+    height: 8px;
+}
+
+.cards::-webkit-scrollbar-thumb{
+    background: var(--font-color);
+    border-radius: 4px;
+}
+.slider h2{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: var(--h2-section-max);
+    line-height: 120%;
+}
+
+.cards_main{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+}
+
+.cards_main img{
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    display: block;
+    max-height: 400px;
+}
+
+.cards_main div{
+    flex: 0 0 25%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    background: var(--font-color);
+    color: var(--font-color2);
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.cards_main div p{
+    line-height: 150%;
+    margin: 0.5rem 1rem;    
+}
+
+.cards_main h3{
+    margin: 1rem 1rem;
+    line-height: 150%;
+    min-height: 4.5rem;
+}
+
+.cards_main div p:first-of-type{
+   min-height: 1.5rem;
+}
+
+.cards_main figure {
+    margin: 0;
+    background:var(--bg-color); 
 }
 
