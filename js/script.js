@@ -28,40 +28,50 @@ modo.addEventListener("click", () => {
 
 //Consideraciones:
 // el <body> de cada html tiene el id={nombre del archivo html}
-// "leer mas..." Se recomienda sea un <button> o un <input type="button"> con class="btn-leer"
-// Se debe incluir un div "modal" (antes del cierre del body) -ver ejemplo de la estructura en card-leer-mas.html perfil "franco"-
+// "leer mas..." Se recomienda sea un <button> o un <input type="button"> con class="voltear"
+// La estructura HTML debve tener una seccion (div, article o cualquiera) con la clase "anverso" -inicial- y otra con "reverso" -cuando se gire el card-
+// El CSS debe contener una clase "flip" que contempla los efectos de transición. Tal como el ejemplo:
+// .card {
+//             .
+//             .
+//             .
+//             position: relative;
+//             transition: transform .6s linear;
+//         }
 
-// menu flip card
-const botones = document.querySelectorAll("#mujeres .card-image");
-const modal = document.querySelector("#mujeres #modal");
-const modalTitulo = document.querySelector("#mujeres #modal-titulo");
-const modalImg = document.querySelector("#mujeres #modal-img");
-const modalTexto = document.querySelector("#mujeres #modal-texto");
-const cerrar = document.querySelector("#mujeres .modal-content.cerrar");
+//         .reverso {
+//             display: none;
+//             transform: rotateY(180deg);
+//         }
 
-botones.forEach((boton) => {
+//         .card.flip {
+//             transform: rotateY(180deg);
+//         }
+
+//         .voltear {
+//             position: absolute;
+//             bottom: 50px;
+//             left: 50%;
+//             transform: translateX(-50%);
+//             background-color: rgba(230, 230, 230, .75);
+//         }
+
+// Flip card
+const botonesFlip = document.querySelectorAll("#mujeres .voltear");
+botonesFlip.forEach((boton) => {
   boton.addEventListener("click", () => {
-    const card = boton.closest(".card");
+    const tarjeta = document.querySelector(".card");
+    const anverso = document.querySelector(".anverso");
+    const reverso = document.querySelector(".reverso");
 
-    const titulo = card.querySelector("h3").textContent;
-    const img = card.querySelector("img").src;
-    const texto = card.querySelector("p").textContent;
+    tarjeta.classList.toggle("flip");
 
-    modalTitulo.textContent = titulo;
-    modalImg.src = img;
-    modalImg.style.width = "50%";
-    modalTexto.textContent = texto;
-
-    modal.style.display = "flex";
+    if (tarjeta.classList.contains("flip")) {
+      anverso.style.display = "none";
+      reverso.style.display = "block";
+    } else {
+      anverso.style.display = "block";
+      reverso.style.display = "none";
+    }
   });
-});
-
-cerrar.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
 });
