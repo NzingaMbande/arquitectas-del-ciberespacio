@@ -391,10 +391,59 @@ footer h3{
     background:var(--bg-color); 
 }
 
+.documento-legal {
+            display: block;
+            background: #fff;
+            padding: 40px;
+            border: 1px solid #e1e1e1;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+        .documento-legal h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .documento-legal h3,
+        .articulo-destacado h3 { color: #2980b9; margin-top: 30px; }
+        
+        .articulo-destacado {
+            background-color: #f0f7ff;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th { background-color: #f2f2f2; }
+
+
 @media (max-width:768px){
 
  #articulos{
     grid-template-columns:1fr;
   }
+
+
+    .documento-legal {
+        padding: 20px; 
+        margin: 10px auto;
+        border: none;  
+    }
+
+    .documento-legal h2 {
+        font-size: 1.5rem; 
+    }
+
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 
 }
