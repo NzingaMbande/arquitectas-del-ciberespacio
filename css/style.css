@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: "Desard Regular";
+    src: url("../fonts/Desard Regular..ttf") format(".ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 *,
 *::after,
 *::before {
@@ -16,18 +23,20 @@
 
     /* Fuentes por defecto, luego se pueden ajustar */
     --font-text: Arial, Helvetica, sans-serif;
+    --font-text-articulos: "Desard Regular", sans-serif;
     --font-titular: 'Times New Roman', Times, serif;
 
     /* Colores */
     --bg-color: #e6e6e6;
     --bg-color2: rgb(143, 143, 143);
+    --bg-color3: rgb(63, 63, 63);
     --font-color: #292929;
     --font-color2:  #f5f5f5;;
 
     /* Tamaños por defecto, luego se pueden ajustar */
     --h1-min: 2rem;
     --h1-ideal: 1.400rem + 3.000vw;
-    --h1-max: 5rem;
+    --h1-max: 4rem;
 
     --nav-title-min: 2rem;
     --nav-title-ideal: 1.840rem + 0.800vw;
@@ -47,6 +56,15 @@
     }
 
 
+/* PALETA DE MODO OSCURO, NO TOCAR TODAVÍA */
+/* .modo-oscuro {
+            --font-color: white;
+            --font-color2: rgb(192, 192, 192);
+            --bg-color: rgb(0, 0, 0);
+            --bg-color2: rgb(26, 26, 49);
+            --bg-color3: rgb(255, 231, 231);
+        } */
+
 body{
     width: 100%;
     min-height: 100vh;
@@ -55,45 +73,104 @@ body{
     background-color:var(--bg-color);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 2vh 100vh 2fr auto;
+    grid-template-rows: auto auto 100vh 2fr auto;
     grid-template-areas:
+        "hamburguesa"
         "navegador"
         "header"
         "main"
         "footer";
 }
 
-nav:first-child{
-    /* border: 1px solid crimson; */
-    text-transform: uppercase;
-    background-color: var(--bg-color2);
-    grid-area: navegador;
-    justify-content: space-between;
-    justify-items:end;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-self: center;
-    margin-top: 0;
-    z-index: 1000;
+
+/* MENÚ */
+body>nav{
+    display: none;
 }
 
-a{
-    text-decoration: none;
-    color: var(--font-color);
+body>nav>ul{
+    margin-top: 5rem;
 }
 
-ul li{
-    display: inline;
-    /* padding-left: 2rem; */
+body>nav>ul>li{
+    display: block;
+    font-size: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-weight: bolder;
+    border-bottom: 1px solid var(--font-color);
+
 }
 
+/* Menu hamburguesa */
+.material-symbols-outlined{
+    justify-self: end;
+    background-color: transparent;
+    /* color: var(--font-color2); */
+
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+}
+
+body>nav.visible {
+    display: block;
+    height: 100vh;
+}
+
+/* HEADER-HERO */
 header{
     grid-area: header;
     background-color: var(--bg-color2);
+    /* padding: 20px 5%; */
 }
 
+.hero__content {
+    display: flex;
+    flex-direction: column; /* Texto arriba, imagen abajo */
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.hero__text {
+    width: 100%;
+}
+
+.hero__text h1 {
+    font-size: clamp(var(--h1-ideal), var(--h1-max), var(--h1-min));
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero__text p {
+    font-size: 1rem;
+    color: var(--font-color);
+}
+
+header img {
+    width: 100%; 
+}
+
+/* ANIMACION HERO - KEYFRAMES */
+.letra {
+    opacity: 0.2;
+    transform: translateX(-20px);
+    display: inline-block;
+    animation: aparecer 0.3s forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* MAIN DISPLAY */
 main{
     display: grid;
     grid-area: main;
@@ -104,74 +181,91 @@ main{
     overflow: visible;
 }
 
-/* Imagenes */
-figure img{
-    max-width: 95% ;
-    max-height: 95%;
+/* LINKS */
+a{
+    text-decoration: none;
+    color: var(--font-color);
 }
+
+
+/* LISTAS */
+ul li{
+    display: inline;
+    /* padding-left: 2rem; */
+}
+
 
 /* MAIN PAGE */
 #index section h2{
     display: block;
 }
 
-/* SLIDER */
-/* .slider{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; 
-} Lo comento porque dentro esta h2 que no quiere estar en flex y scroll*/  
-
-/* Firefox scrollbar */
-/* .slider{
-    scrollbar-width: thin;
-    scrollbar-color: var(--font-color) var(--bg-color);
-} */
-
-/* Chrome, Safari, Edge */
-/* .slider::-webkit-scrollbar{
-    height: 8px;
-}
-
-.slider::-webkit-scrollbar-thumb{
-    background: var(--font-color);
-    border-radius: 4px;
-}
-
-.slider img{
-    flex: 0 0 100%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
-    scroll-snap-align: start;
-} */
-/*  */
-
-
 /* PÁGINA DE ARTICULOS */
 #articulos{
-    margin-top: 2.5rem;
-    max-width: 90%;
-    display: flex;
+    margin-top: 1.3rem;
+    max-width: 95%;
+    /* display: flex; */
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: space-around;
     justify-self: center;
+    font-family: var(--font-text-articulos);
 }
+
+/*my*/
+
+#articulos{
+    display:grid;
+    /* grid-template-columns: 1.5fr 1.5fr; */
+    grid-template-columns: 1.5fr ; /* 1 columna para movil */
+    
+}
+
 
 #articulos article{
     justify-content: center;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
     color: var(--font-color);
     background-color:var(--bg-color2);
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     border-radius: 2px;
 
 }
 
+/* .post {
+    border: 1px solid #ccc;
+    padding: 0;           
+    margin-bottom: 1rem;
+} */
+
+.post-figure {
+    margin: 0;           
+    padding: 0;          
+    width: 100%;         
+    height: 15rem;       
+    overflow: hidden;
+    margin-bottom: 0.5rem;    
+}
+
+
+.post-figure img {
+    width: 100%;        
+    height: 100%;       
+    display: block;     
+    object-fit: fill;   
+}
+
+.extra{
+    display: none;
+}
+
+.post.activo .extra{
+    display: inline;
+    font-size: 1rem;
+}
+
 #articulos article:last-child{
-    border: 1px solid crimson;
+    /* border: 1px solid crimson; */
     margin-bottom: 1.5rem;
 }
 
@@ -183,16 +277,27 @@ article h2{
 
 article>p, article h2{
     margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
 }
 
-#articulos a, #articulos span{
-    font-size: 0.5rem;
+.fuente{
+    font-size: 0.8rem;
     color: var(--font-color2);
 }
 
 #articulos a:hover{
     color: var(--font-color);
 }
+
+.leer-mas{
+    display:inline-block;
+    justify-self: end;
+    padding:8px 14px;
+    background:black;
+    color:white;
+    text-decoration:none;
+}
+
 
 /* SUBSCRIPCION */
 input{
@@ -214,7 +319,19 @@ button{
     border-radius: 2px;
 }
 
-/* NAV DEL FOOTER */
+#btn-modo{
+    border-radius: 50px;
+    /* transform: scale(0.2); */
+    
+}
+
+
+#btn-modo:hover{
+    transform: scale(1);
+}
+
+
+/*FOOTER */
 footer{
     /* border: 1px solid crimson; */
     background-color: var(--bg-color2);
@@ -246,7 +363,7 @@ footer p{
 footer div>a{
     padding-left: 1rem;
     margin-bottom: 1rem;
-    display: inline;
+    display: inline-block;
 }
 
 footer h3{
@@ -255,6 +372,8 @@ footer h3{
     margin-bottom: 0.5rem;
 }
 
+
+/* SLIDER DE TARJETAS MAIN */
 /* Firefox scrollbar */
 .cards{
     scrollbar-width: thin;
@@ -263,7 +382,7 @@ footer h3{
 
 /* Chrome, Safari, Edge */
 .cards::-webkit-scrollbar{
-    height: 8px;
+    height: 6px;
 }
 
 .cards::-webkit-scrollbar-thumb{
@@ -280,7 +399,7 @@ footer h3{
 
 .cards_main{
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     width: 100%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -290,9 +409,9 @@ footer h3{
 .cards_main img{
     width: 100%;
     height: auto;
-    max-width: 500px;
+    max-width: 31.25rem;
     display: block;
-    max-height: 400px;
+    max-height: 25rem;
 }
 
 .cards_main div{
@@ -302,7 +421,7 @@ footer h3{
     flex-direction: column;
     background: var(--font-color);
     color: var(--font-color2);
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     padding-bottom: 2rem;
 }
@@ -319,7 +438,7 @@ footer h3{
 }
 
 .cards_main div p:first-of-type{
-   min-height: 1.5rem;
+    min-height: 1.5rem;
 }
 
 .cards_main figure {
@@ -510,3 +629,173 @@ footer h3{
     z-index: 2;
     color: white;
 }
+
+/* POLITICA DE PRIVACIDAD */
+.documento-legal {
+            display: block;
+            background: #fff;
+            padding: 40px;
+            border: 1px solid #e1e1e1;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+        .documento-legal h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .documento-legal h3,
+        .articulo-destacado h3 { color: #2980b9; margin-top: 30px; }
+        
+        .articulo-destacado {
+            background-color: #f0f7ff;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th { background-color: #f2f2f2; }
+
+
+/* MEDIA QUERY PARA PANTALLAS DE 768px EN ADELANTE */
+@media (min-width: 768px) {
+
+            body{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 0vh 5vh 50vh 2fr auto;
+            }
+
+
+            /* MENÚS */
+            .material-symbols-outlined {
+                display: none;
+            }
+
+            body>nav{
+            /* border: 1px solid crimson; */
+            grid-area: navegador;
+            color: var(--font-color);
+            background-color: var(--bg-color2);
+            /* justify-content: space-between; */
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 100%;
+            /* justify-self: center; */
+            margin-top: 0;
+            z-index: 1000;
+            }
+
+            body>nav>ul{
+            margin: 0;
+            padding-right: 0.5rem;
+            }
+
+            body>nav>ul>li{
+                display: inline;
+                text-transform: none;
+                border:none;
+                padding-left: 0.5rem;
+                font-weight: bolder;
+                border-left: 2px solid var(--font-color);
+            }
+
+
+            /* HEADER-HERO */
+            header {
+            /* padding: 40px 5%; */
+            min-height: 25rem;
+            /* margin-bottom:40px;  */
+            /* empuja el main hacia abajo */
+            justify-content: space-between;
+            }
+
+
+            .hero__content {
+                max-width: none;
+                /* quitar límite de 1200px */
+                width: 100%;
+                /* ocupar todo el ancho */
+                flex-direction: row;
+                align-items: center;
+                /* justify-content: flex-start; */
+                /* position: relative; */
+            }
+
+            .hero__text {
+                flex: 1;
+                padding-left: 0.8rem;
+                /* padding-right: 430px; */
+                /* espacio para la imagen pegada a la derecha */
+            
+            }
+
+            .hero__text p{
+                margin-top: 0.5rem;
+            }
+
+            /* .hero__image {
+                position: absolute;
+                right: 0;
+                top: 100%;
+                transform: translateY(-50%);
+                width: 420px; 
+                }*/
+                /* ancho fijo para la imagen */
+            
+
+            header img {
+                width: 90%;
+                /* height: auto; */
+                margin: 0;
+            }
+
+
+            /* PAGINA DE ARTICULOS */
+            #articulos{
+            grid-template-columns:1fr;
+            }
+
+
+            .documento-legal {
+                padding: 20px; 
+                margin: 10px auto;
+                border: none;  
+            }
+
+            .documento-legal h2 {
+                font-size: 1.5rem; 
+            }
+
+            
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            /* FOOTER */
+            footer{
+            /* border: 1px solid crimson; */
+            background-color: var(--bg-color2);
+            grid-area: footer;
+            grid-template-columns: 1fr 1fr;
+            justify-content: flex-start;
+            justify-items: normal;
+            text-align: left;
+            gap: 1rem;
+            }
+
+            /* footer div{
+                border: 1px solid crimson;
+            } */
+
+}
+
