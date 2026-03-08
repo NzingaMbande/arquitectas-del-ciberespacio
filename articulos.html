@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Web sobre la mujer en el mundo de la programación">
     <title>Arquitectas del Ciberespacio</title>
-     <!-- Google ICONS // Menú de hamburguesa-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu">
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=apps" />
     <!-- Mis estilos -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/articulos.css"> -->
 </head>
 <body>
+
+    <!-- MENU HAMBURGUESA icon-->
+    <span class="material-symbols-outlined">
+        apps
+    </span>
+
     <!-- Menú de navegación -->
     <nav>
         <ul>
@@ -20,63 +28,191 @@
             <li><a href="#" aria-current="page">Articulos</a></li>
         </ul>
     </nav>
-    <!-- Cabecera -->
-    <!-- No enseñar en Mobile -->
-    <header class="cabecera articulos">
-        <h1>Arquitectas del Ciberespacio</h1>
-    </header>
     
+    <!-- No enseñar en Mobile -->
+    <!-- Cabecera -->
+    <header>
+        <div class="hero__content">
+            <div class="hero__text">
+                <h1 id="titulo">Arquitectas del Ciberespacio</h1>
+                <p>Visibilizando el talento femenino en la técnología</p>
+            </div>
+
+            <figure>
+                <img src="assets/imgDiana/pioneras_header.webp" alt="Pioneras de la programación">
+            </figure>
+
+            <!-- BOTÓN DE MODO OSCURO -->
+            <!-- <button id="btn-modo">Cambiar de modo</button> -->
+            <button id="btn-modo">Cambiar tema</button>
+
+        </div>
+    </header>
+
     <!-- CONTENIDO PRINCIPAL -->
     <main id="articulos">
-        <article>
+<!-- 
+    <article class="post">
+        <img src="assets/articulos/article1.jpg" alt="brechas-del-poder">
+        <h2>Título del artículo</h2>
+        <p class="intro">
+            Texto introductorio del artículo que se mostrará antes del leer más...
+        </p>
+
+        <a class="leer-mas" href="#">Leer más</a>
+    </article>
+
+    <article class="post">
+        <img src="img/post2.jpg" alt="">
+        <h2>Otro artículo</h2>
+        <p class="intro">
+            Pequeño resumen del artículo.
+        </p>
+
+        <a class="leer-mas" href="#">Leer más</a>
+        </article> -->
+
+        <article class="post">
+            <figure class="post-figure">
+                <img src="assets/articulos/article1.jpg" alt="brechas-del-poder">
+            </figure>
             <h2>Las brechas en el poder, los salarios y la IA</h2>
 
-            <p>Las mujeres ocupan tan solo el 27 por ciento de los escaños parlamentarios y el 30 por ciento de los puestos directivos. A este ritmo la igualdad en la esfera del liderazgo tardará 100 años en llegar. Las cuotas demuestran lo que se puede conseguir –en algunos países han hecho posible duplicar la proporción de mujeres que ocupan escaños parlamentarios–, pero los avances siguen siendo dolorosamente lentos.</p>
-            <p>Los obstáculos empiezan mucho antes de que las mujeres lleguen a la sala de juntas. Unos 708 millones de mujeres quedan excluidas del mercado laboral debido a los cuidados no remunerados y la pobreza de tiempo. Incluso aquellas que trabajan se ven empujadas hacia empleos con salarios más bajos y con menos oportunidades para ascender. Sin embargo, cuando las mujeres alcanzan puestos de poder, la recompensa es clara: las empresas con un mayor número de mujeres en puestos de liderazgo obtienen sistemáticamente mejores resultados que otras, lo que demuestra que cuando las mujeres tienen igualdad de acceso a las oportunidades, el crecimiento y la innovación prosperan.</p>
-            <p>A medida que se afianza la revolución de la inteligencia artificial (IA), el mundo se enfrenta a una nueva y profunda transformación, y se corre el riesgo de perpetuar la desigualdad si no aprendemos de los errores del pasado. Las mujeres solo representan alrededor del 29 por ciento de la fuerza laboral en tecnología a escala mundial y tan solo el 14 por ciento del personal directivo en el sector tecnológico. Además, casi el 28 por ciento de los puestos de trabajo ocupados por mujeres están en peligro de cara a la IA, frente al 21 por ciento de los desempeñados por hombres.</p> 
-            <p>Sin embargo, el futuro digital también podría ser un ecualizador importante. Cerrar la brecha digital de género podría beneficiar a 343 millones de mujeres y niñas, sacar a 30 millones de la pobreza extrema, mejorar la seguridad alimentaria de 42 millones e impulsar un crecimiento mundial de 1,5 billones de dólares de aquí a 2030.</p>
-            <p><span>Fuente:</span>  <a href="https://www.unwomen.org/es/articulos/articulo-explicativo/la-igualdad-de-genero-en-2025-logros-brechas-y-la-decision-de-los-342-billones-de-dolares">Las brechas en el poder</a></p>
-        </article>
-        <article>
+            <p class="intro">Las mujeres ocupan tan solo el 27 por ciento de los escaños parlamentarios y el 30 por ciento de los puestos directivos. 
+                <span class="extra">
+                A este ritmo la igualdad en la esfera del liderazgo tardará 100 años en llegar. Las cuotas demuestran lo que se puede 
+                conseguir –en algunos países han hecho posible duplicar la proporción de mujeres que ocupan escaños parlamentarios–,
+                pero los avances siguen siendo dolorosamente lentos. <br>
+                Los obstáculos empiezan mucho antes de que las mujeres lleguen a la sala de juntas. Unos 708 millones de mujeres quedan
+                excluidas del mercado laboral debido a los cuidados no remunerados y la pobreza de tiempo. Incluso aquellas que trabajan
+                se ven empujadas hacia empleos con salarios más bajos y con menos oportunidades para ascender. Sin embargo, cuando las
+                mujeres alcanzan puestos de poder, la recompensa es clara: las empresas con un mayor número de mujeres en puestos de 
+                liderazgo obtienen sistemáticamente mejores resultados que otras, lo que demuestra que cuando las mujeres tienen igualdad 
+                de acceso a las oportunidades, el crecimiento y la innovación prosperan.<br>
+                A medida que se afianza la revolución de la inteligencia artificial (IA), el mundo se enfrenta a una nueva y profunda 
+                transformación, y se corre el riesgo de perpetuar la desigualdad si no aprendemos de los errores del pasado. Las mujeres 
+                solo representan alrededor del 29 por ciento de la fuerza laboral en tecnología a escala mundial y tan solo el 14 por 
+                ciento del personal directivo en el sector tecnológico. Además, casi el 28 por ciento de los puestos de trabajo ocupados 
+                por mujeres están en peligro de cara a la IA, frente al 21 por ciento de los desempeñados por hombres.<br>
+                Sin embargo, el futuro digital también podría ser un ecualizador importante. Cerrar la brecha digital de género podría 
+                beneficiar a 343 millones de mujeres y niñas, sacar a 30 millones de la pobreza extrema, mejorar la seguridad alimentaria 
+                de 42 millones e impulsar un crecimiento mundial de 1,5 billones de dólares de aquí a 2030.<br>
+                <span class="fuente">Fuente: <a href="https://www.unwomen.org/es/articulos/articulo-explicativo/la-igualdad-de-genero-en-2025-logros-brechas-y-la-decision-de-los-342-billones-de-dolares">Las brechas en el poder</a></span></p>
+                <a class="leer-mas" href="#">Leer más</a>
+            </article>
+        <article class="post">
+            <figure class="post-figure">
+                <img src="assets/articulos/article2.jpg" alt="baja-representacion">
+            </figure>
             <h2>Baja representación en carreras tecnológicas</h2>
-            <p>Entre en las instalaciones de una empresa que no se dedique a la ciencia, la tecnología, la ingeniería y las matemáticas (STEM). Tome 10 empleados al azar, y es probable que 5 sean mujeres y 5 hombres.</p>
-            <p>Es un hecho que conoce muy bien Tarika Barrett, CEO de la organización internacional sin ánimo de lucro Girls Who Code, cuyo objetivo es cerrar la brecha de género en los nuevos puestos tecnológicos de nivel inicial para 2030.</p>
-            <p>"Las mujeres representan sólo el 26% de todos los puestos informáticos, y en el caso de las mujeres negras y latinas, las estadísticas son aún peores: combinadas, representan aproximadamente el 5% de todos los puestos informáticos", declaró recientemente durante las Reuniones de Impacto sobre el Desarrollo Sostenible (SDIM) 2023 del Foro Económico Mundial.</p>
-            <p>La proporción de empleo femenino está por debajo de la media en el sector tecnológico.Image: Informe sobre la Brecha Global de Género 2023. Desde que se fundó en 2012, Girls Who Code ha ayudado a 580 000 niñas y mujeres a aprender programación informática. La organización también está impulsando otras iniciativas para lograr la paridad de género en el sector tecnológico, como Barrett detalló en su entrevista para SDIM 2023.</p> 
-            <p><span>Fuente:</span> <a href="https://es.weforum.org/stories/2023/10/las-mujeres-estan-subrepresentadas-en-la-tecnologia-asi-es-como-esta-ong-quiere-cambiar-las-cosas/">Muejeres subrepresentadas</a></p>
-        </article>
-        <article>
+            <p>Entre en las instalaciones de una empresa que no se dedique a la ciencia, la tecnología, la ingeniería y las matemáticas (STEM).
+                <span class="extra">
+                Tome 10 empleados al azar, y es probable que 5 sean mujeres y 5 hombres. Es un hecho que conoce muy bien Tarika Barrett, 
+                CEO de la organización internacional sin ánimo de lucro Girls Who Code, cuyo objetivo es cerrar la brecha de género en 
+                los nuevos puestos tecnológicos de nivel inicial para 2030.<<br>
+                "Las mujeres representan sólo el 26% de todos los puestos informáticos, y en el caso de las mujeres negras y latinas, las 
+                estadísticas son aún peores: combinadas, representan aproximadamente el 5% de todos los puestos informáticos", declaró 
+                recientemente durante las Reuniones de Impacto sobre el Desarrollo Sostenible (SDIM) 2023 del Foro Económico Mundial.<br>
+                La proporción de empleo femenino está por debajo de la media en el sector tecnológico.Image: Informe sobre la Brecha 
+                Global de Género 2023. Desde que se fundó en 2012, Girls Who Code ha ayudado a 580 000 niñas y mujeres a aprender 
+                programación informática. La organización también está impulsando otras iniciativas para lograr la paridad de género en 
+                el sector tecnológico, como Barrett detalló en su entrevista para SDIM 2023.<br>
+                <span class="fuente">Fuente: <a href="https://es.weforum.org/stories/2023/10/las-mujeres-estan-subrepresentadas-en-la-tecnologia-asi-es-como-esta-ong-quiere-cambiar-las-cosas/">Mujeres subrepresentadas</a></span></p>
+                <a class="leer-mas" href="#">Leer más</a>
+            </article>
+        <article class="post">
+            <figure class="post-figure">
+                <img src="assets/articulos/article3.jpg" alt="falta-referentes">
+            </figure>
             <h2>Falta de referentes y liderazgo femenino en el sector tecnologico</h2>
-            <p>A medida que la Inteligencia Artificial (IA) se convierte en la piedra angular de la transformación digital, surge una preocupación crítica: la falta de representación femenina en los sectores tecnológicos clave. El Estudio de Empleabilidad y Talento Digital 2024, realizado por la Fundación VASS y la Fundación Universidad Autónoma de Madrid, con la colaboración de GenAIA, la primera asociación de IA Generativa de España, pone sobre la mesa la alarmante brecha de género en el desarrollo y adopción de la IA, con solo un 22% de las mujeres participando activamente en esta disciplina según datos del Foro Económico Mundial de la UNESCO.</p> 
-            <p>El informe señala que la Inteligencia Artificial, y en especial la IA generativa, está remodelando las dinámicas laborales y empresariales, pero la escasez de mujeres en este ámbito está limitando su potencial de crecimiento y equidad. «La IA es una de las tecnologías más disruptivas de nuestro tiempo, pero sin una mayor inclusión de mujeres, no podremos aprovechar todo su potencial para transformar la sociedad«, señala Antonio Rueda, Director de la Fundación VASS. </p>
-            <p><span>Fuente:</span> <a href="https://www.fundacionvass.org/solo-un-22-de-las-mujeres-del-sector-tecnologico-trabajan-en-ia/">Fundacion Wass</a></p>
-
+            <p>A medida que la Inteligencia Artificial (IA) se convierte en la piedra angular de la transformación digital, 
+                <span class="extra">
+                surge una preocupación crítica: la falta de representación femenina en los sectores tecnológicos clave. El Estudio 
+                de Empleabilidad y Talento Digital 2024, realizado por la Fundación VASS y la Fundación Universidad Autónoma de 
+                Madrid, con la colaboración de GenAIA, la primera asociación de IA Generativa de España, pone sobre la mesa la 
+                alarmante brecha de género en el desarrollo y adopción de la IA, con solo un 22% de las mujeres participando 
+                activamente en esta disciplina según datos del Foro Económico Mundial de la UNESCO.<br>
+                El informe señala que la Inteligencia Artificial, y en especial la IA generativa, está remodelando las dinámicas 
+                laborales y empresariales, pero la escasez de mujeres en este ámbito está limitando su potencial de crecimiento y 
+                equidad. «La IA es una de las tecnologías más disruptivas de nuestro tiempo, pero sin una mayor inclusión de mujeres, 
+                no podremos aprovechar todo su potencial para transformar la sociedad«, señala Antonio Rueda, Director de la Fundación 
+                VASS. <br>
+                <span class="fuente">Fuente: <a href="https://www.fundacionvass.org/solo-un-22-de-las-mujeres-del-sector-tecnologico-trabajan-en-ia/">Fundación Wass</a></span></p>
+                <a class="leer-mas" href="#">Leer más</a>
         </article>
-        <article>
+        <article class="post">
+            <figure class="post-figure">
+                <img src="assets/articulos/article4.jpg" alt="fuera-del-centro">
+            </figure>
             <h2>Las mujeres, fuera del centro del avance tecnológico</h2>
-            <p>Según el estudio, aunque la transformación digital está en auge, con sectores como la IA creciendo exponencialmente, la participación femenina sigue siendo limitada, especialmente en roles técnicos y de liderazgo. Las cifras son claras: solo el 18% de las mujeres se especializan en disciplinas STEM (Ciencia, Tecnología, Ingeniería y Matemáticas), lo que reduce significativamente su presencia en los sectores que están moldeando el futuro del empleo.</p> 
-            <p>La IA generativa está transformando el mercado laboral, automatizando tareas y creando nuevas oportunidades de empleo. Sin embargo, este avance también está introduciendo desafíos en términos de habilidades y competencias. El estudio de la Fundación VASS y la Fundación Universidad Autónoma de Madrid destaca que las empresas están enfrentando dificultades para cubrir puestos relacionados con IA debido a la falta de talento cualificado, especialmente entre mujeres.</p> 
-            <p><span>Fuente:</span> <a href="https://www.fundacionvass.org/solo-un-22-de-las-mujeres-del-sector-tecnologico-trabajan-en-ia/">Fundacion Wass</a></p>
-        </article>
-        <article>
+            <p>Según el estudio, aunque la transformación digital está en auge, con sectores como la IA creciendo exponencialmente,
+                <span class="extra"> 
+                la participación femenina sigue siendo limitada, especialmente en roles técnicos y de liderazgo. Las cifras son 
+                claras: solo el 18% de las mujeres se especializan en disciplinas STEM (Ciencia, Tecnología, Ingeniería y 
+                Matemáticas), lo que reduce significativamente su presencia en los sectores que están moldeando el futuro del 
+                empleo.<br>
+                La IA generativa está transformando el mercado laboral, automatizando tareas y creando nuevas oportunidades de 
+                empleo. Sin embargo, este avance también está introduciendo desafíos en términos de habilidades y competencias. 
+                El estudio de la Fundación VASS y la Fundación Universidad Autónoma de Madrid destaca que las empresas están 
+                enfrentando dificultades para cubrir puestos relacionados con IA debido a la falta de talento cualificado, 
+                especialmente entre mujeres. <br> 
+                <span class="fuente">Fuente: <a href="https://www.fundacionvass.org/solo-un-22-de-las-mujeres-del-sector-tecnologico-trabajan-en-ia/">Fundacion Wass</a></span></p>
+                <a class="leer-mas" href="#">Leer más</a>
+            </article>
+        <article class="post">
+            <figure class="post-figure">
+                <img src="assets/articulos/article5.jpg" alt="suelo-pegajoso">
+            </figure>
             <h2>Estereotipos (Suelo Pegajoso)</h2>
-            <p>El concepto de suelo pegajoso es una traba por ser mujer para iniciar la carrera profesional y mantiene en actividades menos reconocidas y empleos más precarios.</p>
-            <p>Hace referencia al condicionamiento que supone para el desarrollo profesional y promoción de las trabajadoras la asunción de responsabilidades familiares y domésticas, derivado de la dificultad de compaginar ambos ámbitos. Pero también es consecuencia de prácticas laborales y de gestión carentes de perspectiva de género y poco facilitadoras de la conciliación de la vida laboral, familiar y personal.</p>
-            <p>De esta manera en muchos casos las mujeres ven limitadas sus oportunidades de acceso a la formación cuando se realiza fuera del horario laboral, tienen más dificultades para realizar viajes o reuniones, etc., lo que en determinadas empresas puede limitar su promoción y acceso a mejores puestos.</p>
-            <p>Pero el suelo pegajoso también es un factor condicionante de la feminización de determinados puestos o sectores de actividad. Así, los trabajos a tiempo parcial que facilitan esa conciliación acaban siendo desarrollados sobre todo por mujeres, en muchos casos, con un salario menor que si los ejecutara un hombre y en condiciones precarias. Un ejemplo claro de esta feminización son los trabajos desarrollados en el sector de cuidados y limpieza.</p>
-            <p><span>Fuente:</span> <a href="https://igualdadlaboralclm.com/2020/12/16/por-que-las-mujeres-no-progresan-laboralmente/">Porque no progresan laboralmente</a></p>
+            <p>El concepto de suelo pegajoso es una traba por ser mujer para iniciar la carrera profesional y mantiene en actividades
+                <span class="extra"> 
+                menos reconocidas y empleos más precarios. <br>
+                Hace referencia al condicionamiento que supone para el desarrollo profesional y promoción de las trabajadoras la 
+                asunción de responsabilidades familiares y domésticas, derivado de la dificultad de compaginar ambos ámbitos. Pero 
+                también es consecuencia de prácticas laborales y de gestión carentes de perspectiva de género y poco facilitadoras 
+                de la conciliación de la vida laboral, familiar y personal. <br>
+                De esta manera en muchos casos las mujeres ven limitadas sus oportunidades de acceso a la formación cuando se realiza 
+                fuera del horario laboral, tienen más dificultades para realizar viajes o reuniones, etc., lo que en determinadas 
+                empresas puede limitar su promoción y acceso a mejores puestos. <br>
+                Pero el suelo pegajoso también es un factor condicionante de la feminización de determinados puestos o sectores de 
+                actividad. Así, los trabajos a tiempo parcial que facilitan esa conciliación acaban siendo desarrollados sobre todo 
+                por mujeres, en muchos casos, con un salario menor que si los ejecutara un hombre y en condiciones precarias. Un 
+                ejemplo claro de esta feminización son los trabajos desarrollados en el sector de cuidados y limpieza. <br>
+                <span class="fuente">Fuente: <a href="https://igualdadlaboralclm.com/2020/12/16/por-que-las-mujeres-no-progresan-laboralmente/">Porque no progresan laboralmente</a></span></p>
+                <a class="leer-mas" href="#">Leer más</a>
         </article>
-        <article>
+        <article class="post">
+            <figure class="post-figure">
+                <img src="assets/articulos/article6.jpg" alt="dificultades">
+            </figure>
             <h2>Dificultad para conciliar vida laboral y personal</h2>
 
-            <p>A pesar de su importancia, la conciliación entre la vida personal y laboral puede ser un desafío debido a una serie de obstáculos que pueden dificultar este equilibrio:</p>
-            <p>Cultura Organizacional: En muchas organizaciones, la cultura laboral y las expectativas de disponibilidad constante pueden dificultar la conciliación entre la vida laboral y personal. La falta de políticas flexibles y el apoyo por parte de los empleadores pueden ser obstáculos importantes para aquellos que buscan equilibrar sus responsabilidades laborales con sus compromisos personales. Por ejemplo, la presión para trabajar largas horas o estar constantemente disponible fuera del horario laboral puede dificultar el tiempo dedicado a la familia, el ocio o el autocuidado.</p>
-            <p>Tecnología: Si bien la tecnología ofrece muchas ventajas en términos de flexibilidad laboral, también puede dificultar la desconexión y el establecimiento de límites claros entre el trabajo y la vida personal. La constante disponibilidad a través de dispositivos móviles y la comunicación digital puede hacer que sea difícil desconectar del trabajo, incluso fuera del horario laboral. Esto puede llevar a una sensación de agotamiento y dificultad para encontrar tiempo para actividades personales y familiares.</p>
-            <p>Expectativas Sociales: Las expectativas sociales sobre el éxito profesional y la dedicación al trabajo a menudo pueden entrar en conflicto con las necesidades y deseos personales, generando presión adicional para sacrificar la vida personal en aras de la carrera profesional. Esto puede manifestarse en formas sutiles, como el sentimiento de culpa por tomarse tiempo libre o la percepción de que dedicar tiempo a actividades no laborales es visto como falta de compromiso con el trabajo.</p>
-            <p>Autocuidado: A veces, las personas descuidan su autocuidado en medio de las demandas laborales y familiares, lo que dificulta aún más la conciliación entre la vida personal y laboral. La falta de tiempo o energía para actividades de autocuidado, como el ejercicio, la meditación o el tiempo de inactividad, puede tener un impacto negativo en el bienestar físico y emocional, lo que dificulta aún más la capacidad de manejar el estrés y encontrar un equilibrio saludable.</p>
+            <p>A pesar de su importancia, la conciliación entre la vida personal y laboral puede ser un desafío debido a una serie 
+                <span class="extra">
+                de obstáculos que pueden dificultar este equilibrio: <br>
+                Cultura Organizacional: En muchas organizaciones, la cultura laboral y las expectativas de disponibilidad constante 
+                pueden dificultar la conciliación entre la vida laboral y personal. La falta de políticas flexibles y el apoyo por 
+                parte de los empleadores pueden ser obstáculos importantes para aquellos que buscan equilibrar sus responsabilidades 
+                laborales con sus compromisos personales. Por ejemplo, la presión para trabajar largas horas o estar constantemente 
+                disponible fuera del horario laboral puede dificultar el tiempo dedicado a la familia, el ocio o el autocuidado. <br>
+                Tecnología: Si bien la tecnología ofrece muchas ventajas en términos de flexibilidad laboral, también puede dificultar 
+                la desconexión y el establecimiento de límites claros entre el trabajo y la vida personal. La constante disponibilidad 
+                a través de dispositivos móviles y la comunicación digital puede hacer que sea difícil desconectar del trabajo, incluso 
+                fuera del horario laboral. Esto puede llevar a una sensación de agotamiento y dificultad para encontrar tiempo para 
+                actividades personales y familiares. <br>
+                Expectativas Sociales: Las expectativas sociales sobre el éxito profesional y la dedicación al trabajo a menudo pueden 
+                entrar en conflicto con las necesidades y deseos personales, generando presión adicional para sacrificar la vida 
+                personal en aras de la carrera profesional. Esto puede manifestarse en formas sutiles, como el sentimiento de culpa por 
+                tomarse tiempo libre o la percepción de que dedicar tiempo a actividades no laborales es visto como falta de compromiso 
+                con el trabajo. <br>
+                Autocuidado: A veces, las personas descuidan su autocuidado en medio de las demandas laborales y familiares, lo que 
+                dificulta aún más la conciliación entre la vida personal y laboral. La falta de tiempo o energía para actividades de 
+                autocuidado, como el ejercicio, la meditación o el tiempo de inactividad, puede tener un impacto negativo en el 
+                bienestar físico y emocional, lo que dificulta aún más la capacidad de manejar el estrés y encontrar un equilibrio 
+                saludable. <br>
+                <span class="fuente">Fuente: <a href="https://www.canvis.es/conciliacion-entre-la-vida-personal-y-laboral-la-clave-para-el-bienestar-integral/">Conciliacion</a></span></p>
 
-            <p><span>Fuente:</span> <a href="https://www.canvis.es/conciliacion-entre-la-vida-personal-y-laboral-la-clave-para-el-bienestar-integral/">Conciliacion</a></p>
-
+                <a class="leer-mas" href="#">Leer más</a>
         </article>
     </main>
 
@@ -136,5 +272,8 @@
             <p class="footer__copyright">&copy; 2026. Todos los derechos reservados</p>
         </div>
     </footer>
+
+    <!-- Mis scripts -->
+<script src="js/script.js"></script>
 </body>
 </html>
