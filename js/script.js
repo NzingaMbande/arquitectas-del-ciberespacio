@@ -2,10 +2,10 @@
 
 // MENÚ HAMBURGUESA
 const menu_icon = document.querySelector(".material-symbols-outlined");
-        menu_icon.addEventListener("click", () => {
-            const menu_nav = document.querySelector("nav");
-            menu_nav.classList.toggle("visible");
-        });
+menu_icon.addEventListener("click", () => {
+  const menu_nav = document.querySelector("nav");
+  menu_nav.classList.toggle("visible");
+});
 
 
 // MODO OSCURO 
