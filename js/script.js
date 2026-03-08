@@ -80,7 +80,7 @@ texto.split("").forEach((letra, i) => {
 });
 
 // Flip card mujeres.html
-const botones = document.querySelectorAll(".card_mujeres .anverso button");
+const botones = document.querySelectorAll(".card_mujeres .voltear");
 
 botones.forEach((boton) => {
   boton.addEventListener("click", () => {
