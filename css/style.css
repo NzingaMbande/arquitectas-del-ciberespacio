@@ -199,52 +199,10 @@ ul li{
     display: block;
 }
 
-/* SLIDER */
-/* .slider{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; 
-} Lo comento porque dentro esta h2 que no quiere estar en flex y scroll*/  
-
-/* Firefox scrollbar */
-/* .slider{
-    scrollbar-width: thin;
-    scrollbar-color: var(--font-color) var(--bg-color);
-} */
-
-/* Chrome, Safari, Edge */
-/* .slider::-webkit-scrollbar{
-    height: 8px;
-}
-
-.slider::-webkit-scrollbar-thumb{
-    background: var(--font-color);
-    border-radius: 4px;
-}
-
-.slider img{
-    flex: 0 0 100%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
-    scroll-snap-align: start;
-} */
-/*  */
-
-/* body{
-  margin:0;
-  font-family:sans-serif;
-} */
-
-
-
-
-
 /* PÁGINA DE ARTICULOS */
 #articulos{
-    margin-top: 2.5rem;
-    max-width: 90%;
+    margin-top: 1.3rem;
+    max-width: 95%;
     /* display: flex; */
     gap: 2rem;
     flex-wrap: wrap;
@@ -256,43 +214,44 @@ ul li{
 /*my*/
 
 #articulos{
-  display:grid;
-  grid-template-columns: 1.5fr 1.5fr;
+    display:grid;
+    /* grid-template-columns: 1.5fr 1.5fr; */
+    grid-template-columns: 1.5fr ; /* 1 columna para movil */
+    
 }
 
 
 #articulos article{
     justify-content: center;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
     color: var(--font-color);
     background-color:var(--bg-color2);
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     border-radius: 2px;
 
 }
 
-
-
-.post {
-  border: 1px solid #ccc;
-  padding: 0;           
-  margin-bottom: 1rem;
-}
+/* .post {
+    border: 1px solid #ccc;
+    padding: 0;           
+    margin-bottom: 1rem;
+} */
 
 .post-figure {
-  margin: 0;           
-  padding: 0;          
-  width: 100%;         
-  height: 400px;       
-  overflow: hidden;    
+    margin: 0;           
+    padding: 0;          
+    width: 100%;         
+    height: 15rem;       
+    overflow: hidden;
+    margin-bottom: 0.5rem;    
 }
 
 
 .post-figure img {
-  width: 100%;        
-  height: 100%;       
-  display: block;     
-  object-fit: fill;   
+    width: 100%;        
+    height: 100%;       
+    display: block;     
+    object-fit: fill;   
 }
 
 .extra{
@@ -305,7 +264,7 @@ ul li{
 }
 
 #articulos article:last-child{
-    border: 1px solid crimson;
+    /* border: 1px solid crimson; */
     margin-bottom: 1.5rem;
 }
 
@@ -317,10 +276,11 @@ article h2{
 
 article>p, article h2{
     margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
 }
 
-#articulos a, #articulos span{
-    font-size: 0.5rem;
+.fuente{
+    font-size: 0.8rem;
     color: var(--font-color2);
 }
 
@@ -329,12 +289,15 @@ article>p, article h2{
 }
 
 .leer-mas{
-  display:inline-block;
-  padding:8px 14px;
-  background:black;
-  color:white;
-  text-decoration:none;
+    display:inline-block;
+    justify-self: end;
+    padding:8px 14px;
+    background:black;
+    color:white;
+    text-decoration:none;
 }
+
+
 /* SUBSCRIPCION */
 input{
     border: none;
@@ -355,8 +318,19 @@ button{
     border-radius: 2px;
 }
 
+#btn-modo{
+    border-radius: 50px;
+    /* transform: scale(0.2); */
+    
+}
 
-/* NAV DEL FOOTER */
+
+#btn-modo:hover{
+    transform: scale(1);
+}
+
+
+/*FOOTER */
 footer{
     /* border: 1px solid crimson; */
     background-color: var(--bg-color2);
@@ -388,7 +362,7 @@ footer p{
 footer div>a{
     padding-left: 1rem;
     margin-bottom: 1rem;
-    display: inline;
+    display: inline-block;
 }
 
 footer h3{
@@ -471,6 +445,8 @@ footer h3{
     background:var(--bg-color); 
 }
 
+
+/* POLITICA DE PRIVACIDAD */
 .documento-legal {
             display: block;
             background: #fff;
@@ -501,32 +477,6 @@ footer h3{
         }
         th { background-color: #f2f2f2; }
 
-
-@media (max-width:768px){
-
- #articulos{
-    grid-template-columns:1fr;
-  }
-
-
-    .documento-legal {
-        padding: 20px; 
-        margin: 10px auto;
-        border: none;  
-    }
-
-    .documento-legal h2 {
-        font-size: 1.5rem; 
-    }
-
-    
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-}
 
 /* MEDIA QUERY PARA PANTALLAS DE 768px EN ADELANTE */
 @media (min-width: 768px) {
@@ -624,6 +574,29 @@ footer h3{
             }
 
 
+            /* PAGINA DE ARTICULOS */
+            #articulos{
+            grid-template-columns:1fr;
+            }
+
+
+            .documento-legal {
+                padding: 20px; 
+                margin: 10px auto;
+                border: none;  
+            }
+
+            .documento-legal h2 {
+                font-size: 1.5rem; 
+            }
+
+            
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
             /* FOOTER */
             footer{
             /* border: 1px solid crimson; */
@@ -639,8 +612,6 @@ footer h3{
             /* footer div{
                 border: 1px solid crimson;
             } */
-
-
 
 }
 

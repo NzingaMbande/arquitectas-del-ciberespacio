@@ -1,7 +1,7 @@
 // FRANCO
 
 //articulos por arnau
-// para el leer mas
+//BOTON Leer mas
 document.querySelectorAll(".leer-mas").forEach(function(enlace){
   enlace.addEventListener("click", function(e){
     e.preventDefault(); // evita que el <a> recargue la página
@@ -30,8 +30,9 @@ document.querySelectorAll(".leer-mas").forEach(function(enlace){
 //       img.style.width = img.naturalWidth + "px";
 //     }
 //   });
-
 // });
+
+
 // MENÚ HAMBURGUESA
 const menu_icon = document.querySelector(".material-symbols-outlined");
 menu_icon.addEventListener("click", () => {
