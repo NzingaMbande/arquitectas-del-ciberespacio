@@ -38,9 +38,9 @@
     --h1-ideal: 1.400rem + 3.000vw;
     --h1-max: 4rem;
 
-    --nav-title-min: 2rem;
+    --nav-title-min: 1.8rem;
     --nav-title-ideal: 1.840rem + 0.800vw;
-    --nav-title-max: 2.8rem;
+    --nav-title-max: 2.5rem;
 
     --h2-section-min: 1.4rem;
     --h2-section-ideal: 1.240rem + 0.800vw;
@@ -140,7 +140,7 @@ header{
     width: 100%;
 }
 
-.hero__text h1 {
+h1 {
     font-size: clamp(var(--h1-ideal), var(--h1-max), var(--h1-min));
     font-weight: bold;
     margin-bottom: 1rem;
@@ -211,8 +211,7 @@ ul li{
     font-family: var(--font-text-articulos);
 }
 
-/*my*/
-
+/*ARNAU - ARTICULOS*/
 #articulos{
     display:grid;
     /* grid-template-columns: 1.5fr 1.5fr; */
@@ -498,6 +497,7 @@ footer h3{
             grid-area: navegador;
             color: var(--font-color);
             background-color: var(--bg-color2);
+            font-size: clamp(var(--nav-ideal), var(--nav-max), var(--nav-min));
             /* justify-content: space-between; */
             top: 0;
             display: flex;
