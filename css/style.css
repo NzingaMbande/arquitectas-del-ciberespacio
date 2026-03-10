@@ -84,6 +84,13 @@ body {
         "footer";
 }
 
+#modo-oscuro {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
 
 /* HEADLINES */
 h1 {
@@ -214,15 +221,23 @@ main {
     justify-self: center;
     /* Para el sticky 
     overflow: hidden; */
-    overflow: visible;
+    overflow: hidden;
 }
-
-
 
 
 /* MAIN PAGE */
 #index section h2 {
-    display: block;
+    margin-top: 1rem ;
+}
+
+.preview-articulo img{
+    width: 75%;
+    border: 2px;
+}
+
+#index section:last-child{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 /* PÁGINA DE ARTICULOS */
