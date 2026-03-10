@@ -257,7 +257,7 @@ ul li{
 
 #articulos{
   display:grid;
-  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 
@@ -266,7 +266,7 @@ ul li{
     gap: 0.5rem;
     color: var(--font-color);
     background-color:var(--bg-color2);
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     border-radius: 2px;
 
 }
