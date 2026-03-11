@@ -32,16 +32,17 @@
     --bg-color3: rgb(63, 63, 63);
     --font-color: #292929;
     --font-color2: #f5f5f5;
+    --time-line: #fa7c42
     ;
 
     /* Tamaños por defecto, luego se pueden ajustar */
-    --h1-min: 2rem;
+    --h1-min: 2.3rem;
     --h1-ideal: 1.400rem + 3.000vw;
     --h1-max: 4rem;
 
-    --nav-title-min: 2rem;
+    --nav-title-min: 1.8rem;
     --nav-title-ideal: 1.840rem + 0.800vw;
-    --nav-title-max: 2.8rem;
+    --nav-title-max: 2.5rem;
 
     --h2-section-min: 1.4rem;
     --h2-section-ideal: 1.240rem + 0.800vw;
@@ -83,6 +84,47 @@ body {
         "footer";
 }
 
+#modo-oscuro {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+
+/* HEADLINES */
+h1 {
+    font-size: clamp(var(--h1-ideal), var(--h1-max), var(--h1-min));
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-left: 0.2rem;
+}
+
+h2{
+    font-size: clamp(var(--h2-ideal), var(--h2-max), var(--h2-min));
+
+}
+
+h3{
+    font-size: clamp(var(--h3-ideal), var(--h3-max), var(--h3-min));
+
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+p{
+    font-size: clamp(var(--p-ideal), var(--p-max), var(--p-min));
+}
+
+/* LISTAS */
+ul li {
+    display: inline;
+    /* padding-left: 2rem; */
+}
 
 /* MENÚ */
 body>nav {
@@ -140,21 +182,20 @@ header {
 
 .hero__text {
     width: 100%;
+
 }
 
-.hero__text h1 {
-    font-size: clamp(var(--h1-ideal), var(--h1-max), var(--h1-min));
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
 
 .hero__text p {
     font-size: 1rem;
     color: var(--font-color);
+    padding-left: 0.2rem;
 }
 
 header img {
-    width: 100%;
+    padding-top: 5rem;
+    width: 98%;
+    height: 100%;
 }
 
 /* ANIMACION HERO - KEYFRAMES */
@@ -180,50 +221,37 @@ main {
     justify-self: center;
     /* Para el sticky 
     overflow: hidden; */
-    overflow: visible;
-}
-
-/* LINKS */
-a {
-    text-decoration: none;
-    color: var(--font-color);
-}
-
-
-/* LISTAS */
-ul li {
-    display: inline;
-    /* padding-left: 2rem; */
+    overflow: hidden;
 }
 
 
 /* MAIN PAGE */
 #index section h2 {
-    display: block;
+    margin-top: 1rem ;
+}
+
+.preview-articulo img{
+    width: 75%;
+    border: 2px;
+}
+
+#index section:last-child{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 /* PÁGINA DE ARTICULOS */
 #articulos {
+    display:grid;
+    /* grid-template-columns: 1.5fr 1.5fr; */
+    grid-template-columns: 1.5fr ; /* 1 columna para movil */
     margin-top: 1.3rem;
     max-width: 95%;
-    /* display: flex; */
     gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    justify-self: center;
+    justify-self: center; 
     font-family: var(--font-text-articulos);
+    
 }
-
-/*my*/
-
-#articulos {
-    display: grid;
-    /* grid-template-columns: 1.5fr 1.5fr; */
-    grid-template-columns: 1.5fr;
-    /* 1 columna para movil */
-
-}
-
 
 #articulos article {
     justify-content: center;
@@ -267,10 +295,10 @@ ul li {
     font-size: 1rem;
 }
 
-#articulos article:last-child {
-    /* border: 1px solid crimson; */
+/* #articulos article:last-child {
+    border: 1px solid crimson;
     margin-bottom: 1.5rem;
-}
+} */
 
 article h2 {
     padding-bottom: 0.5rem;
@@ -317,6 +345,7 @@ input {
     padding-left: 0.3rem;
 }
 
+/* BOTONES */
 button {
     border: none;
     padding: 0.3rem;
@@ -420,7 +449,7 @@ footer h3 {
 }
 
 .cards_main div {
-    flex: 0 0 25%;
+    flex: 0 0 35%;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -428,18 +457,23 @@ footer h3 {
     color: var(--font-color2);
     border-radius: 4px;
     overflow: hidden;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
+
+    /* PERSPECTIVA PARA LAS TARJETAS */
+    transform: perspective(100px) rotateY(-8deg);
+
 }
 
 .cards_main div p {
-    line-height: 150%;
-    margin: 0.5rem 1rem;
+    /* line-height: 150%; */
+    /* margin: 0.5rem 1rem; */
+    padding-left: 0.5rem;
 }
 
 .cards_main h3 {
-    margin: 1rem 1rem;
+    margin: 0.5rem;
     line-height: 150%;
-    min-height: 4.5rem;
+    /* min-height: 4.5rem; */
 }
 
 .cards_main div p:first-of-type {
@@ -452,11 +486,13 @@ footer h3 {
 }
 
 .slider span {
-    color: #52FF58;
+    color: var(--time-line);
 }
 
-.timiline span {
-    color: #52FF58;
+
+/* PAGINA MUJERES */
+.timiline span{
+    color: var(--time-line);
 }
 
 .timiline {
@@ -488,6 +524,158 @@ footer h3 {
     position: relative;
 }
 
+
+/* AGREGADO ROS_ ENTREVISTAS */
+#entrevistas .negrita{
+    font-weight: bold;
+}
+
+#entrevistas {
+    width: 92%;
+    margin: 2rem auto 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#entrevistas section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#entrevistas h2{
+    font-family: 'Space Grotesk';
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+#entrevistas .manifiesto{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+#entrevistas .manifiesto p{
+    line-height: 1.7;
+    max-width: 85%;
+}
+
+#entrevistas .manifiesto figure{
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 0.25rem;
+}
+
+#entrevistas img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+#entrevistas .audio_media{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+#entrevistas .audio_media figure{
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 0.25rem;
+}
+
+#entrevistas .audio_media audio{
+    width: 100%;
+}
+
+#entrevistas .transcripcion{
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1.25rem;
+    background-color: var(--bg-color2);
+    line-height: 1.6;
+    border-radius: 0.5rem;
+}
+
+#entrevistas .transcripcion p{
+    line-height: 1.7;
+    margin-bottom: 0.9rem;
+}
+
+#entrevistas .transcripcion h3{
+    margin-bottom: 1rem;
+}
+
+#entrevistas .frases{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+#entrevistas .frases figure{
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+#entrevistas .proximas{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+#entrevistas .proximas h2{
+    grid-column: 1 / -1;
+}
+
+#entrevistas .proximas article{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#entrevistas .proximas figcaption{
+    margin-top: 0.75rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+#entrevistas .proximas figure{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 0;
+}
+
+#entrevistas .proximas article img{
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    display: block;
+    object-fit: cover;
+}
+
+#entrevistas .proximas article p,
+#entrevistas .extra
+{
+    line-height: 1.6;
+}
+#entrevistas .extra p{
+    margin-bottom: 1rem;
+}
+
+
 .timeline-item {
     position: relative;
     padding: 0 0 6rem 0;
@@ -511,65 +699,71 @@ footer h3 {
     font-size: var(--h2-section-max);
 }
 
-.timeline-item figure img {
-    width: 100%;
+
+.timeline-item figure img{
+    width:100%;
     max-width: 620px;
     height: auto;
     margin-bottom: 2rem;
 }
 
-.timeline-item h3 {
+
+.timeline-item h3{
     text-transform: uppercase;
     margin-bottom: 0.7rem;
     color: #949494;
 }
 
+
+.timeline-item p {
 .timeline-item p {
     max-width: 620px;
 }
+}
 
-.timeline-item span {
+.timeline-item span{
     display: inline-block;
     margin-top: 1rem;
     padding: 0.25rem 0.7rem;
-    border: 1px solid #52FF58;
-    color: #52FF58;
+    border: 1px solid #8d6751;
+    color:var(--time-line);
     border-radius: 333px;
 }
 
-.cards_mujeres {
+
+.cards_mujeres{
     margin-bottom: 10rem;
     padding: 0 3rem;
     display: flex;
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; 
 }
-
-.card_mujeres {
-    flex: 0 0 calc(33% - 2rem);
+.card_mujeres{
+    flex: 0 0 calc(33% - 2rem); 
     height: 70vh;
     /* FCS Para el flip */
     transition: transform .6s linear;
 }
-
-.anverso,
-.reverso {
+.anverso, .reverso{
     margin-bottom: 2rem;
     height: 100%;
 }
 
+
+
 .anverso {
     padding: 1rem 2rem;
-    background-color: #292929;
-    color: #ffff;
+    background-color: var(--bg-color3);
+    color: var(--font-color2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     cursor: pointer;
+    border-radius: 12px;
     border-radius: 12px;
 }
 
@@ -584,15 +778,15 @@ footer h3 {
     font-weight: 500;
     background: none;
     border: none;
-    color: #52FF58;
+    color: var(--time-line);  
     cursor: pointer;
     font-size: 0.8rem;
 }
 
 .reverso {
     padding: 2rem 2.5rem;
-    background-color: #292929;
-    color: #ffff;
+    background-color: var(--bg-color3);
+    color: var(--font-color2);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -637,7 +831,7 @@ footer h3 {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent -10%, black 100%);
+    background: linear-gradient(to bottom, transparent -10%, var(--bg-color3));
     z-index: 1;
 }
 
@@ -701,7 +895,7 @@ th {
     body {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 0vh 5vh 50vh 2fr auto;
+        grid-template-rows: 0vh 5vh 60vh 2fr auto;
     }
 
 
@@ -715,6 +909,7 @@ th {
         grid-area: navegador;
         color: var(--font-color);
         background-color: var(--bg-color2);
+            font-size: clamp(var(--nav-ideal), var(--nav-max), var(--nav-min));
         /* justify-content: space-between; */
         top: 0;
         display: flex;
@@ -791,11 +986,13 @@ th {
     }
 
 
-    /* PAGINA DE ARTICULOS */
-    #articulos {
-        grid-template-columns: 1fr;
-    }
-
+            /* PAGINA DE ARTICULOS */
+            .divisor {
+                display: grid;
+                gap: 1rem;
+                grid-template-columns: 1.8fr 1.8fr;
+                margin-bottom: 1rem;
+            }
 
     .documento-legal {
         padding: 20px;
@@ -807,27 +1004,66 @@ th {
         font-size: 1.5rem;
     }
 
-
+            
     table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
 
-    /* FOOTER */
-    footer {
-        /* border: 1px solid crimson; */
-        background-color: var(--bg-color2);
-        grid-area: footer;
+
+    /* ENTREVISTAS */
+    #entrevistas .manifiesto{
+    grid-template-columns: 1fr 1fr;
+    }
+    
+    #entrevistas .audio_media{
         grid-template-columns: 1fr 1fr;
-        justify-content: flex-start;
-        justify-items: normal;
-        text-align: left;
-        gap: 1rem;
+        align-items: center;
+    }
+    
+    #entrevistas .transcripcion{
+        width: 65%;
+        max-width: 700px;
     }
 
-    /* footer div{
-                border: 1px solid crimson;
-            } */
+    #entrevistas .frases{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #entrevistas .proximas{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* FOOTER */
+    footer{
+    /* border: 1px solid crimson; */
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: var(--bg-color2);
+    grid-area: footer;
+    justify-content: flex-start;
+    justify-items: normal;
+    text-align: left;
+    }
+
+
+    .foot-grid{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 2fr 1fr ;
+    }
+
+
+    .footer__copyright{
+        margin: 0;
+        grid-column: 3/-1;
+    }
+
+            
+
+            
+
 
 }

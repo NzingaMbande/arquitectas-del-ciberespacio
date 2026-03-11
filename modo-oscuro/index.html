@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --h1-color: black;
+            --h2-color: grey;
+            --h3-color: rgb(148, 148, 148);
+            --font-color: rgb(6, 6, 151);
+            --bg-color: white;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--font-color);
+        }
+
+        h1 {
+            color: var(--h1-color);
+        }
+
+        h2 {
+            color: var(--h2-color);
+        }
+
+        h3 {
+            color: var(--h3-color);
+        }
+
+        .modo-oscuro {
+            --h1-color: white;
+            --h2-color: rgb(192, 192, 192);
+            --h3-color: red;
+            --font-color: rgb(113, 113, 241);
+            --bg-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pagina de prueba</h1>
+        <nav>
+            <li><a href="#">index.html</a></li>
+            <li><a href="index2.html">index2.html</a></li>
+            <li><a href="#">Opcion 3</a></li>
+        </nav>
+    </header>
+    <main>
+        <h2>Titulo 1</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsam quibusdam cumque eos fuga voluptatum
+            amet
+            voluptatem dolores officia non.
+        </p>
+        <button id="btn-modo">Cambiar de modo</button>
+    </main>
+    <script>
+        const temaGuardado = localStorage.getItem("tema");
+
+        if (temaGuardado === "oscuro") {
+            document.body.classList.add("modo-oscuro");
+        }
+
+        const modo = document.querySelector("#btn-modo");
+
+        modo.addEventListener("click", () => {
+            const body = document.querySelector("body");
+            body.classList.toggle("modo-oscuro");
+            if (document.body.classList.contains("modo-oscuro")) {
+                localStorage.setItem("tema", "oscuro");
+            } else {
+                localStorage.setItem("tema", "claro");
+            }
+        })
+
+    </script>
+</body>
+
+</html>
