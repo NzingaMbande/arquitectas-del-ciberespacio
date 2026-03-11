@@ -526,6 +526,10 @@ footer h3 {
 
 
 /* AGREGADO ROS_ ENTREVISTAS */
+#entrevistas .negrita{
+    font-weight: bold;
+}
+
 #entrevistas {
     width: 92%;
     margin: 2rem auto 4rem;
@@ -662,8 +666,13 @@ footer h3 {
     object-fit: cover;
 }
 
-#entrevistas .proximas article p{
+#entrevistas .proximas article p,
+#entrevistas .extra
+{
     line-height: 1.6;
+}
+#entrevistas .extra p{
+    margin-bottom: 1rem;
 }
 
 
