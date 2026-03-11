@@ -93,11 +93,19 @@ body {
 
 
 /* HEADLINES */
+
+h1,h2,h3{
+    padding-left: 0.4rem;
+    margin-top: 1rem ;
+    margin-bottom: 0.8rem;
+
+}
+
 h1 {
     font-size: clamp(var(--h1-ideal), var(--h1-max), var(--h1-min));
     font-weight: bold;
     margin-bottom: 1rem;
-    padding-left: 0.2rem;
+    width: 75%;
 }
 
 h2{
@@ -118,6 +126,7 @@ a {
 
 p{
     font-size: clamp(var(--p-ideal), var(--p-max), var(--p-min));
+    padding-left: 0.4rem;
 }
 
 /* LISTAS */
@@ -185,7 +194,6 @@ header {
 
 }
 
-
 .hero__text p {
     font-size: 1rem;
     color: var(--font-color);
@@ -219,31 +227,60 @@ main {
     grid-area: main;
     width: 100%;
     justify-self: center;
-    /* Para el sticky 
-    overflow: hidden; */
     overflow: hidden;
 }
 
 
 /* MAIN PAGE */
-#index section h2 {
+/* #index section h2 {
     margin-top: 1rem ;
-}
+    margin-bottom: 0.8rem;
+} */
 
-.preview-articulo img{
-    width: 75%;
+.preview-entrevista img {
+    width: 85%;
     border: 2px;
 }
 
-#index section:last-child{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+#index section h2{
+    display: block;
+    width: 100%;
 }
+
+#index p{
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    padding-left: 0.8rem;
+
+}
+
+#index section:last-child{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+#index figcaption{
+    font-size: 0.8rem;
+}
+
+.preview-articulo figure{
+    width: 90%;
+    height: 40%;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.preview-articulo img{
+    width: 100%;
+    height: 100%;
+
+}
+
 
 /* PÁGINA DE ARTICULOS */
 #articulos {
     display:grid;
-    /* grid-template-columns: 1.5fr 1.5fr; */
     grid-template-columns: 1.5fr ; /* 1 columna para movil */
     margin-top: 1.3rem;
     max-width: 95%;
@@ -929,6 +966,7 @@ th {
 
     /* HEADER-HERO */
     header {
+        display: flex;
         /* padding: 40px 5%; */
         min-height: 25rem;
         /* margin-bottom:40px;  */
@@ -977,13 +1015,13 @@ th {
     }
 
 
-            /* PAGINA DE ARTICULOS */
-            .divisor {
-                display: grid;
-                gap: 1rem;
-                grid-template-columns: 1.8fr 1.8fr;
-                margin-bottom: 1rem;
-            }
+    /* PAGINA DE ARTICULOS */
+    .divisor {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1.8fr 1.8fr;
+        margin-bottom: 1rem;
+    }
 
     .documento-legal {
         padding: 20px;
