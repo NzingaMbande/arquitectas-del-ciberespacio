@@ -30,7 +30,7 @@ Proyecto Web para CIFO La Violeta como ejercicio de maquetación avanzada utiliz
 
 ## 📌 Descripción
 
-[web] es una web responsive construida desde cero aplicando técnicas avanzadas de CSS como:
+EDITOLINE es una web responsive construida desde cero aplicando técnicas avanzadas de CSS como:
 
 * Layout con Grid y Flexbox (?)
 * Tipografía fluida con clamp() (?)
