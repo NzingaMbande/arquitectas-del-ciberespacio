@@ -541,6 +541,7 @@ footer h3 {
 }
 
 #entrevistas h2{
+    font-family: 'Space Grotesk';
     line-height: 1.2;
     margin-bottom: 0.75rem;
 }
@@ -551,13 +552,12 @@ footer h3 {
     gap: 1.5rem;
     padding: 1.5rem;
     align-items: center;
-    padding: 1.25rem;
     border-radius: 0.5rem;
 }
 
 #entrevistas .manifiesto p{
     line-height: 1.7;
-    max-width: 60ch;
+    max-width: 85%;
 }
 
 #entrevistas .manifiesto figure{
