@@ -1,75 +1,101 @@
-// Consideraciones:
-// el <body> de cada html tiene el id={nombre del archivo html}
-// La estructura de todos los html contienen un icon (o span) con id="nav-icon"
-// #index>nav:first-child esta oculto desde CSS (display:none)
-// Se define en CSS la clase .mostrar-menu {display:inline}
+// FRANCO
 
-// menu hamburguesa
-const navIcon = document.querySelector("#nav-icon");
-navIcon.addEventListener("click", () => {
-  const menuPrincipal = document.querySelector("#index>nav:first-child");
-  menuPrincipal.classList.toggle("mostrar-menu");
-});
-
-//Consideraciones:
-// el <body> de cada html tiene el id={nombre del archivo html}
-// "leer mas..." Se recomienda sea un <button> o un <input type="button"> con class="btn-leer"
-// Se debe incluir un div "modal" (antes del cierre del body) -ver ejemplo de la estructura en card-leer-mas.html perfil "franco"-
-
-// menu flip card
-const botones = document.querySelectorAll("#mujeres .card-image");
-const modal = document.querySelector("#mujeres #modal");
-const modalTitulo = document.querySelector("#mujeres #modal-titulo");
-const modalImg = document.querySelector("#mujeres #modal-img");
-const modalTexto = document.querySelector("#mujeres #modal-texto");
-const cerrar = document.querySelector("#mujeres .modal-content.cerrar");
-
-botones.forEach((boton) => {
-  boton.addEventListener("click", () => {
-    const card = boton.closest(".card");
-
-    const titulo = card.querySelector("h3").textContent;
-    const img = card.querySelector("img").src;
-    const texto = card.querySelector("p").textContent;
-
-    modalTitulo.textContent = titulo;
-    modalImg.src = img;
-    modalImg.style.width = "50%";
-    modalTexto.textContent = texto;
-
-    modal.style.display = "flex";
+//articulos por arnau
+//BOTON Leer mas
+document.querySelectorAll(".leer-mas").forEach(function (enlace) {
+  enlace.addEventListener("click", function (e) {
+    e.preventDefault(); // evita que el <a> recargue la página
+    this.closest(".post").classList.toggle("activo");
   });
 });
 
-cerrar.addEventListener("click", () => {
-  modal.style.display = "none";
+//imagenes
+// window.addEventListener("load", function(){
+
+//   // seleccionamos todas las imágenes de los posts
+//   const imgs = document.querySelectorAll(".post img");
+
+//   // definimos el tamaño máximo deseado (ejemplo 200px de alto)
+//   const maxHeight = 200;
+
+//   imgs.forEach(img => {
+//     // si la imagen es más alta que maxHeight
+//     if(img.naturalHeight > maxHeight){
+//       const ratio = maxHeight / img.naturalHeight;
+//       img.style.height = maxHeight + "px";
+//       img.style.width = (img.naturalWidth * ratio) + "px";
+//     } else {
+//       // si la imagen es más pequeña, la dejamos igual
+//       img.style.height = img.naturalHeight + "px";
+//       img.style.width = img.naturalWidth + "px";
+//     }
+//   });
+// });
+
+// MENÚ HAMBURGUESA
+const menu_icon = document.querySelector(".material-symbols-outlined");
+menu_icon.addEventListener("click", () => {
+  const menu_nav = document.querySelector("nav");
+  menu_nav.classList.toggle("visible");
 });
 
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-});
+// MODO OSCURO
+// const temaGuardado = localStorage.getItem("tema");
 
-// Consideraciones:
-// Añadir al CSS la clase .modo-oscuro con las variables de colores
-// Se asume que los elementos tienen una definición de estilo en el CSS
+//         if (temaGuardado === "oscuro") {
+//             document.body.classList.add("modo-oscuro");
+//         }
 
-// Modo oscuro
-const temaGuardado = localStorage.getItem("tema");
+//         const modo = document.querySelector("#btn-modo");
 
-if (temaGuardado === "oscuro") {
-  document.body.classList.add("modo-oscuro");
-}
+//         modo.addEventListener("click", () => {
+//             const body = document.querySelector("body");
+//             body.classList.toggle("modo-oscuro");
+//             if (document.body.classList.contains("modo-oscuro")) {
+//                 localStorage.setItem("tema", "oscuro");
+//             } else {
+//                 localStorage.setItem("tema", "claro");
+//             }
+//         })
 
-const modo = document.querySelector("#btn-modo");
+// DIANA
+const titulo = document.getElementById("titulo");
+const texto = titulo.textContent;
 
-modo.addEventListener("click", () => {
-  const body = document.querySelector("body");
-  body.classList.toggle("modo-oscuro");
-  if (document.body.classList.contains("modo-oscuro")) {
-    localStorage.setItem("tema", "oscuro");
+titulo.textContent = ""; // vaciar el h1
+
+texto.split("").forEach((letra, i) => {
+  const span = document.createElement("span");
+
+  if (letra === " ") {
+    // Si es un espacio, ponemos un &nbsp; sin animación
+    span.innerHTML = "&nbsp;";
   } else {
-    localStorage.setItem("tema", "claro");
+    span.textContent = letra;
+    span.classList.add("letra");
+    span.style.animationDelay = i * 0.03 + "s";
   }
+
+  titulo.appendChild(span);
+});
+
+// Flip card mujeres.html
+const botones = document.querySelectorAll(".card_mujeres .voltear");
+
+botones.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const tarjeta = boton.closest(".card_mujeres");
+    const anverso = tarjeta.querySelector(".anverso");
+    const reverso = tarjeta.querySelector(".reverso");
+
+    tarjeta.classList.toggle("flip");
+
+    if (tarjeta.classList.contains("flip")) {
+      anverso.style.display = "none";
+      reverso.style.display = "flex";
+    } else {
+      anverso.style.display = "flex";
+      reverso.style.display = "none";
+    }
+  });
 });

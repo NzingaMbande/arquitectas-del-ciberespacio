@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Web sobre la mujer en el mundo de la programación">
     <title>Arquitectas del Ciberespacio</title>
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=apps" />
+    
     <!-- Mis estilos -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- MENU HAMBURGUESA icon-->
+    <span class="material-symbols-outlined">
+        apps
+    </span>
+
     <!-- Menú de navegación -->
     <nav>
         <ul>
@@ -18,127 +28,151 @@
             <li><a href="articulos.html">Articulos</a></li>
         </ul>
     </nav>
-    <!-- Cabecera -->
+
     <!-- No enseñar en mobile -->
-    <header class="cabecera mujeres">
-        <h1>Arquitectas del Ciberespacio</h1>
+    <!-- Cabecera -->
+    <header>
+        <div class="hero__content">
+            <div class="hero__text">
+                <h1 id="titulo">Arquitectas del Ciberespacio</h1>
+                <p>Visibilizando el talento femenino en la técnología</p>
+            </div>
+
+            <figure>
+                <img src="assets/imgDiana/pioneras_header.webp" alt="Pioneras de la programación">
+            </figure>
+        </div>
+
+            <!-- BOTÓN DE MODO OSCURO -->
+            <!-- <button id="btn-modo">Cambiar de modo</button> -->
+            <button id="btn-modo">Cambiar tema</button>
     </header>
     <!-- CONTENIDO PRINCIPAL -->
     <main id="mujeres">
-
-        <!-- PRIMERA SECCION -->
-        <section>
-            <h2>AÑO XXXXX</h2>
-        <!-- Mae Jemison -->
-            <div>
-                <figure class="card-image">
-                <img src="assets/img/Mae-Jemison/mae-jemison.webp" alt="Mae Jemison">
-                <figcaption>Mae Jemison</figcaption>
+        <!-- Timiline section -->
+        <section class="timiline">
+        <div class="title_column">
+            <h2>Pioneras de <span>la</span> programación</h2>
+            <p>Mujeres que cambiaron el curso de la historia digital</p>
+        </div>
+        <div class="timiline_column">
+            <div class="timeline-item">
+                <img src="assets/pioners_page/timiline_figuras/1stop.svg" class="timiline_avatar" alt="1">
+                <figure>
+                    <img src="assets/pioners_page/timiline_fotos/Ada-Lovelace-SF-1.webp" alt="Ada Lovelace">
                 </figure>
-                <h3>Primera dona negra a l'espai.</h3>
-                <p>Va volar a bord del Challenger i va obrir camí a dones en l'astronàutica. També és defensora de STEM i
-                    innovació educativa.</p>
-                <p class="read-more"><a href="https://commons.wikimedia.org/wiki/File:Mae_Jemison.jpg"
-                        target="_blank">Llegir més</a></p>
-            </div>
-
-            <!-- Fei-Fei Li -->
-            <div>
-                <figure class="card-image">
-                <img src="assets/img/Fei-Fei-Li/fei-fei-li_inteligencia-artificial.jpg" alt="Fei-Fei Li">
-                <figcaption>Fei-Fei Li</figcaption>
+                <h2>1842</h2>
+                <h3>Ada Lovelace</h3>
+                <p>Describió el primer algoritmo pensado para ser ejecutado por una máquina, el motor analítico de Charles Babbage</p>
+                <span>Primera programadora</span>
+                </div>
+                <div class="timeline-item">
+                <img src="assets/pioners_page/timiline_figuras/2stop.svg" class="timiline_avatar" alt="2">
+                <figure>
+                    <img src="assets/pioners_page/timiline_fotos/Grace_Hopper_and_UNIVAC.webp" alt="COBOL">
                 </figure>
-                <h3>Pionera en intel·ligència artificial</h3>
-                <p>Va liderar el projecte ImageNet, fonament del deep learning modern. La seva recerca inspira la visió per
-                    ordinador i reconeixement d'imatges.</p>
-                <p class="read-more"><a href="https://commons.wikimedia.org/wiki/File:Fei-Fei_Li.jpg" target="_blank">Llegir
-                        més</a></p>
-            </div>
-
-            <!-- Lynn Conway -->
-            <div>
-                <figure class="card-image">
-                <img src="assets/img/Lynn-Conway/Lynn-Conway.jpg" alt="Lynn Conway">
-                <figcaption>Lynn Conway</figcaption>
+                <h2>1952</h2>
+                <h3>Grace Hopper</h3>
+                <p>Desarrolló uno de los primeros compiladores, abriendo el camino a lenguajes de alto nivel como COBOL</p>
+                <span>Pionera de los lenguajes de programación</span>
+                </div>
+                <div class="timeline-item">
+                <img src="assets/pioners_page/timiline_figuras/3stop.svg" class="timiline_avatar" alt="3">
+                <figure>
+                    <img src="assets/pioners_page/timiline_fotos/margaret-hamilton-1024x576.webp" alt="Hamilton">
                 </figure>
-                <h3>Pionera en arquitectura de microprocessadors.</h3>
-                <p>Va crear dissenys i tècniques que són base dels xips moderns. La seva trajectòria va obrir portes a dones
-                    trans en tecnologia.</p>
-                <p class="read-more"><a href="https://commons.wikimedia.org/wiki/File:Lynn_Conway.jpg"
-                        target="_blank">Llegir més</a></p>
-            </div>
-
-            <!-- Jennifer Doudna & Emmanuelle -->
-            <div>
-                <figure class="card-image">
-                <img src="assets/img/Jennifer_Doudna/Jennifer-doudna-emmanuelle-charpentier.jpg" alt="Jennifer Doudna">
-                <figcaption>Jennifer Doudna & Emmanuelle Charpentier</figcaption>
+                <h2>1969</h2>
+                <h3>Margaret Hamilton</h3> 
+                <p>Dirigió el desarrollo del software de navegación del Apollo Guidance Computer, fundamental para el éxito del alunizaje</p>
+                <span>La ingeniera del software que llevó al ser humano a la Luna</span>
+                </div>
+                <div class="timeline-item">
+                <img src="assets/pioners_page/timiline_figuras/4stop.svg" class="timiline_avatar" alt="4">
+                <figure>
+                    <img src="assets/pioners_page/timiline_fotos/radiaperlman.webp" alt="Hamilton">
                 </figure>
-                <h3>Co-descobridores de CRISPR-Cas9.</h3>
-                <p>Las seves recerques van revolucionar la genètica i la biotecnologia, permetent editar genomes amb gran
-                    precisió i impulsar medicina personalitzada.</p>
-                <p class="read-more"><a href="https://commons.wikimedia.org/wiki/File:Jennifer_Doudna.jpg"
-                        target="_blank">Llegir més</a></p>
+                <h2>1985</h2>
+                <h3>Radia Perlman</h3> 
+                <p>Inventó el algoritmo Spanning Tree Protocol (STP), que permite construir redes informáticas grandes y estables evitando bucles infinitos</p>
+                <span>La madre del Internet moderno</span>
             </div>
-
-            <!-- Radia Perlman -->
-            <div>
-                <figure class="card-image">
-                    <img src="assets/img/Radia-Perlman/Radia-Perlman-young.jpg" alt="Radia Perlman">
-                <figcaption>Radia Perlman</figcaption>
-                </figure>
-                <h3>Inventora del protocol Spanning Tree.</h3>
-                <p>El seu treball en xarxes va permetre que internet i LANs funcionessin de manera fiable. És coneguda com
-                    la "mare de la internet".</p>
-                <p class="read-more"><a href="https://commons.wikimedia.org/wiki/File:Radia_Perlman.jpg"
-                        target="_blank">Llegir més</a></p>
-            </div>
+        </div>
         </section>
-
-        <!-- SEGUNDA SECCION -->
-        <section>
-            <h2>AÑO XXXXX</h2>
-
-        <!-- Katherine Johnson -->
-            <div>
-                <figure class="card-image">
-                    <img src="assets/img/Katherine_Johnson/Katherine Johnson_orbital calculations for space missions.jpg"
-                    alt="Katherine Johnson">
-                    <figcaption>Katherine Johnson</figcaption>
-                </figure>
-                <h3>Càlculs orbitals clau per a missions espacials.</h3>
-                <p>Els seus càlculs van permetre les primeres missions amb èxit a l'espai i a la Lluna. Va obrir camí per a
-                    dones i persones de color en STEM.</p>
-                <p class="read-more"><a href="https://commons.wikimedia.org/wiki/File:Katherine_Johnson.jpg"
-                        target="_blank">Llegir més</a></p>
+        <!-- Tarjetas section -->
+        <section class="cards_mujeres">
+            <div class="card_mujeres">
+                <div class="anverso">
+                    <h3>Primera programadora de la historia</h3>
+                    <button class="voltear">Click</button>
+                </div>
+                <div class="reverso">
+                    <img src="assets/pioners_page/tarjetas_fotos/ada_lovelace.webp" alt="ada">
+                    <h4>Ada Lovelace</h4>
+                    <p class="voltear">Ada Lovelace fue matemática y escritora británica, considerada la primera
+                        programadora de la
+                        historia. Trabajó junto a Charles Babbage en su Máquina Analítica y escribió el primer algoritmo
+                        destinado a ser ejecutado por una máquina. Visionaria adelantada a su tiempo, fue la primera en
+                        reconocer que la máquina podía ir más allá del cálculo puro y aplicarse a cualquier problema que
+                        pudiera expresarse en símbolos</p>
+                </div>
+            </div>
+            <div class="card_mujeres">
+                <div class="anverso">
+                    <h3>Pionera de los lenguajes de programación</h3>
+                    <button class="voltear">Click</button>
+                </div>
+                <div class="reverso">
+                    <img src="assets/pioners_page/tarjetas_fotos/young hopperHistory_0.webp" alt="hopper">
+                    <h4>Grace Hopper</h4>
+                    <p class="voltear">Grace Hopper fue matemática y oficial de la marina estadounidense, pionera en el
+                        desarrollo de
+                        los lenguajes de programación. Desarrolló el primer compilador de la historia, un programa que
+                        traducía instrucciones escritas en lenguaje humano al lenguaje de las máquinas. Su trabajo fue
+                        fundamental para la creación de COBOL, uno de los primeros lenguajes de programación de alto
+                        nivel. Visionaria e incansable, demostró que los ordenadores podían ir mucho más allá de los
+                        cálculos matemáticos y abrió el camino a la programación moderna tal como la conocemos hoy</p>
+                </div>
+            </div>
+            <div class="card_mujeres">
+                <div class="anverso">
+                    <h3>La ingeniera del software que llevó al ser humano a la Luna</h3>
+                    <button class="voltear">Click</button>
+                </div>
+                <div class="reverso">
+                    <img src="assets/pioners_page/tarjetas_fotos/P-Hamilton-Margaret.webp" alt="Hamilton">
+                    <h4>Margaret Hamilton</h4>
+                    <p class="voltear">Margaret Hamilton fue ingeniera de software y matemática estadounidense,
+                        directora del equipo de
+                        desarrollo del software de navegación del Apollo Guidance Computer en la NASA. Su trabajo fue
+                        fundamental para el éxito de las misiones Apollo, incluido el histórico alunizaje del Apollo 11
+                        en 1969. Fue una de las primeras personas en usar el término "ingeniería de software", elevando
+                        la programación al nivel de una disciplina de ingeniería seria. Su código, escrito a mano línea
+                        por línea, fue tan preciso y fiable que salvó la misión Apollo 11 en los últimos minutos antes
+                        del alunizaje cuando el sistema de navegación estuvo a punto de colapsar</p>
+                </div>
+            </div>
+            <div class="card_mujeres">
+                <div class="anverso">
+                    <h3>La madre del Internet moderno</h3>
+                    <button class="voltear">Click</button>
+                </div>
+                <div class="reverso">
+                    <img src="assets/pioners_page/tarjetas_fotos/RadiaPerlman__1.webp" alt="Hamilton">
+                    <h4>Radia Perlman</h4>
+                    <p class="voltear">Radia Perlman es ingeniera de redes y matemática estadounidense, conocida como
+                        "la madre del
+                        Internet moderno". Inventó el algoritmo Spanning Tree Protocol (STP) en 1985, que resolvió uno
+                        de los problemas fundamentales de las redes informáticas: cómo construir redes grandes y
+                        estables sin que los datos circulen en bucles infinitos. Su trabajo permitió que Internet
+                        escalara hasta convertirse en la red global que conocemos hoy. A pesar de ser una de las
+                        contribuciones más importantes de la historia de la informática, Perlman siempre rechazó el
+                        título de "madre del Internet", argumentando que Internet fue construido por miles de personas.
+                        Además de STP, desarrolló importantes contribuciones en seguridad de redes y protocolos de
+                        enrutamiento</p>
+                </div>
             </div>
 
-        <!-- Grace Hopper -->
-            <div>
-                <figure class="card-image">
-                    <img src="assets/img/grace_hopper/Grace-Hopper-machine.webp" alt="Grace Hopper">
-                    <figcaption>Grace Hopper</figcaption>
-            </figure>
-            <h3>Pionera en llenguatges de programació.</h3>
-            <p>Va crear COBOL i va popularitzar el concepte de compilador. La seva carrera en la Marina i la informàtica
-                va marcar un abans i un després.</p>
-                <p class="read-more"><a href="https://commons.wikimedia.org/wiki/File:Rear_Admiral_Grace_M._Hopper.jpg"
-                    target="_blank">Llegir més</a></p>
-            </div>
 
-        <!-- Ada Lovelace -->
-            <div>
-            <figure class="card-image">
-                <img src="assets/img/ada_lovelace/ada_lovelace_in_1852.jpg" alt="Ada Lovelace">
-            <figcaption>Ada Lovelace</figcaption>
-            </figure>
-            <h3>Primera programadora de la història.</h3>
-            <p>Va escriure el primer algoritme per a una màquina analítica i va conceptualitzar la computació. La seva
-                visió anticipava la programació moderna.</p>
-            <p class="read-more"><a href="https://commons.wikimedia.org/wiki/File:Ada_Lovelace_portrait.jpg"
-                    target="_blank">Llegir més</a></p>
-            </div>
-        </section>
     </main>
 
     <!-- PIE DE PÁGINA -->
@@ -156,6 +190,8 @@
                     <li><a href="entrevistas.html">Entrevistas</a></li>
                     <li><a href="#" aria-current="page">Mujeres</a></li>
                     <li><a href="articulos.html">Articulos</a></li>
+                    <li><a href="politica.html">Política de Privacidad</a></li>
+
                 </ul>
             </nav>
             <div class="footer__contact">
@@ -197,5 +233,8 @@
             <p class="footer__copyright">&copy; 2026. Todos los derechos reservados</p>
         </div>
     </footer>
+
+    <!-- Mis scripts -->
+<script src="js/script.js"></script>
 </body>
 </html>
