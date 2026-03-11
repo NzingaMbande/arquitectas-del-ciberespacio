@@ -32,8 +32,7 @@
     --bg-color3: rgb(63, 63, 63);
     --font-color: #292929;
     --font-color2: #f5f5f5;
-    --time-line: #fa7c42
-    ;
+    --time-line: #fa7c42;
 
     /* Tamaños por defecto, luego se pueden ajustar */
     --h1-min: 2.3rem;
@@ -94,19 +93,19 @@ body {
 
 /* HEADLINES */
 h1 {
-    font-size: clamp(var(--h1-ideal), var(--h1-max), var(--h1-min));
+    font-size: clamp(var(--h1-min), var(--h1-ideal), var(--h1-max));
     font-weight: bold;
     margin-bottom: 1rem;
     padding-left: 0.2rem;
 }
 
-h2{
-    font-size: clamp(var(--h2-ideal), var(--h2-max), var(--h2-min));
+h2 {
+    font-size: clamp(var(--h2-min), var(--h2-ideal), var(--h2-max));
 
 }
 
-h3{
-    font-size: clamp(var(--h3-ideal), var(--h3-max), var(--h3-min));
+h3 {
+    font-size: clamp(var(--h3-min), var(--h3-ideal), var(--h3-max));
 
 }
 
@@ -116,8 +115,8 @@ a {
     color: var(--font-color);
 }
 
-p{
-    font-size: clamp(var(--p-ideal), var(--p-max), var(--p-min));
+p {
+    font-size: clamp(var(--p-min), var(--p-ideal), var(--p-max));
 }
 
 /* LISTAS */
@@ -180,9 +179,14 @@ header {
     margin: 0 auto;
 }
 
-.hero__text {
+.hero__text>#titulo {
     width: 100%;
-
+    /* Para que el titulo no se rompa en medio de una palabra */
+    word-break: normal;
+    overflow-wrap: normal;
+    /* Desactivar el silabeo: Para que el navegador no divida las palabras automaticamente */
+    hyphens: none;
+    text-wrap: balance;
 }
 
 
@@ -227,30 +231,31 @@ main {
 
 /* MAIN PAGE */
 #index section h2 {
-    margin-top: 1rem ;
+    margin-top: 1rem;
 }
 
-.preview-articulo img{
+.preview-articulo img {
     width: 75%;
     border: 2px;
 }
 
-#index section:last-child{
+#index section:last-child {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
 /* PÁGINA DE ARTICULOS */
 #articulos {
-    display:grid;
+    display: grid;
     /* grid-template-columns: 1.5fr 1.5fr; */
-    grid-template-columns: 1.5fr ; /* 1 columna para movil */
+    grid-template-columns: 1.5fr;
+    /* 1 columna para movil */
     margin-top: 1.3rem;
     max-width: 95%;
     gap: 2rem;
-    justify-self: center; 
+    justify-self: center;
     font-family: var(--font-text-articulos);
-    
+
 }
 
 #articulos article {
@@ -491,7 +496,7 @@ footer h3 {
 
 
 /* PAGINA MUJERES */
-.timiline span{
+.timiline span {
     color: var(--time-line);
 }
 
@@ -526,7 +531,7 @@ footer h3 {
 
 
 /* AGREGADO ROS_ ENTREVISTAS */
-#entrevistas .negrita{
+#entrevistas .negrita {
     font-weight: bold;
 }
 
@@ -538,19 +543,19 @@ footer h3 {
     gap: 3rem;
 }
 
-#entrevistas section{
+#entrevistas section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-#entrevistas h2{
+#entrevistas h2 {
     font-family: 'Space Grotesk';
     line-height: 1.2;
     margin-bottom: 0.75rem;
 }
 
-#entrevistas .manifiesto{
+#entrevistas .manifiesto {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -559,26 +564,26 @@ footer h3 {
     border-radius: 0.5rem;
 }
 
-#entrevistas .manifiesto p{
+#entrevistas .manifiesto p {
     line-height: 1.7;
     max-width: 85%;
 }
 
-#entrevistas .manifiesto figure{
+#entrevistas .manifiesto figure {
     margin: 0;
     aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 0.25rem;
 }
 
-#entrevistas img{
+#entrevistas img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
 }
 
-#entrevistas .audio_media{
+#entrevistas .audio_media {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -586,17 +591,17 @@ footer h3 {
     padding: 1rem;
 }
 
-#entrevistas .audio_media figure{
+#entrevistas .audio_media figure {
     aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 0.25rem;
 }
 
-#entrevistas .audio_media audio{
+#entrevistas .audio_media audio {
     width: 100%;
 }
 
-#entrevistas .transcripcion{
+#entrevistas .transcripcion {
     width: 100%;
     margin-top: 0.5rem;
     padding: 1.25rem;
@@ -605,29 +610,29 @@ footer h3 {
     border-radius: 0.5rem;
 }
 
-#entrevistas .transcripcion p{
+#entrevistas .transcripcion p {
     line-height: 1.7;
     margin-bottom: 0.9rem;
 }
 
-#entrevistas .transcripcion h3{
+#entrevistas .transcripcion h3 {
     margin-bottom: 1rem;
 }
 
-#entrevistas .frases{
+#entrevistas .frases {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-#entrevistas .frases figure{
+#entrevistas .frases figure {
     margin: 0;
     aspect-ratio: 4 / 5;
     overflow: hidden;
     border-radius: 0.5rem;
 }
 
-#entrevistas .proximas{
+#entrevistas .proximas {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -635,31 +640,31 @@ footer h3 {
     border-radius: 0.5rem;
 }
 
-#entrevistas .proximas h2{
+#entrevistas .proximas h2 {
     grid-column: 1 / -1;
 }
 
-#entrevistas .proximas article{
+#entrevistas .proximas article {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
 }
 
-#entrevistas .proximas figcaption{
+#entrevistas .proximas figcaption {
     margin-top: 0.75rem;
     line-height: 1.3;
     font-weight: 700;
 }
 
-#entrevistas .proximas figure{
+#entrevistas .proximas figure {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     margin: 0;
 }
 
-#entrevistas .proximas article img{
+#entrevistas .proximas article img {
     width: 100%;
     aspect-ratio: 4 / 5;
     display: block;
@@ -667,11 +672,11 @@ footer h3 {
 }
 
 #entrevistas .proximas article p,
-#entrevistas .extra
-{
+#entrevistas .extra {
     line-height: 1.6;
 }
-#entrevistas .extra p{
+
+#entrevistas .extra p {
     margin-bottom: 1rem;
 }
 
@@ -700,15 +705,15 @@ footer h3 {
 }
 
 
-.timeline-item figure img{
-    width:100%;
+.timeline-item figure img {
+    width: 100%;
     max-width: 620px;
     height: auto;
     margin-bottom: 2rem;
 }
 
 
-.timeline-item h3{
+.timeline-item h3 {
     text-transform: uppercase;
     margin-bottom: 0.7rem;
     color: #949494;
@@ -716,37 +721,39 @@ footer h3 {
 
 
 .timeline-item p {
-.timeline-item p {
-    max-width: 620px;
-}
+    .timeline-item p {
+        max-width: 620px;
+    }
 }
 
-.timeline-item span{
+.timeline-item span {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.25rem 0.7rem;
     border: 1px solid #8d6751;
-    color:var(--time-line);
+    color: var(--time-line);
     border-radius: 333px;
 }
 
 
-.cards_mujeres{
+.cards_mujeres {
     margin-bottom: 10rem;
     padding: 0 3rem;
     display: flex;
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
 }
-.card_mujeres{
-    flex: 0 0 calc(33% - 2rem); 
+
+.card_mujeres {
+    flex: 0 0 calc(33% - 2rem);
     height: 70vh;
     /* FCS Para el flip */
     transition: transform .6s linear;
 }
-.anverso, .reverso{
+
+.anverso, .reverso {
     margin-bottom: 2rem;
     height: 100%;
 }
@@ -778,7 +785,7 @@ footer h3 {
     font-weight: 500;
     background: none;
     border: none;
-    color: var(--time-line);  
+    color: var(--time-line);
     cursor: pointer;
     font-size: 0.8rem;
 }
@@ -909,7 +916,7 @@ th {
         grid-area: navegador;
         color: var(--font-color);
         background-color: var(--bg-color2);
-            font-size: clamp(var(--nav-ideal), var(--nav-max), var(--nav-min));
+        font-size: clamp(var(--nav-min), var(--nav-ideal), var(--nav-max));
         /* justify-content: space-between; */
         top: 0;
         display: flex;
@@ -986,13 +993,13 @@ th {
     }
 
 
-            /* PAGINA DE ARTICULOS */
-            .divisor {
-                display: grid;
-                gap: 1rem;
-                grid-template-columns: 1.8fr 1.8fr;
-                margin-bottom: 1rem;
-            }
+    /* PAGINA DE ARTICULOS */
+    .divisor {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1.8fr 1.8fr;
+        margin-bottom: 1rem;
+    }
 
     .documento-legal {
         padding: 20px;
@@ -1004,7 +1011,7 @@ th {
         font-size: 1.5rem;
     }
 
-            
+
     table {
         display: block;
         overflow-x: auto;
@@ -1013,57 +1020,57 @@ th {
 
 
     /* ENTREVISTAS */
-    #entrevistas .manifiesto{
-    grid-template-columns: 1fr 1fr;
+    #entrevistas .manifiesto {
+        grid-template-columns: 1fr 1fr;
     }
-    
-    #entrevistas .audio_media{
+
+    #entrevistas .audio_media {
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
-    
-    #entrevistas .transcripcion{
+
+    #entrevistas .transcripcion {
         width: 65%;
         max-width: 700px;
     }
 
-    #entrevistas .frases{
+    #entrevistas .frases {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    #entrevistas .proximas{
+    #entrevistas .proximas {
         grid-template-columns: repeat(3, 1fr);
     }
 
 
     /* FOOTER */
-    footer{
-    /* border: 1px solid crimson; */
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-    background-color: var(--bg-color2);
-    grid-area: footer;
-    justify-content: flex-start;
-    justify-items: normal;
-    text-align: left;
+    footer {
+        /* border: 1px solid crimson; */
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        background-color: var(--bg-color2);
+        grid-area: footer;
+        justify-content: flex-start;
+        justify-items: normal;
+        text-align: left;
     }
 
 
-    .foot-grid{
+    .foot-grid {
         display: grid;
         gap: 1rem;
-        grid-template-columns: 2fr 1fr ;
+        grid-template-columns: 2fr 1fr;
     }
 
 
-    .footer__copyright{
+    .footer__copyright {
         margin: 0;
         grid-column: 3/-1;
     }
 
-            
 
-            
+
+
 
 
 }
