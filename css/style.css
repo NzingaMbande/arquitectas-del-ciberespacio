@@ -36,7 +36,7 @@
     ;
 
     /* Tamaños por defecto, luego se pueden ajustar */
-    --h1-min: 2rem;
+    --h1-min: 2.3rem;
     --h1-ideal: 1.400rem + 3.000vw;
     --h1-max: 4rem;
 
@@ -84,6 +84,47 @@ body {
         "footer";
 }
 
+#modo-oscuro {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+
+/* HEADLINES */
+h1 {
+    font-size: clamp(var(--h1-ideal), var(--h1-max), var(--h1-min));
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-left: 0.2rem;
+}
+
+h2{
+    font-size: clamp(var(--h2-ideal), var(--h2-max), var(--h2-min));
+
+}
+
+h3{
+    font-size: clamp(var(--h3-ideal), var(--h3-max), var(--h3-min));
+
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+p{
+    font-size: clamp(var(--p-ideal), var(--p-max), var(--p-min));
+}
+
+/* LISTAS */
+ul li {
+    display: inline;
+    /* padding-left: 2rem; */
+}
 
 /* MENÚ */
 body>nav {
@@ -141,21 +182,20 @@ header {
 
 .hero__text {
     width: 100%;
+
 }
 
-h1 {
-    font-size: clamp(var(--h1-ideal), var(--h1-max), var(--h1-min));
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
 
 .hero__text p {
     font-size: 1rem;
     color: var(--font-color);
+    padding-left: 0.2rem;
 }
 
 header img {
-    width: 100%;
+    padding-top: 5rem;
+    width: 98%;
+    height: 100%;
 }
 
 /* ANIMACION HERO - KEYFRAMES */
@@ -181,29 +221,23 @@ main {
     justify-self: center;
     /* Para el sticky 
     overflow: hidden; */
-    overflow: visible;
-}
-
-/* LINKS */
-a {
-    text-decoration: none;
-    color: var(--font-color);
-}
-
-p{
-    font-size: clamp(var(--p-ideal), var(--p-max), var(--p-min));
-}
-
-/* LISTAS */
-ul li {
-    display: inline;
-    /* padding-left: 2rem; */
+    overflow: hidden;
 }
 
 
 /* MAIN PAGE */
 #index section h2 {
-    display: block;
+    margin-top: 1rem ;
+}
+
+.preview-articulo img{
+    width: 75%;
+    border: 2px;
+}
+
+#index section:last-child{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 /* PÁGINA DE ARTICULOS */
@@ -507,7 +541,6 @@ footer h3 {
 }
 
 #entrevistas h2{
-    font-size: clamp(var(--h2-section-min), var(--h2-section-ideal), var(--h2-section-max));
     line-height: 1.2;
     margin-bottom: 0.75rem;
 }
@@ -632,33 +665,7 @@ footer h3 {
     line-height: 1.6;
 }
 
-/* MEDIA QUERIES */
-@media only screen and (min-width: 768px) {
-  
-/* ENTREVISTAS */
-    #entrevistas .manifiesto{
-    grid-template-columns: 1fr 1fr;
-    }
-    
-    #entrevistas .audio_media{
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-    
-    #entrevistas .transcripcion{
-        width: 65%;
-        max-width: 700px;
-    }
 
-    #entrevistas .frases{
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    #entrevistas .proximas{
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-}
 .timeline-item {
     position: relative;
     padding: 0 0 6rem 0;
@@ -681,7 +688,7 @@ footer h3 {
     margin-bottom: 1rem;
     font-size: var(--h2-section-max);
 }
-}
+
 
 .timeline-item figure img{
     width:100%;
@@ -689,14 +696,14 @@ footer h3 {
     height: auto;
     margin-bottom: 2rem;
 }
-}
+
 
 .timeline-item h3{
     text-transform: uppercase;
     margin-bottom: 0.7rem;
     color: #949494;
 }
-}
+
 
 .timeline-item p {
 .timeline-item p {
@@ -712,7 +719,7 @@ footer h3 {
     color:var(--time-line);
     border-radius: 333px;
 }
-}
+
 
 .cards_mujeres{
     margin-bottom: 10rem;
@@ -733,9 +740,9 @@ footer h3 {
     margin-bottom: 2rem;
     height: 100%;
 }
-}
 
-.anverso {
+
+
 .anverso {
     padding: 1rem 2rem;
     background-color: var(--bg-color3);
@@ -988,37 +995,61 @@ th {
     }
 
             
-            table {
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-            }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 
 
-            /* FOOTER */
-            footer{
-            /* border: 1px solid crimson; */
-            padding-top: 0.5rem;
-            padding-left: 0.5rem;
-            background-color: var(--bg-color2);
-            grid-area: footer;
-            justify-content: flex-start;
-            justify-items: normal;
-            text-align: left;
-            }
+    /* ENTREVISTAS */
+    #entrevistas .manifiesto{
+    grid-template-columns: 1fr 1fr;
+    }
+    
+    #entrevistas .audio_media{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    #entrevistas .transcripcion{
+        width: 65%;
+        max-width: 700px;
+    }
+
+    #entrevistas .frases{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #entrevistas .proximas{
+        grid-template-columns: repeat(3, 1fr);
+    }
 
 
-            .foot-grid{
-                display: grid;
-                gap: 1rem;
-                grid-template-columns: 2fr 1fr ;
-            }
+    /* FOOTER */
+    footer{
+    /* border: 1px solid crimson; */
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: var(--bg-color2);
+    grid-area: footer;
+    justify-content: flex-start;
+    justify-items: normal;
+    text-align: left;
+    }
 
 
-            .footer__copyright{
-                margin: 0;
-                grid-column: 3/-1;
-            }
+    .foot-grid{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 2fr 1fr ;
+    }
+
+
+    .footer__copyright{
+        margin: 0;
+        grid-column: 3/-1;
+    }
 
             
 
