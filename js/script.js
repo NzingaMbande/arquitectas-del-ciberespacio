@@ -70,25 +70,25 @@ menu_icon.addEventListener("click", () => {
 //         })
 
 // DIANA
-const titulo = document.getElementById("titulo");
-const texto = titulo.textContent;
+// const titulo = document.getElementById("titulo");
+// const texto = titulo.textContent;
 
-titulo.textContent = ""; // vaciar el h1
+// titulo.textContent = ""; // vaciar el h1
 
-texto.split("").forEach((letra, i) => {
-  const span = document.createElement("span");
+// texto.split("").forEach((letra, i) => {
+//   const span = document.createElement("span");
 
-  if (letra === " ") {
-    // Si es un espacio, ponemos un &nbsp; sin animación
-    span.innerHTML = "&nbsp;";
-  } else {
-    span.textContent = letra;
-    span.classList.add("letra");
-    span.style.animationDelay = i * 0.03 + "s";
-  }
+//   if (letra === " ") {
+//     // Si es un espacio, ponemos un &nbsp; sin animación
+//     span.innerHTML = "&nbsp;";
+//   } else {
+//     span.textContent = letra;
+//     span.classList.add("letra");
+//     span.style.animationDelay = i * 0.03 + "s";
+//   }
 
-  titulo.appendChild(span);
-});
+//   titulo.appendChild(span);
+// });
 
 // Flip card mujeres.html
 const botones = document.querySelectorAll(".card_mujeres .voltear");

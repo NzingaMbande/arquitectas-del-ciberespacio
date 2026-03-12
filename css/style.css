@@ -105,16 +105,16 @@ h1 {
     font-size: clamp(var(--h1-min), var(--h1-ideal), var(--h1-max));
     font-weight: bold;
     margin-bottom: 1rem;
-    width: 75%;
+    width: 50%;
 }
 
 h2 {
-    font-size: clamp(var(--h2-min), var(--h2-ideal), var(--h2-max));
+    font-size: clamp(var(--h2-section-min), var(--h2-section-ideal), var(--h2-section-max));
 
 }
 
 h3 {
-    font-size: clamp(var(--h3-min), var(--h3-ideal), var(--h3-max));
+    font-size: clamp(var(--h3-section-min), var(--h3-section-ideal), var(--h3-section-max));
 
 }
 
@@ -236,11 +236,6 @@ main {
 
 
 /* MAIN PAGE */
-/* #index section h2 {
-    margin-top: 1rem ;
-    margin-bottom: 0.8rem;
-} */
-
 .preview-entrevista img {
     width: 85%;
     border: 2px;
@@ -296,19 +291,14 @@ main {
 
 #articulos article {
     justify-content: center;
-    /* gap: 0.5rem; */
     color: var(--font-color);
     background-color: var(--bg-color2);
-    /* padding: 0.5rem; */
     border-radius: 2px;
+    margin-bottom: 0.8rem;
+    border-radius: 18px;
 
 }
 
-/* .post {
-    border: 1px solid #ccc;
-    padding: 0;           
-    margin-bottom: 1rem;
-} */
 
 .post-figure {
     margin: 0;
@@ -317,6 +307,8 @@ main {
     height: 15rem;
     overflow: hidden;
     margin-bottom: 0.5rem;
+    border-radius: 18px;
+
 }
 
 
@@ -336,10 +328,6 @@ main {
     font-size: 1rem;
 }
 
-/* #articulos article:last-child {
-    border: 1px solid crimson;
-    margin-bottom: 1.5rem;
-} */
 
 article h2 {
     padding-bottom: 0.5rem;
@@ -466,10 +454,7 @@ footer h3 {
 }
 
 .slider h2 {
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    font-size: var(--h2-section-max);
+    text-align: left;
     line-height: 120%;
 }
 
@@ -499,11 +484,6 @@ footer h3 {
     color: var(--font-color2);
     border-radius: 4px;
     overflow: hidden;
-    /* padding-bottom: 2rem; */
-
-    /* PERSPECTIVA PARA LAS TARJETAS */
-    transform: perspective(100px) rotateY(-8deg);
-
 }
 
 .cards_main div p {
@@ -556,7 +536,6 @@ footer h3 {
 }
 
 /* AGREGADO ROS_ ENTREVISTAS */
-
 #header_esconder{
     display: none;
 }
@@ -615,7 +594,8 @@ footer h3 {
     display: block;
     object-fit: cover;
 }
- #entrevistas .btn-audio{
+
+#entrevistas .btn-audio{
     display: inline-block;
     text-align: left;
     width: 48%;
@@ -626,7 +606,7 @@ footer h3 {
     text-decoration: none;
     border-radius: 333px;
 }
- 
+
 #entrevistas audio{
     width: 100%;
     padding: 0.8rem;
@@ -982,7 +962,7 @@ th {
         grid-area: navegador;
         color: var(--font-color);
         background-color: var(--bg-color2);
-            font-size: clamp(var(--nav-min), var(--nav-ideal), var(--nav-max));
+        font-size: clamp(var(--nav-title-min), var(--nav-title-ideal), var(--nav-title-max));
         /* justify-content: space-between; */
         top: 0;
         display: flex;
@@ -1142,7 +1122,7 @@ th {
     height: 70vh; 
 }
 
- .cards_main div{
+.cards_main div{
         flex: 0 0 25%;
     }
 }
