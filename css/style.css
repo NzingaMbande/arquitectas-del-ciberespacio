@@ -331,6 +331,9 @@ main {
     font-size: 1rem;
 }
 
+.post.activo .extra > p{
+    padding: 0.5rem;
+}
 
 article h2 {
     padding-bottom: 0.5rem;
@@ -342,8 +345,12 @@ article>p,
 article h2 {
     margin-bottom: 0.8rem;
     padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
+article>p{
+    text-align: justify;
+}
 .fuente {
     font-size: 0.8rem;
     color: var(--font-color2);
@@ -964,12 +971,12 @@ nav> img:nth-of-type(1){
         display: none;
     }
 
-    nav img:nth-of-type(2){
+nav img:nth-of-type(2){
         display: block;
         margin: 0 auto;
-    }
-
 }
+
+
 
 /* MEDIA QUERY PARA PANTALLAS DE 768px EN ADELANTE */
 @media (min-width: 768px) {
