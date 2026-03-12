@@ -29,8 +29,8 @@
     /* Colores */
     /* --bg-color: #e6e6e6; */
     --bg-color: #F3F5F9;
-    --bg-color2: rgb(143, 143, 143);
-    --bg-color3: rgb(63, 63, 63);
+    --bg-color2: rgba(52, 52, 52, 0);
+    --bg-color3: rgb(87, 87, 87);
     --font-color: #292929;
     --font-color2: #f5f5f5;
     --time-line: #fa7c42
@@ -499,11 +499,17 @@ footer h3 {
     display: none;
 }
 
+.manifiesto-intro {
+    background: #e5f0ff;
+    padding: 2rem;
+    border-radius: 28px;
+}
+
 #entrevistas .negrita{
     font-weight: bold;
 }
 
-#entrevistas {
+#entrevistas{
     width: 92%;
     margin: 2rem auto 4rem;
     display: flex;
@@ -517,35 +523,42 @@ footer h3 {
     gap: 1.5rem;
 }
 
-#entrevistas h2{
-    font-family: 'Space Grotesk';
-    font-size: 36px;
-    font-weight: bolder;
+#entrevistas h2{ /*sacar padding, ver clamp con mary*/
+    font-family: 'Space Grotesk', sans-serif;
     color: #1F3C88;
-    line-height: 1.2;
-    padding: 0.1rem 2rem;
+    font-size: clamp(1.8rem, 1.2rem + 2vw, 2.8rem); /*36px*/
+    margin-bottom: 1rem;
+    padding: 0;
 }
 
-#entrevistas .manifiesto{
+#entrevistas .manifiesto{ /*sacar aling, added bg */
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 1.5rem;
     align-items: center;
-    border-radius: 0.5rem;
+    background: #FFFFFF;
+    border: 1px solid #e5e9eb;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(31, 60, 136, 0.08);
+    
 }
 
-#entrevistas .manifiesto p{
+
+#entrevistas .manifiesto p{   /*color y font size ver var*/
+    color: #374151;
     line-height: 1.8;
+    font-size: 1rem;
+    margin: 0;
     max-width: 98%;
     text-align: left;
 }
 
-#entrevistas .manifiesto figure{
+#entrevistas .manifiesto figure{ /*radius mas grande*/
     margin: 0;
     aspect-ratio: 4 / 3;
     overflow: hidden;
-    border-radius: 0.25rem;
+    border-radius: 18px;
 }
 
 #entrevistas img{
@@ -554,46 +567,99 @@ footer h3 {
     display: block;
     object-fit: cover;
 }
- #entrevistas .btn-audio{
-    display: inline-block;
-    text-align: left;
-    width: 48%;
-    margin: 0.8rem ;
-    padding: 0.8rem;
-    background-color: #2DD4BF;
-    color: #f3f3f3;
-    text-decoration: none;
-    border-radius: 333px;
-}
- 
-#entrevistas audio{
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #8d9493;
+
+#entrevistas .btn-audio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.9rem 1.4rem;
+    background: #18C6B3;
+    color: #FFFFFF;
+    border-radius: 999px;
+    font-weight: 600;
+    margin: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+#entrevistas .btn-audio:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(24, 198, 179, 0.25);
+}
+
+#entrevistas .tag {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(24, 198, 179, 0.14);
+    color: #1F3C88;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
 
 #entrevistas .audio_media{
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.2rem;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.8rem;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(31, 60, 136, 0.08);
 }
+
+ 
+#entrevistas .audio{ /*Fondo color para dar protagonismo*/
+    width: 100%;
+    padding: 2rem;
+    background: #e5f0ff;
+    border-radius: 28px;
+}
+
 
 #entrevistas .audio_media figure{
-    aspect-ratio: 4 / 3;
+    margin: 0;
+    aspect-ratio: 4 / 4.2;
     overflow: hidden;
-    border-radius: 0.25rem;
+    border-radius: 20px;
 }
 
-#entrevistas .audio_media figure>img {
+#entrevistas .audio_media figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   /* width: 400px; */
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 92%, transparent),
+  /* -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 92%, transparent),
                       linear-gradient(to bottom, transparent, black 10%, black 92%, transparent);
 
   -webkit-mask-composite: intersect;
-  mask-composite: intersect;
+  mask-composite: intersect; */
+}
+
+#entrevistas .audio-player{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    background: #F8FAFC;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+}
+
+#entrevistas .audio-push{
+    margin: 0;
+    font-weight: 700;
+    color: #1F3C88;
+}
+
+#entrevistas .audio-player audio{
+    width: 100%;
+    background: #F3F5F9;
+    border-radius: 16px;
+    padding: 0.8rem;
 }
 
 #entrevistas .post{
@@ -611,12 +677,20 @@ footer h3 {
 
 #entrevistas h3{
     margin-bottom: 0.8rem;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #1F3C88;
+    padding: 0;
 }
 
 #entrevistas .frases{
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(31, 60, 136, 0.08);
 }
 
 #entrevistas .frases figure{
@@ -630,8 +704,11 @@ footer h3 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 1.25rem;
-    border-radius: 0.5rem;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(31, 60, 136, 0.08);
 }
 
 #entrevistas .proximas h2{
@@ -645,17 +722,7 @@ footer h3 {
     padding: 1rem;
 }
 
-#entrevistas .proximas figcaption{
-    font-family: 'Space Grotesk';
-    background: #18C6B3;
-    color: #F9FAFB;
-    border-radius: 8px;
-    margin-top: 0.75rem;
-    padding: 8px 14px;
-    line-height: 1.3;
-    font-weight: 700;
-}
-
+ 
 #entrevistas .proximas figure{
     display: flex;
     flex-direction: column;
@@ -1016,7 +1083,7 @@ th {
     }
 
    /* PAGINA DE ARTICULOS */
-    .divisor {
+    .divisor{
         display: grid;
         gap: 1rem;
         grid-template-columns: 1.8fr 1.8fr;
@@ -1043,14 +1110,30 @@ th {
 
     /* ENTREVISTAS */
     #entrevistas .manifiesto{
-    grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 2rem;
+    }
+    #entrevistas .manifiesto p{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #entrevistas .manifiesto figure{
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    #entrevistas .btn-audio{
+        grid-column: 1;
+        grid-row: 2;
+        align-self: start;
     }
     
     #entrevistas .audio_media{
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
+        grid-template-columns: 0.95fr 1.05fr;
     }
-    
+
     #entrevistas .transcripcion{
         width: 65%;
         max-width: 700px;
