@@ -95,11 +95,19 @@ body {
 
 
 /* HEADLINES */
+
+h1,h2,h3{
+    padding-left: 0.4rem;
+    margin-top: 1rem ;
+    margin-bottom: 0.8rem;
+
+}
+
 h1 {
     font-size: clamp(var(--h1-min), var(--h1-ideal), var(--h1-max));
     font-weight: bold;
     margin-bottom: 1rem;
-    padding-left: 0.2rem;
+    width: 75%;
 }
 
 h2{
@@ -187,7 +195,6 @@ header {
 
 }
 
-
 .hero__text p {
     font-size: 1rem;
     color: var(--font-color);
@@ -221,31 +228,60 @@ main {
     grid-area: main;
     width: 100%;
     justify-self: center;
-    /* Para el sticky 
-    overflow: hidden; */
     overflow: hidden;
 }
 
 
 /* MAIN PAGE */
-#index section h2 {
+/* #index section h2 {
     margin-top: 1rem ;
-}
+    margin-bottom: 0.8rem;
+} */
 
-.preview-articulo img{
-    width: 75%;
+.preview-entrevista img {
+    width: 85%;
     border: 2px;
 }
 
-#index section:last-child{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+#index section h2{
+    display: block;
+    width: 100%;
 }
+
+#index p{
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    padding-left: 0.8rem;
+
+}
+
+#index section:last-child{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+#index figcaption{
+    font-size: 0.8rem;
+}
+
+.preview-articulo figure{
+    width: 90%;
+    height: 40%;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.preview-articulo img{
+    width: 100%;
+    height: 100%;
+
+}
+
 
 /* PÁGINA DE ARTICULOS */
 #articulos {
     display:grid;
-    /* grid-template-columns: 1.5fr 1.5fr; */
     grid-template-columns: 1.5fr ; /* 1 columna para movil */
     margin-top: 1.3rem;
     max-width: 95%;
@@ -411,17 +447,17 @@ footer h3 {
 
 /* SLIDER DE TARJETAS MAIN */
 /* Firefox scrollbar */
-.cards {
+.cards_main {
     scrollbar-width: thin;
     scrollbar-color: var(--font-color) var(--bg-color);
 }
 
 /* Chrome, Safari, Edge */
-.cards::-webkit-scrollbar {
+.cards_main::-webkit-scrollbar {
     height: 6px;
 }
 
-.cards::-webkit-scrollbar-thumb {
+.cards_main::-webkit-scrollbar-thumb {
     background: var(--font-color);
     border-radius: 4px;
 }
@@ -452,7 +488,7 @@ footer h3 {
 }
 
 .cards_main div {
-    flex: 0 0 35%;
+    flex: 0 0 100%;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -492,6 +528,9 @@ footer h3 {
     color: var(--time-line);
 }
 
+.slider{
+    overflow: hidden;
+}
 
 /* AGREGADO ROS_ ENTREVISTAS */
 
@@ -711,16 +750,16 @@ footer h3 {
 
 .timeline-item {
     position: relative;
-    padding: 0 0 6rem 0;
+    padding: 0 0 4rem 0;
 }
 
 .timiline_avatar {
     position: absolute;
-    left: -11.4rem;
+    left: -3.8rem;
     top: 0;
     object-fit: cover;
     object-position: top;
-    width: 120px;
+    width: 60px;
 }
 
 .timeline-item h2 {
@@ -756,28 +795,30 @@ footer h3 {
 .timeline-item span{
     display: inline-block;
     margin-top: 1rem;
-    padding: 0.25rem 0.7rem;
+    padding: 0.5rem 0.7rem;
     border: 1px solid #8d6751;
     color:var(--time-line);
     border-radius: 333px;
+    line-height: 150%;
 }
 
 
 .cards_mujeres{
-    margin-bottom: 10rem;
+    margin: 3rem 0;
     padding: 0 3rem;
-    display: flex;
-    gap: 2rem;
-    display: flex;
+    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center; 
+    display: flex;
 }
+
 .card_mujeres{
-    flex: 0 0 calc(33% - 2rem); 
-    height: 70vh;
+    flex: 0 0 100%; 
+    /* height: 70vh; */
     /* FCS Para el flip */
     transition: transform .6s linear;
 }
+
 .anverso, .reverso{
     margin-bottom: 2rem;
     height: 100%;
@@ -795,6 +836,7 @@ footer h3 {
     cursor: pointer;
     border-radius: 12px;
     border-radius: 12px;
+    height: 70vh; 
 }
 
 .anverso h3 {
@@ -834,6 +876,7 @@ footer h3 {
 
 .reverso p {
     line-height: 150%;
+    font-size: var(--p-min);
 }
 
 .reverso {
@@ -871,6 +914,7 @@ footer h3 {
     z-index: 2;
     color: white;
 }
+
 
 /* POLITICA DE PRIVACIDAD */
 .documento-legal {
@@ -968,6 +1012,7 @@ th {
 
     /* HEADER-HERO */
     header {
+        display: flex;
         /* padding: 40px 5%; */
         min-height: 25rem;
         /* margin-bottom:40px;  */
@@ -1015,7 +1060,8 @@ th {
         margin: 0;
     }
 
-   /* PAGINA DE ARTICULOS */
+
+    /* PAGINA DE ARTICULOS */
     .divisor {
         display: grid;
         gap: 1rem;
@@ -1090,9 +1136,87 @@ th {
         grid-column: 3/-1;
     }
 
-            
+     .card_mujeres{
+        flex: 0 0 100%;
+    }
 
-            
+    .cards_main div{
+        flex: 0 0 50%;
+    }
 
+}
 
+@media (min-width: 1024px){
+    
+    .timiline {
+    grid-template-columns: 1fr 2fr;
+    padding: 6rem 10rem;
+    gap: 9rem;
+}
+
+.title_column {
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+    margin-top: 2rem;
+}
+
+.title_column h2 {
+    font-size: var(--h2-section-max);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.title_column p{
+    text-align: left;
+}
+
+.timiline_column {
+    padding-left: 8rem;
+}
+
+.timeline-item {
+    padding: 0 0 6rem 0;
+}
+
+.timiline_avatar {
+    left: -11.4rem;
+    top: 0;
+    width: 120px;
+}
+
+.timeline-item h2 {
+    font-weight: 700;
+    color: var(--font-color);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-size: var(--h2-section-max);
+}
+
+.timeline-item figure img{
+    margin-bottom: 2rem;
+}
+
+.timeline-item h3{
+    margin-bottom: 0.7rem;
+}
+
+.cards_mujeres{
+    margin-bottom: 5rem;
+    padding: 0 3rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.card_mujeres{
+    flex: 0 0 calc(33% - 2rem); 
+    height: 70vh; 
+}
+
+ .cards_main div{
+        flex: 0 0 25%;
+    }
 }
