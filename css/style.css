@@ -886,6 +886,14 @@ th {
     background-color: #f2f2f2;
 }
 
+body > span{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > img{
+    display: none;
+}
 
 /* MEDIA QUERY PARA PANTALLAS DE 768px EN ADELANTE */
 @media (min-width: 768px) {
@@ -912,7 +920,7 @@ th {
         top: 0;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-between;
         width: 100%;
         /* justify-self: center; */
         margin-top: 0;
@@ -1065,6 +1073,10 @@ th {
 
     .cards_main div{
         flex: 0 0 50%;
+    }
+
+    nav > img{
+    display: block;
     }
 
 }
