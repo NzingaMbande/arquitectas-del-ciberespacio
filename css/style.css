@@ -520,7 +520,7 @@ footer h3 {
 
 
 /* PAGINA MUJERES */
-.timiline span{
+.title_column span{
     color: var(--time-line);
 }
 
@@ -733,7 +733,7 @@ footer h3 {
 
 /* PAGINA MUJERES */
 .timiline span{
-    color: var(--time-line);
+    color: #18C6B3;
 }
 
 #entrevistas .extra p {
@@ -756,7 +756,7 @@ footer h3 {
 
 .timeline-item h2 {
     font-weight: 700;
-    color: var(--font-color);
+    color: #18C6B3;
     letter-spacing: -0.03em;
     line-height: 1;
     margin-bottom: 1rem;
@@ -789,20 +789,22 @@ footer h3 {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 0.7rem;
-    border: 1px solid #8d6751;
-    color:var(--time-line);
+    border: 1px solid #18C6B3;
+    color: #18C6B3;
     border-radius: 333px;
     line-height: 150%;
 }
 
 
 .cards_mujeres{
-    margin: 3rem 0;
-    padding: 0 3rem;
+    margin: 1rem 1rem;
+    padding: 2rem 2rem;
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center; 
     display: flex;
+    background-color: #E5F0FF;
+    border-radius: 12px;
 }
 
 .card_mujeres{
@@ -819,7 +821,7 @@ footer h3 {
 
 .anverso {
     padding: 1rem 2rem;
-    background-color: var(--bg-color3);
+    background: linear-gradient(to bottom, #1F3C88, #0a0f1e);
     color: var(--font-color2);
     display: flex;
     flex-direction: column;
@@ -843,7 +845,7 @@ footer h3 {
     font-weight: 500;
     background: none;
     border: none;
-    color: var(--time-line);  
+    color: #18C6B3;  
     cursor: pointer;
     font-size: 0.8rem;
 }
@@ -1195,7 +1197,6 @@ nav> img:nth-of-type(1){
 
 .timeline-item h2 {
     font-weight: 700;
-    color: var(--font-color);
     letter-spacing: -0.03em;
     line-height: 1;
     margin-bottom: 1rem;
@@ -1211,8 +1212,8 @@ nav> img:nth-of-type(1){
 }
 
 .cards_mujeres{
-    margin-bottom: 5rem;
-    padding: 0 3rem;
+    margin: 1rem 3rem;
+    padding: 1.5rem 1.5rem;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
