@@ -523,7 +523,7 @@ footer h3 {
 
 /* PAGINA MUJERES */
 .timiline span{
-.timiline span{
+
     color: var(--time-line);
 }
 
@@ -975,7 +975,7 @@ nav> img:nth-of-type(1){
         margin: 0 auto;
     }
 
-}
+
 
 /* MEDIA QUERY PARA PANTALLAS DE 768px EN ADELANTE */
 @media (min-width: 768px) {
@@ -1243,9 +1243,4 @@ nav> img:nth-of-type(1){
         display: block;
     }
 }
-
-   nav> img:nth-of-type(1){
-        display: block;
-    }
   
-}
