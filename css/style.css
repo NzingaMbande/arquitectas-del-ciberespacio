@@ -44,7 +44,7 @@
     --nav-title-ideal: 1.840rem + 0.800vw;
     --nav-title-max: 2.5rem;
 
-    --h2-section-min: 1.4rem;
+    --h2-section-min: 1.3rem;
     --h2-section-ideal: 2.1rem + 0.800vw;
     --h2-section-max: 2.2rem;
 
@@ -455,6 +455,7 @@ footer h3 {
 
 .slider h2 {
     text-align: left;
+    font-size: 1.3rem;;
     line-height: 120%;
 }
 
@@ -963,13 +964,11 @@ th {
         color: var(--font-color);
         background-color: var(--bg-color2);
         font-size: clamp(var(--nav-title-min), var(--nav-title-ideal), var(--nav-title-max));
-        /* justify-content: space-between; */
         top: 0;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         width: 100%;
-        /* justify-self: center; */
         margin-top: 0;
         z-index: 1000;
     }
