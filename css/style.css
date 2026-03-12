@@ -961,6 +961,11 @@ th {
     background-color: #f2f2f2;
 }
 
+/* @media (max-width: 767px){
+    #articulos{
+ 
+    }
+} 
 
 /* MEDIA QUERY PARA PANTALLAS DE 768px EN ADELANTE */
 @media (min-width: 768px) {
@@ -1064,7 +1069,7 @@ th {
     .divisor {
         display: grid;
         gap: 1rem;
-        grid-template-columns: 1.8fr 1.8fr;
+        grid-template-columns: 1.5fr 1.5fr 1.5fr;
         margin-bottom: 1rem;
     }
 
