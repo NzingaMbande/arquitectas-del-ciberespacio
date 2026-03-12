@@ -196,12 +196,15 @@ header {
     /* Desactivar el silabeo: Para que el navegador no divida las palabras automaticamente */
     hyphens: none;
     text-wrap: balance;
+    padding: 0 2rem;
+    text-align: center;
 }
 
 .hero__text p {
     font-size: 1rem;
     color: var(--font-color);
-    padding-left: 0.2rem;
+    padding: 0 2rem;
+    text-align: center;
 }
 
 header img {
@@ -512,8 +515,13 @@ footer h3 {
     color: var(--time-line);
 }
 
+.slider{
+    overflow: hidden;
+}
+
 
 /* PAGINA MUJERES */
+.timiline span{
 .timiline span{
     color: var(--time-line);
 }
@@ -521,9 +529,11 @@ footer h3 {
 .timiline {
     display: grid;
     grid-template-columns: 1fr ;
+    grid-template-columns: 1fr ;
     align-items: start;
     position: relative;
     min-height: 100vh;
+    margin: 0 3rem;
     margin: 0 3rem;
 }
 
@@ -950,6 +960,21 @@ th {
     background-color: #f2f2f2;
 }
 
+body > span{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav> img:nth-of-type(1){
+        display: none;
+    }
+
+    nav img:nth-of-type(2){
+        display: block;
+        margin: 0 auto;
+    }
+
+}
 
 /* MEDIA QUERY PARA PANTALLAS DE 768px EN ADELANTE */
 @media (min-width: 768px) {
@@ -975,7 +1000,7 @@ th {
         top: 0;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-between;
         width: 100%;
         margin-top: 0;
         z-index: 1000;
@@ -1051,7 +1076,7 @@ th {
     .divisor {
         display: grid;
         gap: 1rem;
-        grid-template-columns: 1.8fr 1.8fr;
+        grid-template-columns: 1.5fr 1.5fr 1.5fr;
         margin-bottom: 1rem;
     }
 
@@ -1208,6 +1233,11 @@ th {
  .cards_main div{
         flex: 0 0 25%;
     }
+
+    nav> img:nth-of-type(2){
+        display: none;
+    }
+}
 
     nav> img:nth-of-type(2){
         display: none;
