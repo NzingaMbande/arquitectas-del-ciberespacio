@@ -1231,4 +1231,12 @@ nav> img:nth-of-type(1){
     nav> img:nth-of-type(2){
         display: none;
     }
+
+    nav > img:first-of-type{
+        display: block;
+    }
+    /* Solo para esta pagina para que se funcione sticky */
+    #mujeres{
+        overflow: visible;
+    }
 }
