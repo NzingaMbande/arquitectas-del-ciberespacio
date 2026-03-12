@@ -27,12 +27,14 @@
     --font-titular: 'Times New Roman', Times, serif;
 
     /* Colores */
-    --bg-color: #e6e6e6;
+    /* --bg-color: #e6e6e6; */
+    --bg-color: #F3F5F9;
     --bg-color2: rgb(143, 143, 143);
     --bg-color3: rgb(63, 63, 63);
     --font-color: #292929;
     --font-color2: #f5f5f5;
     --time-line: #fa7c42
+   
     ;
 
     /* Tamaños por defecto, luego se pueden ajustar */
@@ -45,7 +47,7 @@
     --nav-title-max: 2.5rem;
 
     --h2-section-min: 1.4rem;
-    --h2-section-ideal: 1.240rem + 0.800vw;
+    --h2-section-ideal: 2.1rem + 0.800vw;
     --h2-section-max: 2.2rem;
 
     --h3-section-min: 1.2rem;
@@ -102,19 +104,19 @@ h1,h2,h3{
 }
 
 h1 {
-    font-size: clamp(var(--h1-ideal), var(--h1-max), var(--h1-min));
+    font-size: clamp(var(--h1-min), var(--h1-ideal), var(--h1-max));
     font-weight: bold;
     margin-bottom: 1rem;
     width: 75%;
 }
 
 h2{
-    font-size: clamp(var(--h2-ideal), var(--h2-max), var(--h2-min));
+    font-size: clamp(var(--h2-min),var(--h2-ideal), var(--h2-max));
 
 }
 
 h3{
-    font-size: clamp(var(--h3-ideal), var(--h3-max), var(--h3-min));
+    font-size: clamp(var(--h3-min), var(--h3-ideal), var(--h3-max));
 
 }
 
@@ -125,8 +127,7 @@ a {
 }
 
 p{
-    font-size: clamp(var(--p-ideal), var(--p-max), var(--p-min));
-    padding-left: 0.4rem;
+    font-size: clamp(var(--p-min), var(--p-ideal), var(--p-max));
 }
 
 /* LISTAS */
@@ -362,9 +363,10 @@ article h2 {
     display: inline-block;
     justify-self: end;
     padding: 8px 14px;
-    background: black;
-    color: white;
+    background: #18C6B3;
+    color: #F9FAFB;
     text-decoration: none;
+    border-radius: 333px;
 }
 
 
@@ -530,43 +532,12 @@ footer h3 {
     overflow: hidden;
 }
 
-/* PAGINA MUJERES */
-.timiline span{
-    color: var(--time-line);
-}
-
-.timiline {
-    display: grid;
-    grid-template-columns: 1fr ;
-    align-items: start;
-    position: relative;
-    min-height: 100vh;
-    margin: 0 3rem;
-}
-
-.title_column {
-    margin: 3rem 0;
-}
-
-.title_column h2 {
-    font-size: var(--h2-section-max);
-
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.title_column p{
-    text-align: center;
-}
-
-.timiline_column {
-    padding-left: 2rem;
-    border-left: 1px solid var(--font-color);
-    position: relative;
-}
-
-
 /* AGREGADO ROS_ ENTREVISTAS */
+
+#header_esconder{
+    display: none;
+}
+
 #entrevistas .negrita{
     font-weight: bold;
 }
@@ -587,8 +558,11 @@ footer h3 {
 
 #entrevistas h2{
     font-family: 'Space Grotesk';
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F3C88;
     line-height: 1.2;
-    margin-bottom: 0.75rem;
+    padding: 0.1rem 2rem;
 }
 
 #entrevistas .manifiesto{
@@ -601,8 +575,9 @@ footer h3 {
 }
 
 #entrevistas .manifiesto p{
-    line-height: 1.7;
-    max-width: 85%;
+    line-height: 1.8;
+    max-width: 98%;
+    text-align: left;
 }
 
 #entrevistas .manifiesto figure{
@@ -618,13 +593,31 @@ footer h3 {
     display: block;
     object-fit: cover;
 }
+ #entrevistas .btn-audio{
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    margin: 0.8rem ;
+    padding: 0.8rem;
+    background-color: #2DD4BF;
+    color: #f3f3f3;
+    text-decoration: none;
+    border-radius: 333px;
+}
+ 
+#entrevistas audio{
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #8d9493;
+}
+
 
 #entrevistas .audio_media{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.2rem;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 #entrevistas .audio_media figure{
@@ -633,26 +626,30 @@ footer h3 {
     border-radius: 0.25rem;
 }
 
-#entrevistas .audio_media audio{
-    width: 100%;
+#entrevistas .audio_media figure>img {
+  /* width: 400px; */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 92%, transparent),
+                      linear-gradient(to bottom, transparent, black 10%, black 92%, transparent);
+
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
 }
 
-#entrevistas .transcripcion{
+#entrevistas .post{
     width: 100%;
-    margin-top: 0.5rem;
     padding: 1.25rem;
-    background-color: var(--bg-color2);
     line-height: 1.6;
     border-radius: 0.5rem;
 }
 
-#entrevistas .transcripcion p{
+#entrevistas p{
     line-height: 1.7;
     margin-bottom: 0.9rem;
+    text-align: left;
 }
 
-#entrevistas .transcripcion h3{
-    margin-bottom: 1rem;
+#entrevistas h3{
+    margin-bottom: 0.8rem;
 }
 
 #entrevistas .frases{
@@ -688,7 +685,12 @@ footer h3 {
 }
 
 #entrevistas .proximas figcaption{
+    font-family: 'Space Grotesk';
+    background: #18C6B3;
+    color: #F9FAFB;
+    border-radius: 8px;
     margin-top: 0.75rem;
+    padding: 8px 14px;
     line-height: 1.3;
     font-weight: 700;
 }
@@ -707,15 +709,44 @@ footer h3 {
     object-fit: cover;
 }
 
-#entrevistas .proximas article p,
-#entrevistas .extra
-{
+#entrevistas .proximas article p{
     line-height: 1.6;
+    text-align: left;
 }
-#entrevistas .extra p{
+
+/* PAGINA MUJERES */
+.timiline span{
+    color: var(--time-line);
+}
+
+.timiline {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    position: relative;
+    min-height: 100vh;
+    padding: 6rem 10rem;
+    gap: 9rem;
+}
+
+.title_column {
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+    margin-top: 2rem;
+
+}
+
+.title_column h2 {
+    font-size: var(--h2-section-max);
     margin-bottom: 1rem;
 }
 
+.timiline_column {
+    padding-left: 8rem;
+    border-left: 1px solid var(--font-color);
+    position: relative;
+}
 
 .timeline-item {
     position: relative;
@@ -757,10 +788,9 @@ footer h3 {
 
 
 .timeline-item p {
-.timeline-item p {
     max-width: 620px;
 }
-}
+
 
 .timeline-item span{
     display: inline-block;
@@ -953,7 +983,7 @@ th {
         grid-area: navegador;
         color: var(--font-color);
         background-color: var(--bg-color2);
-            font-size: clamp(var(--nav-ideal), var(--nav-max), var(--nav-min));
+            font-size: clamp(var(--nav-min), var(--nav-ideal), var(--nav-max));
         /* justify-content: space-between; */
         top: 0;
         display: flex;
