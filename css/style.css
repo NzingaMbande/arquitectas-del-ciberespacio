@@ -514,26 +514,215 @@ footer h3 {
 
 
 /* PAGINA MUJERES */
-.timiline span {
+.timiline span{
     color: var(--time-line);
 }
 
 .timiline {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr ;
     align-items: start;
     position: relative;
     min-height: 100vh;
-    padding: 6rem 10rem;
-    gap: 9rem;
+    margin: 0 3rem;
 }
 
 .title_column {
-    position: sticky;
-    top: 50vh;
-    transform: translateY(-50%);
-    margin-top: 2rem;
+    margin: 3rem 0;
+}
 
+.title_column h2 {
+    font-size: var(--h2-section-max);
+
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.title_column p{
+    text-align: center;
+}
+
+.timiline_column {
+    padding-left: 2rem;
+    border-left: 1px solid var(--font-color);
+    position: relative;
+}
+
+
+
+.timiline span{
+    color: var(--time-line);
+}
+
+#entrevistas .extra p {
+    margin-bottom: 1rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 4rem 0;
+}
+
+.timiline_avatar {
+    position: absolute;
+    left: -3.8rem;
+    top: 0;
+    object-fit: cover;
+    object-position: top;
+    width: 60px;
+}
+
+.timeline-item h2 {
+    font-weight: 700;
+    color: var(--font-color);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-size: var(--h2-section-max);
+}
+
+
+.timeline-item figure img{
+    width:100%;
+    max-width: 620px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+
+.timeline-item h3{
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+    color: #949494;
+}
+
+
+.timeline-item p {
+    max-width: 620px;
+}
+
+
+.timeline-item span{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #8d6751;
+    color:var(--time-line);
+    border-radius: 333px;
+    line-height: 150%;
+}
+
+
+.cards_mujeres{
+    margin: 3rem 0;
+    padding: 0 3rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center; 
+    display: flex;
+}
+
+.card_mujeres{
+    flex: 0 0 100%; 
+    /* height: 70vh; */
+    /* FCS Para el flip */
+    transition: transform .6s linear;
+}
+
+.anverso, .reverso{
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.anverso {
+    padding: 1rem 2rem;
+    background-color: var(--bg-color3);
+    color: var(--font-color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 12px;
+    border-radius: 12px;
+    height: 70vh; 
+}
+
+.anverso h3 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    line-height: 140%;
+}
+
+.anverso button {
+    font-weight: 500;
+    background: none;
+    border: none;
+    color: var(--time-line);  
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.reverso {
+    padding: 2rem 2.5rem;
+    background-color: var(--bg-color3);
+    color: var(--font-color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+    gap: 1rem;
+    /* FCS Para el flip */
+    display: none;
+    transform: rotateY(180deg);
+}
+
+/* FCS Para el flip */
+.card_mujeres.flip {
+    transform: rotateY(180deg);
+}
+
+.reverso p {
+    line-height: 150%;
+    font-size: var(--p-min);
+}
+
+.reverso {
+    position: relative;
+    min-height: 50vh;
+    overflow: hidden;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    text-align: left;
+    border-radius: 12px;
+}
+
+.reverso img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.reverso::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent -10%, var(--bg-color3));
+    z-index: 1;
+}
+
+.reverso h4,
+.reverso p {
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
 /* AGREGADO ROS_ ENTREVISTAS */
@@ -713,187 +902,6 @@ footer h3 {
     text-align: left;
 }
 
-/* PAGINA MUJERES */
-.timiline span{
-    color: var(--time-line);
-}
-
-#entrevistas .extra p {
-    margin-bottom: 1rem;
-}
-
-.timiline_column {
-    padding-left: 8rem;
-    border-left: 1px solid var(--font-color);
-    position: relative;
-}
-
-.timeline-item {
-    position: relative;
-    padding: 0 0 4rem 0;
-}
-
-.timiline_avatar {
-    position: absolute;
-    left: -3.8rem;
-    top: 0;
-    object-fit: cover;
-    object-position: top;
-    width: 60px;
-}
-
-.timeline-item h2 {
-    font-weight: 700;
-    color: var(--font-color);
-    letter-spacing: -0.03em;
-    line-height: 1;
-    margin-bottom: 1rem;
-    font-size: var(--h2-section-max);
-}
-
-
-.timeline-item figure img {
-    width: 100%;
-    max-width: 620px;
-    height: auto;
-    margin-bottom: 2rem;
-}
-
-
-.timeline-item h3 {
-    text-transform: uppercase;
-    margin-bottom: 0.7rem;
-    color: #949494;
-}
-
-
-.timeline-item p {
-    max-width: 620px;
-}
-
-
-.timeline-item span {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 0.7rem;
-    border: 1px solid #8d6751;
-    color: var(--time-line);
-    border-radius: 333px;
-    line-height: 150%;
-}
-
-
-.cards_mujeres{
-    margin: 3rem 0;
-    padding: 0 3rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center; 
-    display: flex;
-}
-
-.card_mujeres{
-    flex: 0 0 100%; 
-    /* height: 70vh; */
-    /* FCS Para el flip */
-    transition: transform .6s linear;
-}
-
-.anverso, .reverso{
-    margin-bottom: 2rem;
-    height: 100%;
-}
-
-.anverso {
-    padding: 1rem 2rem;
-    background-color: var(--bg-color3);
-    color: var(--font-color2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 12px;
-    border-radius: 12px;
-    height: 70vh; 
-}
-
-.anverso h3 {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    line-height: 140%;
-}
-
-.anverso button {
-    font-weight: 500;
-    background: none;
-    border: none;
-    color: var(--time-line);
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-.reverso {
-    padding: 2rem 2.5rem;
-    background-color: var(--bg-color3);
-    color: var(--font-color2);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: center;
-    gap: 1rem;
-    /* FCS Para el flip */
-    display: none;
-    transform: rotateY(180deg);
-}
-
-/* FCS Para el flip */
-.card_mujeres.flip {
-    transform: rotateY(180deg);
-}
-
-.reverso p {
-    line-height: 150%;
-    font-size: var(--p-min);
-}
-
-.reverso {
-    position: relative;
-    min-height: 50vh;
-    overflow: hidden;
-    /* display: flex; */
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 12px;
-}
-
-.reverso img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.reverso::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent -10%, var(--bg-color3));
-    z-index: 1;
-}
-
-.reverso h4,
-.reverso p {
-    position: relative;
-    z-index: 2;
-    color: white;
-}
 
 
 /* POLITICA DE PRIVACIDAD */
@@ -1116,12 +1124,92 @@ th {
 
 
 
+    .card_mujeres{
+        flex: 0 0 100%;
+    }
+
+    .cards_main div{
+        flex: 0 0 50%;
+    }
+
+}
+
+
+@media (min-width: 1024px){
+    
+    .timiline {
+    grid-template-columns: 1fr 2fr;
+    padding: 6rem 10rem;
+    gap: 9rem;
+}
+
+.title_column {
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+    margin-top: 2rem;
+}
+
+.title_column h2 {
+    font-size: var(--h2-section-max);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.title_column p{
+    text-align: left;
+}
+
+.timiline_column {
+    padding-left: 8rem;
+}
+
+.timeline-item {
+    padding: 0 0 6rem 0;
+}
+
+.timiline_avatar {
+    left: -11.4rem;
+    top: 0;
+    width: 120px;
+}
+
+.timeline-item h2 {
+    font-weight: 700;
+    color: var(--font-color);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-size: var(--h2-section-max);
+}
+
+.timeline-item figure img{
+    margin-bottom: 2rem;
+}
+
+.timeline-item h3{
+    margin-bottom: 0.7rem;
+}
+
+.cards_mujeres{
+    margin-bottom: 5rem;
+    padding: 0 3rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
 .card_mujeres{
     flex: 0 0 calc(33% - 2rem); 
     height: 70vh; 
 }
 
-.cards_main div{
+ .cards_main div{
         flex: 0 0 25%;
+    }
+
+    nav> img:nth-of-type(2){
+        display: none;
     }
 }
