@@ -58,14 +58,14 @@
 }
 
 
-/* PALETA DE MODO OSCURO, NO TOCAR TODAVÍA */
-/* .modo-oscuro {
+/* PALETA DE MODO OSCURO*/
+.modo-oscuro {
             --font-color: white;
             --font-color2: rgb(192, 192, 192);
             --bg-color: rgb(0, 0, 0);
             --bg-color2: rgb(26, 26, 49);
             --bg-color3: rgb(255, 231, 231);
-        } */
+        }
 
 body {
     width: 100%;
@@ -93,7 +93,6 @@ body {
 
 
 /* HEADLINES */
-
 h1, h2, h3 {
     padding-left: 0.4rem;
     margin-top: 1rem;
@@ -394,10 +393,19 @@ button {
     border-radius: 2px;
 }
 
-#btn-modo {
-    border-radius: 50px;
-    /* transform: scale(0.2); */
+/* BOTON MODO OSCURO */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
 
+/* Escondemos el checkbox original */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 

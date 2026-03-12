@@ -13,8 +13,6 @@
 </head>
 
 <body>
-    
-    
     <!-- MENU HAMBURGUESA icon-->
     <span class="material-symbols-outlined">
     menu
@@ -24,7 +22,7 @@
     <nav>
         <!-- Logos -->
         <img src="assets/logo/Group 31.svg" alt="Logo">
-
+        <img src="assets/logo/Logo_small.svg" alt="Logo-small">
 
         <ul>
             <li><a href="#" aria-current="page">Inicio</a></li>
@@ -49,14 +47,18 @@
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main id="index">
+    <main id="index"> 
         <!-- BOTÓN DE MODO OSCURO -->
-        <div id="modo-oscuro">
+        <!-- <button id="btn-modo">Cambiar de modo</button> -->
+        <!-- BOTÓN DE MODO OSCURO -->
+        <label class="switch">
             <ul>
-                <li><button id="btn-modo"><img src="assets/logos-svg/dark_mode.svg" alt=""></button></li>
-                <li><button id="btn-modo"><img src="assets/logos-svg/light_mode.svg" alt=""></button></li>
+                <li>
+                    <input type="checkbox" id="btn-modo"><img src="assets/logos-svg/dark_mode.svg" alt=""></input>
+                    <span class="sliding"></span>
+                </li>
             </ul>
-        </div>
+        </label>
 
 
         <section>
@@ -138,10 +140,6 @@
                 <p><a href="articulos.html">Leer más</a></p>
 
             </div>
-
-
-
-
         </section>
     </main>
 
