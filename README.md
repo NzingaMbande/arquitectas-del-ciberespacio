@@ -115,7 +115,6 @@ Explicar brevemente:
 * Qué soluciones se aplicaron.
 * Qué se aprendió técnicamente.
 
-
 ## 🚀 Mejoras futuras
 
 * Añadir funcionalidad con JavaScript con los botones y/o carrousel de imágenes
