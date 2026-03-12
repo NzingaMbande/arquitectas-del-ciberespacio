@@ -10,15 +10,15 @@
 // });
 
 // Version Rocio
-document.querySelectorAll(".leer-mas").forEach(elemento=> {
+document.querySelectorAll(".leer-mas").forEach((elemento) => {
   elemento.addEventListener("click", function (e) {
     e.preventDefault(); // evita que el <a> recargue la página
     this.closest(".post").classList.toggle("activo");
-    elemento.textContent==="Leer más"?elemento.textContent="Leer menos":elemento.textContent="Leer más";
+    elemento.textContent === "Leer más"
+      ? (elemento.textContent = "Leer menos")
+      : (elemento.textContent = "Leer más");
   });
 });
-
-
 
 //imagenes
 // window.addEventListener("load", function(){
