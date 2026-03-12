@@ -94,9 +94,9 @@ body {
 
 /* HEADLINES */
 
-h1,h2,h3{
+h1, h2, h3 {
     padding-left: 0.4rem;
-    margin-top: 1rem ;
+    margin-top: 1rem;
     margin-bottom: 0.8rem;
 
 }
@@ -245,36 +245,36 @@ main {
     border: 2px;
 }
 
-#index section h2{
+#index section h2 {
     display: block;
     width: 100%;
 }
 
-#index p{
+#index p {
     margin-bottom: 0.2rem;
     font-size: 0.8rem;
     padding-left: 0.8rem;
 
 }
 
-#index section:last-child{
+#index section:last-child {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
 }
 
-#index figcaption{
+#index figcaption {
     font-size: 0.8rem;
 }
 
-.preview-articulo figure{
+.preview-articulo figure {
     width: 90%;
     height: 40%;
     padding: 0;
     margin-bottom: 1rem;
 }
 
-.preview-articulo img{
+.preview-articulo img {
     width: 100%;
     height: 100%;
 
@@ -283,8 +283,9 @@ main {
 
 /* PÁGINA DE ARTICULOS */
 #articulos {
-    display:grid;
-    grid-template-columns: 1.5fr ; /* 1 columna para movil */
+    display: grid;
+    grid-template-columns: 1.5fr;
+    /* 1 columna para movil */
     margin-top: 1.3rem;
     max-width: 95%;
     gap: 2rem;
@@ -332,6 +333,9 @@ main {
     font-size: 1rem;
 }
 
+.post.activo .extra > p{
+    padding: 0.5rem;
+}
 
 article h2 {
     padding-bottom: 0.5rem;
@@ -343,8 +347,12 @@ article>p,
 article h2 {
     margin-bottom: 0.8rem;
     padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
+article>p{
+    text-align: justify;
+}
 .fuente {
     font-size: 0.8rem;
     color: var(--font-color2);
@@ -621,23 +629,23 @@ footer h3 {
 }
 
 
-.cards_mujeres{
+.cards_mujeres {
     margin: 3rem 0;
     padding: 0 3rem;
     gap: 1rem;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     display: flex;
 }
 
-.card_mujeres{
-    flex: 0 0 100%; 
+.card_mujeres {
+    flex: 0 0 100%;
     /* height: 70vh; */
     /* FCS Para el flip */
     transition: transform .6s linear;
 }
 
-.anverso, .reverso{
+.anverso, .reverso {
     margin-bottom: 2rem;
     height: 100%;
 }
@@ -654,7 +662,7 @@ footer h3 {
     cursor: pointer;
     border-radius: 12px;
     border-radius: 12px;
-    height: 70vh; 
+    height: 70vh;
 }
 
 .anverso h3 {
@@ -967,10 +975,11 @@ nav> img:nth-of-type(1){
         display: none;
     }
 
-    nav img:nth-of-type(2){
+nav img:nth-of-type(2){
         display: block;
         margin: 0 auto;
-    }
+}
+
 
 
 
@@ -1231,9 +1240,9 @@ nav> img:nth-of-type(1){
         height: 70vh; 
     }
 
-    .cards_main div{
-            flex: 0 0 25%;
-        }
+    .cards_main div {
+        flex: 0 0 25%;
+    }
 
     nav> img:nth-of-type(2){
         display: none;
