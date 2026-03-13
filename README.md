@@ -5,27 +5,32 @@ Proyecto Web para CIFO La Violeta como ejercicio de maquetación avanzada utiliz
 ## Análisis
 
 **Objetivo**
-El objetivo del proyecto es dar visibilidad de la importancia de las mujeres en la tecnología, además de ser un espacio de reconocimiento, memoria e inspiración en el marco de las conmemoraciones del 08/Mar por la "Día del la mujer".
+El objetivo del proyecto es dar visibilidad a la importancia de las mujeres en la tecnología, además de ser un espacio de reconocimiento, memoria e inspiración en el marco de las conmemoraciones del 08/Mar por el "Día del la mujer".
 
 **Público objetivo (target)**
 Público en general
 
 **Análisis de la competencia**
-Webs similares: ???
+Webs similares: 
+https://websummit.com/
+https://www.womentech.net/
+https://mujerestech.org/
+https://www.mujeresentech.org/
 
 **Propuesta de valor**
-Responde a esto: ???
+Ofrecemos un lugar de referencia e inspiración para 
+nuestra generación y las que nos preceden. Damos altavoz y creamos un espacio donde la mujer es el centro, apostamos por la visibilización de los logros y las dificultades muchas veces ignoradas.
 
-> Por la buena visibilidad y armonía. ???
+Trabajamos con paleta de azules, grises y acentos vibrantes que conectan con el universo digital, la innovación y la visibilidad, sin perder calidez ni fuerza. La estética busca transmitir que esta no es una web “sobre mujeres” en un sentido superficial, sino una plataforma con criterio, con mirada editorial y con autoridad dentro del ámbito tech.
+También elegimos tipografías modernas, limpias y contundentes, que refuerzan esa idea de credibilidad, actualidad y diseño digital. Todo el sistema visual está pensado para sostener cuatro valores clave que queríamos comunicar desde el primer vistazo: autoridad y credibilidad tech, empoderamiento, modernidad e inclusión. En conjunto, la web no solo informa, sino que construye una presencia de marca clara: una voz valiente, inteligente e inspiradora que pone en el centro a las mujeres que están haciendo historia en tecnología.
 
-Puede ser:
-
-- Más rápido y cercano. ???
 
 **Contenido y estructura**
 _index.html_: Página principal. Declaración de intenciones. Presentación de las mujeres más representativas. Enlaces a los artículos relacionados.
 _articulos.html_: Artículos sobre temas aún pendientes para el reconocimiento de la importancia de la mujer en es aspecto tecnológico.
-_entrevistas.html_: Sección de entrevistas a mujeres destacadas del ámbito.
+_entrevistas.html_: Sección de entrevistas a mujeres destacadas del ámbito. 
+Página dedicada al formato podcast/entrevista. Incluye: cabecera visual con imagen destacada, manifiesto del proyecto, bloque principal de entrevista destacada con reproductor de audio, transcripción en formato pregunta/respuesta, sección de frases destacadas visuales, bloque de próximas entrevistas.
+
 _mujeres.html_: Timeline con hitos de sus aportes y galería flip-card sobre aportes mas destacados.
 _politica.html_: Información legal general sobre la aplicación del reglamento general de protección de datos y la cesión de derechos de imagen y voz.
 
@@ -35,11 +40,11 @@ _politica.html_: Información legal general sobre la aplicación del reglamento 
 
 ## 📌 Descripción
 
-**"Arquitectas del Ciberespacio"** Es una web responsive, usando HTML, CSS y JS, sin el apoyo de frameworks ni CMS.
+**"Arquitectas del Ciberespacio"** Es una web responsive, usando HTML, CSS y JS, sin el apoyo de frameworks y CMS.
 
 _HTML_:
 
-- Todos los elementos requeridos para la estrutura de una web actual
+- Todos los elementos requeridos para la estructura de una web actual
 
 _CSS_:
 
@@ -52,9 +57,9 @@ _CSS_:
 
 _JS_:
 
-- Captura del elementos con document.querySelector() y document.querySelectorAll()
+- Captura de elementos con document.querySelector() y document.querySelectorAll()
 - Método classList.toggle() para añadir/quitar clases CSS que determinaban visiblidad de los elementos HTML
-- Métodos AddEventListener() para "escuchar" eventos "click" generados por el usuarios.
+- Métodos AddEventListener() para "escuchar" eventos "click" generados por los usuarios.
 
 ---
 
@@ -109,12 +114,11 @@ Se han utilizado unidades relativas (`rem`, `%`, `vw`) y tipografía fluida medi
 ## 🎨 Decisiones técnicas relevantes
 
 - Por qué se eligió Grid para el layout principal:
-  Para establecer una estructura general aplicable a cada pagina web que compone el proyecto.
+  Para establecer una estructura general aplicable a cada página web que compone el proyecto.
 - En qué partes se utilizó Flexbox y por qué.
-  Se utilizó para los componentes que contengan elementos, a fin que puedan distribuirse y ordernarse según el diseño acordado.
-- Cómo se resolvió el scroll horizontal con Scroll Snap: ???
-- Cómo se gestionaron las transformaciones y transiciones: mayoritariamente con pseudoelementos CSS
-- Cómo se abordó la accesibilidad básica (si lo han hecho): ???
+  Se utilizó para los componentes que contengan elementos, a fin que puedan distribuirse y ordenarse según el diseño acordado.
+- Cómo se gestionaron las transformaciones y transiciones: mayoritariamente con pseudo elementos CSS
+- Cómo se abordó la accesibilidad básica (si lo han hecho): uso de Alt en imágenes.
 
 ---
 
@@ -128,6 +132,7 @@ Se han utilizado unidades relativas (`rem`, `%`, `vw`) y tipografía fluida medi
 - Dominio del Git y Github
 - Falta de tiempo
 - Entendimiento y coordinación grupal
+- Dirigir y repartir el trabajo equitativamente
 
 **Qué soluciones se aplicaron.**
 
@@ -135,18 +140,19 @@ _Sobre git y github_: Tecnologías difíciles de dominar para estudiantes novele
 
 _Sobre falta de tiempo_: Sobre todo porque durante algunos días las clases no se detuvieron y el tiempo para avanzar y coordinar se vió afectado. Cada miembro intentó aprovechar las franjas de clase destinadas al avance del proyecto. Aparte, se tuvo que dedicar tiempo personal fuera de los horarios de estudio.
 
-_Entendimiento y coordinación grupal_: Inicialmente, fue difícil lograr el entendimiento entre los miembros del grupo. Cada uno quería aportar con sus ideas y/o experiencias, por lo que más de una vez fue necesario una intervención de la Project Manager (Mary Ramos) y del profesor (Manel Plaza) para lograr concensos.
+_Entendimiento y coordinación grupal_: Inicialmente, fue difícil lograr el entendimiento entre los miembros del grupo. Cada uno quería aportar con sus ideas y/o experiencias, por lo que más de una vez fue necesario una intervención de la Project Manager (Mary Ramos) y del profesor (Manel Plaza) para lograr consensos.
 
 **Qué se aprendió técnicamente.**
 
-Un aporte básico de JS puede lograr efectos que hacen mas vistosa la web. Las herramientas que HTML5 y CSS3 ofrecen estan en constante evolución y es fácil encontrar nuevas formas de mostrar una pagina html.
+Un aporte básico de JS puede lograr efectos que hacen más vistosa la web. Las herramientas que HTML5 y CSS3 ofrecen están en constante evolución y es fácil encontrar nuevas formas de mostrar una página html.
 
 ## 🚀 Mejoras futuras
 
 - Integración con backend para implementar suscripciones
 - Buscar a futuro hacer un proyecto con mayor visibilidad y evolutivo.
-- Aprender a subir un proyecto web al internet, desde las opciones gratuitas hasta las mas profesionales.
+- Aprender a subir un proyecto web al internet, desde las opciones gratuitas hasta las más profesionales.
 - Mejora de accesibilidad.
+- Añadir un botón de compartir.
 
 ---
 
@@ -171,5 +177,6 @@ Confección y Publicación Web Año: 2026
 ---
 
 ## Capturas de pantalla.
+
 
 [capturas de pantalla de la web]???
