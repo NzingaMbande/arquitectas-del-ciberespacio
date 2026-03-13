@@ -554,7 +554,7 @@ footer h3 {
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
-    background: var(--tarjetas);
+    background-color: var(--tarjetas);
     color: var(--font-color2);
     border-radius: 4px;
     overflow: hidden;
@@ -570,6 +570,7 @@ footer h3 {
 .cards_main h3 {
     margin: 0.5rem;
     line-height: 150%;
+    color: white;
     /* min-height: 4.5rem; */
 }
 
