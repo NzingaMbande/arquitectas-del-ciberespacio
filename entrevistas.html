@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Podcast y entrevistas a mujeres que crean el futuro digital">
     <title>Arquitectas del Ciberespacio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <!-- Mis estilos -->
@@ -40,11 +48,11 @@
         <div class="hero__content">
             <div class="hero__text">
                 <h1 id="titulo">Arquitectas del Ciberespacio</h1>
-                <p>Visibilizando el talento femenino en la técnología</p>
+                <p>Visibilizando el talento femenino en la tecnología</p>
             </div>
 
-            <figure>
-                <img src="assets/imgDiana/pioneras_header.webp" alt="Pioneras de la programación">
+            <figure class="hero__image">
+                <img src="assets/main_page_fotos/hero.webp" alt="Pioneras de la programación">
             </figure>
         </div>
 
@@ -79,86 +87,126 @@
                 <figure>
                     <img src="assets/entrevista.webp" alt="dos mujeres en una entrevista">
                 </figure>
+                <a class="btn-audio" href="#">Escuchar podcast</a>
             </div>
-            <a class="btn-audio" href="#">Escuchar podcast</a>
         </section>
 
         <section class="audio">
-            <h2>Podcast Invitada: Anna Cejudo</h2>
+            <div class="audio-header">
+                <span class="tag">Podcast destacado</span>
+                <h2>Anna Cejudo: educación, innovación y liderazgo tecnológico</h2>
+                <p>Una conversación sobre aprender, emprender y abrir camino a más mujeres en tecnología.</p>
+            </div>
 
-            <div class="audio_media">
+            <div class="audio-media">
                 <figure>
-                    <img src="assets/Anna.webp" alt="Anna Cejudo en la entrevista">
+                    <img src="assets/anna.webp" alt="Anna Cejudo en la entrevista">
                 </figure>
 
-                <audio src="assets/audio/PODCAST.mp3" controls>Tu navegador no soporta este archivo de audio</audio>
+                <div>
+                    <p class="audio-push">Escucha el episodio</p>
+                    <audio src="#" controls>Tu navegador no soporta este archivo de audio</audio>
+                </div>
             </div>
+
 
             <article class="post">
                 <h3 class="intro">Transcripción</h3>
 
                 <div class="extra">
-                    <p><strong>Pregunta:</strong> Ana, llevas más de diez años emprendiendo en el mundo de
-                        la innovación y la educación. ¿Qué te motivó a empezar este camino?.</p>
-                    <p><strong>Respuesta:</strong> Desde el principio tuve mucha curiosidad por cómo las
-                        ideas pueden convertirse en proyectos que cambian cosas. Cuando cofundé Ideafoster en 2014
-                        quería ayudar a empresas a innovar y pensar diferente. Con el tiempo entendí que la clave de
-                        todo es la educación: si damos a más personas las herramientas adecuadas, pueden crear un
-                        impacto enorme</p>
-                    <p><strong>Pregunta:</strong> Después de la experiencia con Ideafoster, ¿qué te llevó a
-                        crear Founderz?</p>
-                    <p><strong>Respuesta:</strong> Me di cuenta de que el acceso al conocimiento sigue
-                        siendo muy desigual. Founderz nace con la misión de democratizar la educación en habilidades
-                        clave para el futuro, como la inteligencia artificial, la tecnología o el liderazgo. Queríamos
-                        crear una escuela online accesible y global que permitiera a cualquier persona aprender y
-                        reinventarse profesionalmente.</p>
-                    <p><strong>Pregunta:</strong> En Arquitectas del Ciberespacio hablamos mucho del papel
-                        de las mujeres en tecnología. ¿Qué crees que hace falta para que haya más mujeres en este
-                        sector?</p>
-                    <p><strong>Respuesta:</strong> Creo que necesitamos más referentes, más confianza y más
-                        acceso a formación tecnológica. Muchas veces el talento está ahí, pero faltan oportunidades o
-                        entornos que impulsen a las mujeres a dar el paso. La educación y las comunidades de apoyo son
-                        claves para cambiar eso.</p>
-                    <p><strong>Pregunta:</strong> Además de emprendedora, eres madre de tres. ¿Cómo ha
-                        influido tu vida personal en tu visión de la educación?</p>
-                    <p><strong>Respuesta:</strong> Muchísimo. Ser madre me ha hecho pensar constantemente en
-                        el tipo de futuro y de aprendizaje que queremos para las próximas generaciones. Creo
-                        profundamente que un buen entorno educativo puede desbloquear el potencial de cualquier persona,
-                        y eso es algo que intento aplicar tanto en mi familia como en mi trabajo.</p>
-                    <p><strong>Pregunta:</strong> Anna ¿qué consejo le darías a las mujeres que quieren
-                        empezar en tecnología o emprender?</p>
-                    <p><strong>Respuesta:</strong> Que no esperen a sentirse completamente preparadas. La
-                        mayoría aprendemos haciendo, equivocándonos y volviendo a intentarlo. Rodearse de personas que
-                        inspiren, seguir aprendiendo y confiar en tu propia visión puede marcar toda la diferencia.</p>
-                    <p><strong>Pregunta:</strong> Founderz apuesta mucho por el aprendizaje online. ¿Qué
-                        ventajas crees que tiene frente a la educación tradicional?</p>
-                    <p><strong>Respuesta:</strong> La educación online rompe muchas barreras. Permite
-                        aprender desde cualquier lugar, adaptar el ritmo a tu vida y acceder a expertos de todo el
-                        mundo. Además, en tecnología todo cambia muy rápido, así que necesitamos modelos de aprendizaje
-                        continuo que se actualicen constantemente.</p>
-                    <p><strong>Pregunta:</strong> La inteligencia artificial está transformando muchas
-                        profesiones. ¿Cómo crees que debería prepararse la gente para este cambio?</p>
-                    <p><strong>Respuesta:</strong> Lo más importante es perder el miedo y empezar a entender
-                        cómo funciona. No todo el mundo tiene que ser programador, pero sí comprender cómo usar estas
-                        herramientas para mejorar su trabajo. La curiosidad y la capacidad de aprender constantemente
-                        serán habilidades clave.</p>
-                    <p><strong>Pregunta:</strong> En tu trayectoria como emprendedora, seguro que también ha
-                        habido momentos difíciles. ¿Qué has aprendido de los fracasos?</p>
-                    <p><strong>Respuesta:</strong> He aprendido que los errores forman parte del proceso.
-                        Muchas veces son las experiencias más difíciles las que te enseñan más. Lo importante es
-                        mantener la perspectiva, aprender rápido y seguir avanzando con más conocimiento que antes.</p>
-                    <p><strong>Pregunta:</strong> Founderz tiene una comunidad global de estudiantes. ¿Por
-                        qué es importante construir comunidad alrededor del aprendizaje?</p>
-                    <p><strong>Respuesta:</strong> Porque aprender no es solo consumir contenido, también es
-                        compartir experiencias. Cuando las personas conectan, colaboran y se apoyan entre ellas, el
-                        aprendizaje se vuelve mucho más poderoso. La comunidad crea motivación y abre oportunidades que
-                        a veces no esperas.</p>
-                    <p><strong>Pregunta:</strong> Para terminar, ¿cómo imaginas el futuro de la educación en
-                        los próximos diez años?</p>
-                    <p><strong>Respuesta:</strong> Creo que será mucho más flexible, personalizada y
-                        conectada con la realidad del mercado. Veremos más aprendizaje a lo largo de toda la vida,
-                        microprogramas especializados y una integración cada vez mayor de la tecnología y la
-                        inteligencia artificial en el proceso educativo.</p>
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> Anna, llevas más de diez años emprendiendo en el mundo
+                            de la innovación y la educación. ¿Qué te motivó a empezar este camino?</p>
+                        <p class="respuesta"><span>Respuesta</span> Desde el principio tuve mucha curiosidad por cómo
+                            las ideas pueden convertirse en proyectos que cambian cosas. Cuando cofundé Ideafoster en
+                            2014 quería ayudar a empresas a innovar y pensar diferente. Con el tiempo entendí que la
+                            clave de todo es la educación: si damos a más personas las herramientas adecuadas, pueden
+                            crear un impacto enorme.</p>
+                    </div>
+
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> Después de la experiencia con Ideafoster, ¿qué te
+                            llevó a crear Founderz?</p>
+                        <p class="respuesta"><span>Respuesta</span> Me di cuenta de que el acceso al conocimiento sigue
+                            siendo muy desigual. Founderz nace con la misión de democratizar la educación en habilidades
+                            clave para el futuro, como la inteligencia artificial, la tecnología o el liderazgo.
+                            Queríamos crear una escuela online accesible y global que permitiera a cualquier persona
+                            aprender y reinventarse profesionalmente.</p>
+                    </div>
+
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> En Arquitectas del Ciberespacio hablamos mucho del
+                            papel de las mujeres en tecnología. ¿Qué crees que hace falta para que haya más mujeres en
+                            este sector?</p>
+                        <p class="respuesta"><span>Respuesta</span> Creo que necesitamos más referentes, más confianza y
+                            más acceso a formación tecnológica. Muchas veces el talento está ahí, pero faltan
+                            oportunidades o entornos que impulsen a las mujeres a dar el paso. La educación y las
+                            comunidades de apoyo son claves para cambiar eso.</p>
+                    </div>
+
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> Además de emprendedora, eres madre de tres. ¿Cómo ha
+                            influido tu vida personal en tu visión de la educación?</p>
+                        <p class="respuesta"><span>Respuesta</span> Muchísimo. Ser madre me ha hecho pensar
+                            constantemente en el tipo de futuro y de aprendizaje que queremos para las próximas
+                            generaciones. Creo profundamente que un buen entorno educativo puede desbloquear el
+                            potencial de cualquier persona, y eso es algo que intento aplicar tanto en mi familia como
+                            en mi trabajo.</p>
+                    </div>
+
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> Anna, ¿qué consejo le darías a las mujeres que quieren
+                            empezar en tecnología o emprender?</p>
+                        <p class="respuesta"><span>Respuesta</span> Que no esperen a sentirse completamente preparadas.
+                            La mayoría aprendemos haciendo, equivocándonos y volviendo a intentarlo. Rodearse de
+                            personas que inspiren, seguir aprendiendo y confiar en tu propia visión puede marcar toda la
+                            diferencia.</p>
+                    </div>
+
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> Founderz apuesta mucho por el aprendizaje online. ¿Qué
+                            ventajas crees que tiene frente a la educación tradicional?</p>
+                        <p class="respuesta"><span>Respuesta</span> La educación online rompe muchas barreras. Permite
+                            aprender desde cualquier lugar, adaptar el ritmo a tu vida y acceder a expertos de todo el
+                            mundo. Además, en tecnología todo cambia muy rápido, así que necesitamos modelos de
+                            aprendizaje continuo que se actualicen constantemente.</p>
+                    </div>
+
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> La inteligencia artificial está transformando muchas
+                            profesiones. ¿Cómo crees que debería prepararse la gente para este cambio?</p>
+                        <p class="respuesta"><span>Respuesta</span> Lo más importante es perder el miedo y empezar a
+                            entender cómo funciona. No todo el mundo tiene que ser programador, pero sí comprender cómo
+                            usar estas herramientas para mejorar su trabajo. La curiosidad y la capacidad de aprender
+                            constantemente serán habilidades clave.</p>
+                    </div>
+
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> En tu trayectoria como emprendedora, seguro que
+                            también ha habido momentos difíciles. ¿Qué has aprendido de los fracasos?</p>
+                        <p class="respuesta"><span>Respuesta</span> He aprendido que los errores forman parte del
+                            proceso. Muchas veces son las experiencias más difíciles las que te enseñan más. Lo
+                            importante es mantener la perspectiva, aprender rápido y seguir avanzando con más
+                            conocimiento que antes.</p>
+                    </div>
+
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> Founderz tiene una comunidad global de estudiantes.
+                            ¿Por qué es importante construir comunidad alrededor del aprendizaje?</p>
+                        <p class="respuesta"><span>Respuesta</span> Porque aprender no es solo consumir contenido,
+                            también es compartir experiencias. Cuando las personas conectan, colaboran y se apoyan entre
+                            ellas, el aprendizaje se vuelve mucho más poderoso. La comunidad crea motivación y abre
+                            oportunidades que a veces no esperas.</p>
+                    </div>
+
+                    <div class="qa">
+                        <p class="pregunta"><span>Pregunta</span> Para terminar, ¿cómo imaginas el futuro de la
+                            educación en los próximos diez años?</p>
+                        <p class="respuesta"><span>Respuesta</span> Creo que será mucho más flexible, personalizada y
+                            conectada con la realidad del mercado. Veremos más aprendizaje a lo largo de toda la vida,
+                            microprogramas especializados y una integración cada vez mayor de la tecnología y la
+                            inteligencia artificial en el proceso educativo.</p>
+                    </div>
                 </div>
                 <a class="leer-mas" href="#">Leer más</a>
             </article>
@@ -166,8 +214,8 @@
         </section>
 
         <section class="frases-destacadas">
-            <h2>Frases que resuenan</h2>
             <div class="frases">
+                <h2>Frases que resuenan</h2>
                 <figure>
                     <img src="assets/educacion.webp"
                         alt="frase que dice: La educación es la herramienta más poderosa para que más mujeres puedan diseñar el futuro tecnológico.">
@@ -187,12 +235,11 @@
         </section>
 
         <section class="proximas">
-            <h2>Proximas entrevistas</h2>
-
+            <h2>Próximas entrevistas</h2>
             <article>
                 <h3>Erna Schneider Hoover</h3>
                 <figure>
-                    <figcaption>Erna Schneider Hoover</figcaption>
+                    <figcaption class="tag">Erna Schneider Hoover</figcaption>
                     <img src="assets/Erna.webp" alt="Erna Schneider Hoover">
                 </figure>
                 <p>La famosa ingeniera nos hablará de su experiencia inventando y registrando patentes</p>
@@ -201,7 +248,7 @@
             <article>
                 <h3>Nerea Luis Miguenza</h3>
                 <figure>
-                    <figcaption>Nerea Luis Miguenza</figcaption>
+                    <figcaption class="tag">Nerea Luis Miguenza</figcaption>
                     <img src="assets/Nerea-Luis.webp" alt="Nerea Luis Mingueza">
                 </figure>
                 <p>Doctora en ciencias de la computación y directora de Inteligencia Artificial en Sngular, impulsa
@@ -211,7 +258,7 @@
             <article>
                 <h3>Samantha Payne</h3>
                 <figure>
-                    <figcaption>Samantha Payne</figcaption>
+                    <figcaption class="tag">Samantha Payne</figcaption>
                     <img src="assets/SamanthaPayne.webp" alt="Samantha Payne">
                 </figure>
                 <p>Joven, emprendedora y co-fundadora de Open Bionics, cambiando vidas a muchos niños y niñas.</p>
