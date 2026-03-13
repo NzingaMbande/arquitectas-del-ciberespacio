@@ -6,13 +6,17 @@ Proyecto Web para CIFO La Violeta como ejercicio de maquetación avanzada utiliz
 
 **Objetivo de la web**
 
-1. **Existe para** :
-2. **Público objetivo (target)**
+1.**Existe para** :
 
-   * Acceso por ordenador y móvil
+2.**Público objetivo (target)**
+
+* Acceso por ordenador y móvil
+
 3. Análisis de la competencia (anton / diana / rocio)
+
    Webs similares: ???
 4. Propuesta de valor
+
    Responde a esto:
 
    > Por la buena visibilidad y armonía.
@@ -23,6 +27,7 @@ Proyecto Web para CIFO La Violeta como ejercicio de maquetación avanzada utiliz
    * Más rápido y cercano.
 5. Contenido y estructura
 6. Aspectos técnicos básicos
+
    A nivel simple:
 
    * Una web corporativa, que busca mostrar al público ???.
@@ -59,6 +64,7 @@ El objetivo del proyecto es consolidar la capacidad de maquetación profesional 
 
 * HTML5 (semántico)
 * CSS3
+
   * Flexbox
   * CSS Grid
   * clamp()
@@ -114,7 +120,6 @@ Explicar brevemente:
 * Qué problemas surgieron.
 * Qué soluciones se aplicaron.
 * Qué se aprendió técnicamente.
-
 
 ## 🚀 Mejoras futuras
 

@@ -15,22 +15,23 @@
         rel="stylesheet">
 
     <!-- Google Icons -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=more_vert" />
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <!-- Mis estilos -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
     <!-- MENU HAMBURGUESA icon-->
     <span class="material-symbols-outlined">
-        more_vert
+    menu
     </span>
 
     <!-- Menú de navegación -->
     <nav>
+        <!-- Logos -->
+        <img src="assets/logo/Group 31.svg" alt="Logo">
+        <img src="assets/logo/Logo_small.svg" alt="Logo-small">
+
         <ul>
             <li><a href="#" aria-current="page">Inicio</a></li>
             <li><a href="entrevistas.html">Entrevistas</a></li>
@@ -54,35 +55,39 @@
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main id="index">
+    <main id="index"> 
         <!-- BOTÓN DE MODO OSCURO -->
-        <div id="modo-oscuro">
+        <label class="switch">
             <ul>
-                <li><button id="btn-modo"><img src="assets/logos-svg/dark_mode.svg" alt=""></button></li>
-                <li><button id="btn-modo"><img src="assets/logos-svg/light_mode.svg" alt=""></button></li>
+                <li>
+                    <input type="checkbox" id="btn-modo"></input>
+                    <span class="sliding"></span>
+                </li>
             </ul>
-        </div>
+        </label>
 
-
+        <!-- SECCIONES -->
         <section>
             <h2>Quienes somos</h2>
             <p>Somos una organización que busca reivindicar el papel de la mujer en el mundo de la tecnología. Nuestro
                 objetivo es inspirar, buscar referentes actuales, pasados y poner enfasis en sus logros . </p>
         </section>
+
         <section class="preview-entrevista">
             <h2>Nueva entrevista con Anna Cejudo </h2>
-            <figure>
-                <img src="assets/Anna.webp" alt="Foto de una entrevista">
-                <figcaption>Puedes ver la nueva entrevista <a href="entrevistas.html">aquí</a></figcaption>
-            </figure>
-            <p><a href="entrevistas.html">Leer más</a></p>
-
+            <div class="card">
+                <figure>
+                    <img src="assets/Anna.webp" alt="Foto de una entrevista">
+                </figure>
+                <p>Anna Cejudo visita nuestro podcast de "Conversaciones esenciales", nos cuenta un poco sobre su papel como confundadora, madre y nos ofrece consejo.</p>
+                <p><a href="entrevistas.html">Escuchalo aquí</a></p>
+            </div>
         </section>
+
         <section class="slider">
             <h2>Nombres detrás del <span>&#123;</span>código<span>&#125;</span></h2>
 
             <div class="cards_main">
-
                 <div>
                     <figure>
                         <img src="assets/main_page_fotos/tarjetas_de_mujeres/Ada_Lovelace.webp" alt="Ada">
@@ -93,7 +98,7 @@
 
                 <div>
                     <figure>
-                        <img src="assets/main_page_fotos/tarjetas_de_mujeres/grace-hopper 2.webp" alt="Grace">
+                        <img src="assets/main_page_fotos/tarjetas_de_mujeres/grace-hopper-2.webp" alt="Grace">
                     </figure>
                     <h3>Grace Hopper</h3>
                     <p>Pionera de los lenguajes de programación</p>
@@ -115,38 +120,33 @@
                 </div>
             </div>
         </section>
+        <!-- Seccion articulos -->
         <section>
             <h2>Retos en el mundo de la tecnología</h2>
-
             <p>No te pierdas nuestros últimos articulos, siempre buscando representar, visibilizar por un futuro más
                 igualitaro</p>
-
-            <div>
+            <div class="card">
                 <figure class="preview-articulo">
-                    <img src="assets/articulos/article6.jpg" alt="mujer-tech">
                     <figcaption>Dificultad para conciliar vida laboral y personal</figcaption>
+                    <img src="assets/articulos/article6.jpg" alt="mujer-tech">
                 </figure>
                 <p><a href="articulos.html">Leer más</a></p>
 
 
                 <figure class="preview-articulo">
-                    <img src="assets/articulos/article5.jpg" alt="mujer-tech">
                     <figcaption>Estereotipos (Suelo Pegajoso)</figcaption>
+                    <img src="assets/articulos/article5.jpg" alt="mujer-tech">
                 </figure>
                 <p><a href="articulos.html">Leer más</a></p>
 
 
                 <figure class="preview-articulo">
-                    <img src="assets/articulos/article4.jpg" alt="mujer-tech">
                     <figcaption>Las mujeres, fuera del centro del avance tecnológico</figcaption>
+                    <img src="assets/articulos/article4.jpg" alt="mujer-tech">
                 </figure>
                 <p><a href="articulos.html">Leer más</a></p>
 
             </div>
-
-
-
-
         </section>
     </main>
 
@@ -177,7 +177,7 @@
                 <h3 class="footer__title">Suscribete</h3>
                 <form action="#" method="post" class="newsletter__form">
                     <input type="email" name="mail" id="mail" aria-label="mail" class="newsletter_input"
-                        placeholder="Tu correo electronico" requiered>
+                        placeholder="Tu correo electronico" required>
                     <button type="submit" class="newsletter__button">Enviar</button>
                 </form>
             </div>
