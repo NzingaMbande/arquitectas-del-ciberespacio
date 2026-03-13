@@ -519,7 +519,8 @@ footer h3 {
 
 .slider h2 {
     text-align: left;
-    font-size: 1.3rem;;
+    font-size: 1.3rem;
+    ;
     line-height: 120%;
 }
 
@@ -576,227 +577,229 @@ footer h3 {
     color: var(--time-line);
 }
 
-.slider{
+.slider {
     overflow: hidden;
 }
 
 
 /* PAGINA MUJERES */
+.timiline span {
+    .timiline span {
+        color: var(--time-line);
+    }
+
+    .timiline {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        align-items: start;
+        position: relative;
+        min-height: 100vh;
+        margin: 0 3rem;
+    }
+
+    .title_column {
+        margin: 3rem 0;
+    }
+
+    .title_column h2 {
+        font-size: var(--h2-section-max);
+
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .title_column p {
+        text-align: center;
+    }
+
+    .timiline_column {
+        padding-left: 2rem;
+        border-left: 1px solid var(--font-color);
+        position: relative;
+    }
+
+
 .timiline span{
     color: var(--time-line);
 }
 
-.timiline {
-    display: grid;
-    grid-template-columns: 1fr ;
-    align-items: start;
-    position: relative;
-    min-height: 100vh;
-    margin: 0 3rem;
-}
+    #entrevistas .extra p {
+        margin-bottom: 1rem;
+    }
 
-.title_column {
-    margin: 3rem 0;
-}
+    .timeline-item {
+        position: relative;
+        padding: 0 0 4rem 0;
+    }
 
-.title_column h2 {
-    font-size: var(--h2-section-max);
+    .timiline_avatar {
+        position: absolute;
+        left: -3.8rem;
+        top: 0;
+        object-fit: cover;
+        object-position: top;
+        width: 60px;
+    }
 
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.title_column p{
-    text-align: center;
-}
-
-.timiline_column {
-    padding-left: 2rem;
-    border-left: 1px solid var(--font-color);
-    position: relative;
-}
+    .timeline-item h2 {
+        font-weight: 700;
+        color: var(--font-color);
+        letter-spacing: -0.03em;
+        line-height: 1;
+        margin-bottom: 1rem;
+        font-size: var(--h2-section-max);
+    }
 
 
-.timiline span{
-    color: var(--time-line);
-}
-
-#entrevistas .extra p {
-    margin-bottom: 1rem;
-}
-
-.timeline-item {
-    position: relative;
-    padding: 0 0 4rem 0;
-}
-
-.timiline_avatar {
-    position: absolute;
-    left: -3.8rem;
-    top: 0;
-    object-fit: cover;
-    object-position: top;
-    width: 60px;
-}
-
-.timeline-item h2 {
-    font-weight: 700;
-    color: var(--font-color);
-    letter-spacing: -0.03em;
-    line-height: 1;
-    margin-bottom: 1rem;
-    font-size: var(--h2-section-max);
-}
+    .timeline-item figure img {
+        width: 100%;
+        max-width: 620px;
+        height: auto;
+        margin-bottom: 2rem;
+    }
 
 
-.timeline-item figure img{
-    width:100%;
-    max-width: 620px;
-    height: auto;
-    margin-bottom: 2rem;
-}
+    .timeline-item h3 {
+        text-transform: uppercase;
+        margin-bottom: 0.7rem;
+        color: #949494;
+    }
 
 
-.timeline-item h3{
-    text-transform: uppercase;
-    margin-bottom: 0.7rem;
-    color: #949494;
-}
+    .timeline-item p {
+        max-width: 620px;
+    }
 
 
-.timeline-item p {
-.timeline-item p {
-    max-width: 620px;
-}
-}
-
-.timeline-item span{
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 0.7rem;
-    border: 1px solid #8d6751;
-    color:var(--time-line);
-    border-radius: 333px;
-    line-height: 150%;
-}
+    .timeline-item span {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.5rem 0.7rem;
+        border: 1px solid #8d6751;
+        color: var(--time-line);
+        border-radius: 333px;
+        line-height: 150%;
+    }
 
 
-.cards_mujeres {
-    margin: 3rem 0;
-    padding: 0 3rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    display: flex;
-}
+    .cards_mujeres {
+        margin: 3rem 0;
+        padding: 0 3rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+    }
 
-.card_mujeres {
-    flex: 0 0 100%;
-    /* height: 70vh; */
+    .card_mujeres {
+        flex: 0 0 100%;
+        /* height: 70vh; */
+        /* FCS Para el flip */
+        transition: transform .6s linear;
+    }
+
+    .anverso,
+    .reverso {
+        margin-bottom: 2rem;
+        height: 100%;
+    }
+
+    .anverso {
+        padding: 1rem 2rem;
+        background-color: var(--bg-color3);
+        color: var(--font-color2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        cursor: pointer;
+        border-radius: 12px;
+        border-radius: 12px;
+        height: 70vh;
+    }
+
+    .anverso h3 {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        line-height: 140%;
+    }
+
+    .anverso button {
+        font-weight: 500;
+        background: none;
+        border: none;
+        color: var(--time-line);
+        cursor: pointer;
+        font-size: 0.8rem;
+    }
+
+    .reverso {
+        padding: 2rem 2.5rem;
+        background-color: var(--bg-color3);
+        color: var(--font-color2);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: left;
+        gap: 1rem;
+        /* FCS Para el flip */
+        display: none;
+        transform: rotateY(180deg);
+    }
+
     /* FCS Para el flip */
-    transition: transform .6s linear;
-}
+    .card_mujeres.flip {
+        transform: rotateY(180deg);
+    }
 
-.anverso, .reverso {
-    margin-bottom: 2rem;
-    height: 100%;
-}
+    .reverso p {
+        line-height: 150%;
+        font-size: var(--p-min);
+    }
 
-.anverso {
-    padding: 1rem 2rem;
-    background-color: var(--bg-color3);
-    color: var(--font-color2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    cursor: pointer;
-    border-radius: 12px;
-    border-radius: 12px;
-    height: 70vh;
-}
+    .reverso {
+        position: relative;
+        min-height: 50vh;
+        overflow: hidden;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2rem;
+        text-align: left;
+        border-radius: 12px;
+    }
 
-.anverso h3 {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    line-height: 140%;
-}
+    .reverso img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
 
-.anverso button {
-    font-weight: 500;
-    background: none;
-    border: none;
-    color: var(--time-line);  
-    cursor: pointer;
-    font-size: 0.8rem;
-}
+    .reverso::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent -10%, var(--bg-color3));
+        z-index: 1;
+    }
 
-.reverso {
-    padding: 2rem 2.5rem;
-    background-color: var(--bg-color3);
-    color: var(--font-color2);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: left;
-    gap: 1rem;
-    /* FCS Para el flip */
-    display: none;
-    transform: rotateY(180deg);
-}
+    .reverso h4,
+    .reverso p {
+        position: relative;
+        z-index: 2;
+        color: white;
+    }
 
-/* FCS Para el flip */
-.card_mujeres.flip {
-    transform: rotateY(180deg);
-}
-
-.reverso p {
-    line-height: 150%;
-    font-size: var(--p-min);
-}
-
-.reverso {
-    position: relative;
-    min-height: 50vh;
-    overflow: hidden;
-    /* display: flex; */
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 2rem;
-    text-align: left;
-    border-radius: 12px;
-}
-
-.reverso img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.reverso::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent -10%, var(--bg-color3));
-    z-index: 1;
-}
-
-.reverso h4,
-.reverso p {
-    position: relative;
-    z-index: 2;
-    color: white;
-}
-
-/* AGREGADO ROS_ ENTREVISTAS */
-#header_esconder{
-    display: none;
-}
+    /* AGREGADO ROS_ ENTREVISTAS */
+    #header_esconder {
+        display: none;
+    }
 
 .manifiesto-intro {
     background: var(--bg-cards);
@@ -812,61 +815,48 @@ footer h3 {
     gap: 3rem;
 }
 
-#entrevistas section {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
+    #entrevistas section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 
-#entrevistas h2 {
-    /*sacar padding, ver clamp con mary*/
-    font-family: var(--font-titular);
-    color: var(--bg-titulos);
-    font-size: clamp(1.8rem, 1.2rem + 2vw, 2.8rem);
-    /*36px*/
-    margin-bottom: 1rem;
-    padding: 0;
-}
+    #entrevistas h2 {
+        font-family: 'Space Grotesk';
+        font-size: 36px;
+        font-weight: bolder;
+        color: #1F3C88;
+        line-height: 1.2;
+        padding: 0.1rem 2rem;
+    }
 
-#entrevistas .manifiesto {
-    /*sacar aling, added bg */
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    align-items: center;
-    background: #FFFFFF;
-    border: 1px solid #e5e9eb;
-    border-radius: 24px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(31, 60, 136, 0.08);
+    #entrevistas .manifiesto {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        align-items: center;
+        border-radius: 0.5rem;
+    }
 
-}
+    #entrevistas .manifiesto p {
+        line-height: 1.7;
+        max-width: 85%;
+    }
 
+    #entrevistas .manifiesto figure {
+        margin: 0;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        border-radius: 0.25rem;
+    }
 
-#entrevistas .manifiesto p {
-    /*color y font size ver var*/
-    color: #374151;
-    line-height: 1.8;
-    font-size: 1rem;
-    margin: 0;
-    max-width: 98%;
-    text-align: left;
-}
-
-#entrevistas .manifiesto figure {
-    /*radius mas grande*/
-    margin: 0;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    border-radius: 18px;
-}
-
-#entrevistas img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
+    #entrevistas img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
 
 #entrevistas .btn-audio {
     display: inline-flex;
@@ -1062,41 +1052,47 @@ footer h3 {
     box-shadow: 0 10px 30px rgba(31, 60, 136, 0.08);
 }
 
-#entrevistas .proximas h2 {
-    grid-column: 1 / -1;
-}
+    #entrevistas .proximas h2 {
+        grid-column: 1 / -1;
+    }
 
-#entrevistas .proximas article {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-}
+    #entrevistas .proximas article {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
 
-#entrevistas .proximas article h3 {
-    /*es para que no haya error en la semantica*/
-    display: none;
-}
+    #entrevistas .proximas figcaption {
+        font-family: 'Space Grotesk';
+        background: #18C6B3;
+        color: #F9FAFB;
+        border-radius: 8px;
+        margin-top: 0.75rem;
+        padding: 8px 14px;
+        line-height: 1.3;
+        font-weight: 700;
+    }
 
-#entrevistas .proximas figure {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin: 0;
-}
+    #entrevistas .proximas figure {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin: 0;
+    }
 
-#entrevistas .proximas article img {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    display: block;
-    object-fit: cover;
-}
+    #entrevistas .proximas article img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        display: block;
+        object-fit: cover;
+    }
 
-#entrevistas .proximas article p,
-#entrevistas .extra {
-    line-height: 1.6;
-    text-align: left;
-}
+    #entrevistas .proximas article p,
+    #entrevistas .extra {
+        line-height: 1.6;
+        text-align: left;
+    }
 
 /* PAGINA MUJERES */
 .timiline span {
@@ -1282,58 +1278,58 @@ footer h3 {
 }
 
 
-/* POLITICA DE PRIVACIDAD */
-.documento-legal {
-    display: block;
-    background: #fff;
-    padding: 40px;
-    border: 1px solid #e1e1e1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
+    /* POLITICA DE PRIVACIDAD */
+    .documento-legal {
+        display: block;
+        background: #fff;
+        padding: 40px;
+        border: 1px solid #e1e1e1;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
 
-.documento-legal h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-}
+    .documento-legal h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+    }
 
-.documento-legal h3,
-.articulo-destacado h3 {
-    color: #2980b9;
-    margin-top: 30px;
-}
+    .documento-legal h3,
+    .articulo-destacado h3 {
+        color: #2980b9;
+        margin-top: 30px;
+    }
 
-.articulo-destacado {
-    background-color: #f0f7ff;
-    border-left: 5px solid #3498db;
-    padding: 20px;
-    margin: 20px 0;
-    font-style: italic;
-}
+    .articulo-destacado {
+        background-color: #f0f7ff;
+        border-left: 5px solid #3498db;
+        padding: 20px;
+        margin: 20px 0;
+        font-style: italic;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
 
-th,
-td {
-    text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-}
+    th,
+    td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
 
-th {
-    background-color: #f2f2f2;
-}
+    th {
+        background-color: #f2f2f2;
+    }
 
-body > span{
-    display: flex;
-    justify-content: space-between;
-}
+    body>span {
+        display: flex;
+        justify-content: space-between;
+    }
 
-nav> img:nth-of-type(1){
+    nav>img:nth-of-type(1) {
         display: none;
     }
 
@@ -1587,11 +1583,11 @@ nav img:nth-of-type(2){
 
 
 
-    .card_mujeres{
+    .card_mujeres {
         flex: 0 0 100%;
     }
 
-    .cards_main div{
+    .cards_main div {
         flex: 0 0 50%;
     }
 
@@ -1672,7 +1668,7 @@ nav img:nth-of-type(2){
         flex: 0 0 25%;
     }
 
-    nav> img:nth-of-type(2){
+    nav>img:nth-of-type(2) {
         display: none;
     }
 
