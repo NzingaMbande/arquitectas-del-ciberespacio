@@ -165,7 +165,6 @@ body>nav>ul>li {
 .material-symbols-outlined {
     justify-self: end;
     background-color: transparent;
-    /* color: var(--font-color2); */
 
 }
 
@@ -293,7 +292,6 @@ main {
 #articulos {
     display: grid;
     grid-template-columns: 1.5fr;
-    /* 1 columna para movil */
     margin-top: 1.3rem;
     max-width: 95%;
     gap: 2rem;
@@ -431,7 +429,7 @@ button {
     border-radius: 34px;
 }
 
-/* El círculo que se mueve */
+/* El círculo del slide */
 .sliding:before {
     position: absolute;
     content: "";
@@ -444,7 +442,6 @@ button {
     border-radius: 50%;
 }
 
-/* Estilos cuando el checkbox está activado */
 input:checked + .sliding {
   background-color: var(--font-color); /* Color cuando está en modo oscuro */
 }
