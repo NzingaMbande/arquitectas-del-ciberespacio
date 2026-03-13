@@ -260,6 +260,7 @@ main {
     margin-bottom: 0.2rem;
     font-size: 0.8rem;
     padding-left: 0.8rem;
+    
 }
 
 #index section:last-child {
@@ -553,7 +554,7 @@ footer h3 {
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
-    background: var(--font-color);
+    background: var(--tarjetas);
     color: var(--font-color2);
     border-radius: 4px;
     overflow: hidden;
