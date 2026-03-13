@@ -881,7 +881,7 @@ footer h3 {
     justify-content: center;
     width: fit-content;
     padding: 0.9rem 1.4rem;
-    background: var(--acento);
+    background: var(--botones);
     color: #FFFFFF;
     border-radius: 999px;
     font-weight: 600;
@@ -1036,7 +1036,7 @@ footer h3 {
     margin-top: 0.5rem;
     padding: 0.8rem 1.2rem;
     border-radius: 999px;
-    background: var(--acento);
+    background: var(--botones);
     color: #FFFFFF;
     font-weight: 600;
 }
