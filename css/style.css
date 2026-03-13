@@ -22,7 +22,7 @@
     height: 100%;
 
     /* Fuentes por defecto, luego se pueden ajustar */
-    --font-text: Arial, Helvetica, sans-serif;
+    --font-text: 'Inter', sans-serif; /*agregado ro casa*/
     --font-text-articulos: "Space Grotesk", sans-serif;
     --font-titular: 'Times New Roman', Times, serif;
 
@@ -70,9 +70,7 @@
             --bg-color:  #0E1525;
             --bg-color3: rgb(255, 231, 231);
             --tarjetas: #162238;
-            --bg-titulos: #D6E2FF;
-            --bg-cards: #162238;
-        }     
+}     
 
 body {
     width: 100%;
@@ -91,7 +89,7 @@ body {
         "footer";
 }
 
-/* #modo-oscuro estaba con id en vez de class */
+/* #modo-oscuro mismo id  de class */
 #modo-oscuro{
     display: flex;
     justify-content: space-between;
@@ -795,7 +793,7 @@ footer h3 {
 } */
 .manifiesto-intro {
     width: 100%;
-    background: var(--bg-cards);
+    background: var(--tarjetas);
     padding: 1.5rem;
     border-radius: 24px;
 }
@@ -818,7 +816,7 @@ footer h3 {
 
 #entrevistas h2 {
     font-family: var(--font-titular);
-    color: var(--bg-titulos);
+    /* color: var(--titulos); */
     font-size: clamp(1.8rem, 1.2rem + 2vw, 2.8rem);
     margin: 0 0 0.5rem;
     padding: 0;
@@ -829,7 +827,7 @@ footer h3 {
     margin: 0 0 0.8rem;
     padding: 0;
     font-family: var(--font-titular);
-    color: var(--bg-titulos);
+    /* color: var(--titulos); */
 }
 
 #entrevistas img {
@@ -892,7 +890,7 @@ footer h3 {
 #entrevistas .audio {
     width: 100%;
     padding: 1.5rem;
-    background: var(--bg-cards);
+    background: var(--tarjetas);
     border-radius: 24px;
 }
 
@@ -913,7 +911,7 @@ footer h3 {
     padding: 0.45rem 0.9rem;
     border-radius: 999px;
     background: rgba(24, 198, 179, 0.14);
-    color: var(--bg-titulos);
+    /* color: var(--titulos); */
     font-weight: 700;
     font-size: 0.85rem;
     margin-bottom: 0.5rem;
@@ -947,7 +945,7 @@ footer h3 {
     margin: 0 0 0.8rem;
     padding: 0;
     font-weight: 700;
-    color: var(--bg-titulos);
+    color: var(--titulos);
 }
 
 #entrevistas .audio-media audio {
@@ -1041,7 +1039,7 @@ footer h3 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    background: var(--bg-cards);
+    background: var(--tarjetas);
     border: 1px solid #E5E7EB;
     border-radius: 24px;
     padding: 1.5rem;
@@ -1066,7 +1064,7 @@ footer h3 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    background: var(--bg-cards);
+    background: var(--tarjetas); /*habia otra variable*/
     border: 1px solid #E5E7EB;
     border-radius: 24px;
     padding: 1.5rem;
@@ -1082,7 +1080,7 @@ footer h3 {
     flex-direction: column;
     gap: 0.9rem;
     padding: 1rem;
-    background: #FFFFFF;
+    background: var(--bg-color);
     border: 1px solid #E5E7EB;
     border-radius: 20px;
 }
@@ -1109,7 +1107,7 @@ footer h3 {
 #entrevistas .proximas article p {
     line-height: 1.6;
     text-align: left;
-    color: #374151;
+    color:var(--font-text);
 }
 
 #entrevistas .proximas .tag {
