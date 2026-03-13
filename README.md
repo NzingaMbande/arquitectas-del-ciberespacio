@@ -169,7 +169,24 @@ Curso:
 Confección y Publicación Web Año: 2026
 
 ---
+## 🔎 Extra importante
 
-## Capturas de pantalla.
+* Incluir capturas de pantalla.
+* Incluir Lighthouse básico (pruebas de rendimiento y SEO básico).
+* Inlcuir checklist de validación.
 
-[capturas de pantalla de la web]???
+
+Ejemplo:
+
+## 📊 Validación
+
+- HTML validado con W3C ✔
+- CSS validado ✔
+- Lighthouse Performance: 74
+- Lighthouse Accessibility: 90
+- SEO 100
+
+
+=======
+
+
