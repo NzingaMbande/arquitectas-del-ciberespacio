@@ -63,22 +63,16 @@
 
 
 /* PALETA DE MODO OSCURO*/
-/* .modo-oscuro {
+.modo-oscuro {
             --titulares:  #D6E2FF;
             --font-color:  #EEF3FA;
             --font-color2: #97A6BF;
             --bg-color:  #0E1525;
             --bg-color3: rgb(255, 231, 231);
             --tarjetas: #162238;
-        } no existe titulares o tarjetas */
-.modo-oscuro {
-    --font-color: #EEF3FA;
-    --font-color2: #97A6BF;
-    --bg-color: #0E1525;
-    --bg-color3: #162238;
-    --bg-titulos: #D6E2FF;
-    --bg-cards: #162238;
-}         
+            --bg-titulos: #D6E2FF;
+            --bg-cards: #162238;
+        }     
 
 body {
     width: 100%;
@@ -98,7 +92,7 @@ body {
 }
 
 /* #modo-oscuro estaba con id en vez de class */
-.modo-oscuro{
+#modo-oscuro{
     display: flex;
     justify-content: space-between;
     gap: 1rem;
