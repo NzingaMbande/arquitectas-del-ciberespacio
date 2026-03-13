@@ -31,9 +31,13 @@
     --bg-color: #F3F5F9;
     --bg-color2: rgb(143, 143, 143);
     --bg-color3: rgb(63, 63, 63);
-    --font-color: #292929;
-    --font-color2: #f5f5f5;
+    --font-color: #1F3C88;
+    --font-color2: #303030;
     --time-line: #fa7c42;
+    --titulares: #1F3C88;
+    --tarjetas: #E5F0FF;
+    --botones: #18C6B3;
+    --titulos: #1F3C88;
 
     /* Tamaños por defecto, luego se pueden ajustar */
     --h1-min: 2.3rem;
@@ -60,18 +64,19 @@
 
 /* PALETA DE MODO OSCURO*/
 .modo-oscuro {
-            --font-color: white;
-            --font-color2: rgb(192, 192, 192);
-            --bg-color: rgb(0, 0, 0);
-            --bg-color2: rgb(26, 26, 49);
+            --titulares:  #D6E2FF;
+            --font-color:  #EEF3FA;
+            --font-color2: #97A6BF;
+            --bg-color:  #0E1525;
             --bg-color3: rgb(255, 231, 231);
+            --tarjetas: #162238;
         }
 
 body {
     width: 100%;
     min-height: 100vh;
     font-family: var(--font-text);
-    color: var(--font-gris);
+    color: var(--font-color);
     background-color: var(--bg-color);
     display: grid;
     grid-template-columns: 100%;
@@ -94,9 +99,11 @@ body {
 
 /* HEADLINES */
 h1, h2, h3 {
+    color: var(--titulares);
     padding-left: 0.4rem;
     margin-top: 1rem;
     margin-bottom: 0.8rem;
+    
 
 }
 
@@ -125,6 +132,7 @@ a {
 }
 
 p {
+    color: var(--font-color);
     font-size: clamp(var(--p-min), var(--p-ideal), var(--p-max));
 }
 
