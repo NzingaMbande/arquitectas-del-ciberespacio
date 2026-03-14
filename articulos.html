@@ -7,7 +7,7 @@
     <meta name="description" content="Web sobre la mujer en el mundo de la programación">
     <title>Arquitectas del Ciberespacio</title>
     <!-- Google Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu">
     <!-- Mis estilos -->
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/articulos.css"> -->
@@ -23,7 +23,7 @@
     <!-- Menú de navegación -->
     <nav>
         <!-- Logos -->
-        <img src="assets/logo/Group 31.svg" alt="Logo">
+        <img src="assets/logo/Group-31.svg" alt="Logo">
         <img src="assets/logo/Logo_small.svg" alt="Logo-small">
 
         <ul>
@@ -33,8 +33,6 @@
             <li><a href="#" aria-current="page">Articulos</a></li>
         </ul>
     </nav>
-
-    <!-- No enseñar en Mobile -->
     <!-- Cabecera -->
     <header>
         <div class="hero__content">
@@ -44,7 +42,7 @@
             </div>
 
             <figure>
-                <img src="assets/imgDiana/pioneras_header.webp" alt="Pioneras de la programación">
+                <img src="assets/main_page_fotos/hero.webp" alt="Pioneras de la programación">
             </figure>
         </div>
     </header>
@@ -52,13 +50,9 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main id="articulos">
         <!-- BOTÓN DE MODO OSCURO -->
-        <label class="switch">
-            <ul>
-                <li>
-                    <input type="checkbox" id="btn-modo"></input>
-                    <span class="sliding"></span>
-                </li>
-            </ul>
+        <label class="switch" for="btn-modo">
+            <input type="checkbox" id="btn-modo">
+            <span class="sliding"></span>
         </label>
 
         <div class="divisor">
@@ -67,7 +61,6 @@
                     <img src="assets/articulos/article1.webp" alt="brechas-del-poder">
                 </figure>
                 <h2>Las brechas en el poder, los salarios y la IA</h2>
-
                 <p class="intro">Las mujeres ocupan tan solo el 27 por ciento de los escaños parlamentarios y el 30 por
                     ciento de los puestos directivos.
                 <div class="extra">
@@ -114,10 +107,10 @@
                             brechas en el poder</a>
                     </p>
                 </div>
-                </p>
-
                 <a class="leer-mas" href="#">Leer más</a>
-            </article>
+                </article>
+            
+            
             <article class="post">
                 <figure class="post-figure">
                     <img src="assets/articulos/article2.webp" alt="baja-representacion">
@@ -156,7 +149,7 @@
                             subrepresentadas</a>
                     </p>
                 </div>
-                </p>
+
 
                 <a class="leer-mas" href="#">Leer más</a>
             </article>
@@ -196,7 +189,6 @@
                             Wass</a>
                     </p>
                 </div>
-                </p>
 
                 <a class="leer-mas" href="#">Leer más</a>
             </article>
@@ -234,7 +226,6 @@
                             Wass</a>
                     </p>
                 </div>
-                </p>
                 <a class="leer-mas" href="#">Leer más</a>
             </article>
             <article class="post">
@@ -278,7 +269,6 @@
                             no progresan laboralmente</a>
                     </p>
                 </div>
-                </p>
 
                 <a class="leer-mas" href="#">Leer más</a>
             </article>
@@ -342,22 +332,21 @@
                             href="https://www.canvis.es/conciliacion-entre-la-vida-personal-y-laboral-la-clave-para-el-bienestar-integral/">Conciliacion</a>
                     </p>
                 </div>
-                </p>
                 <a class="leer-mas" href="#">Leer más</a>
             </article>
+        </div>
     </main>
 
-    <!-- PIE DE PÁGINA -->
-    <!-- LAS CLASES SON PARA PLANTILLAS, EN PRODUCCIÓN SE LIMPIA EL CODIGO -->
+     <!-- PIE DE PÁGINA -->
     <footer>
         <div class="foot-grid">
-            <div class="footer__top">
-                <div class="footer__brand">
+            <div >
+                <div>
                     <h2 class="footer__logo">Arquitectas del Ciberespacio</h2>
-                    <p class="footer__des">Por un futuro más igualitario</p>
+                    <p>Por un futuro más igualitario</p>
                 </div>
-                <nav class="footer__links">
-                    <h3 class="footer__title">Enlaces</h3>
+                <nav>
+                    <h3>Enlaces</h3>
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="entrevistas.html">Entrevistas</a></li>
@@ -366,23 +355,23 @@
                         <li><a href="politica.html">Política de Privacidad</a></li>
                     </ul>
                 </nav>
-                <div class="footer__contact">
-                    <h3 class="footer__title">Contacto</h3>
+                <div>
+                    <h3>Contacto</h3>
                     <p>Email: <a href="mailto:info@info.com">info@info.com</a></p>
                     <p>Tel: <a href="tel:+34123456789">+34 123 456 789</a></p>
                 </div>
-                <div class="footer__newsletter">
-                    <h3 class="footer__title">Suscribete</h3>
+                <div>
+                    <h3>Suscribete</h3>
                     <form action="#" method="post" class="newsletter__form">
-                        <input type="email" name="mail" id="mail" aria-label="mail" class="newsletter_input"
-                            placeholder="Tu correo electronico" requiered>
+                        <input type="email" name="mail" aria-label="mail" class="newsletter_input"
+                            placeholder="Tu correo electronico">
                         <button type="submit" class="newsletter__button">Enviar</button>
                     </form>
                 </div>
 
             </div>
-            <div class="footer__bottom">
-                <div class="footer__socials">
+            <div>
+                <div>
                     <!-- WEB SIMPLE ICONS https://simpleicons.org/ -->
                     <!-- Twitter -->
                     <a href="#" aria-label="Twitter">
